@@ -39,7 +39,7 @@ function renderCafe(doc){
 
     today = mm + '/' + dd + '/' + yyyy;
   
-  date = today;
+  date.textContent = today;
   name.textContent = doc.data().name;
   title.textContent = doc.data().title;
   location.textContent = doc.data().location;
