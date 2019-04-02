@@ -80,9 +80,13 @@ db.collection('items').get().then(snapshot => {
 // saving data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
     db.collection('items').add({
-        date: todaysDate();
+        date: today;
         name: form.name.value,
         title: form.title.value,
         location: form.location.value,
