@@ -42,6 +42,10 @@ h1{
     width: 5%;
 }
 
+#item-list tr td:last-child {
+    width: 25%;
+}
+
 #item-list td, #item-list th {
   border: 1px solid #ddd;
   padding: 8px;
