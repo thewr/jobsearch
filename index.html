@@ -1,65 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
-	<link rel="stylesheet" type="text/css" href="/jobsearch/css/main.css">
-</head>
-<body>
-<h1>Code Scratch</h1>	
-<button id = "add_item_button">Add Item</button>
-<div class="content">
-            <form id = "add-item-form">
-		<label for="iname">Name</label>
-                <input type="text" name="name">
-		<label for="iname">Amount</label>
-                <input type="text" name="amount">
-		<label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                <input id = "item_submit" type="submit" value="Submit">
-            </form>    
-	</div>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+		<link rel="stylesheet" type="text/css" href="/jobsearch/css/main.css">
+	</head>
+	<body>
+		<h1>Code Scratch</h1>	
+		<button id = "add_item_button">Add Item</button>
+		<div class="content">
+			<form id = "add-item-form">
+				<label for="iname">Name</label>
+				<input type="text" name="name">
+			        <label for="iname">Amount</label>
+			        <input type="text" name="amount">
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+				<input id = "item_submit" type="submit" value="Submit">
+			</form>    
+		</div>
+		
+		<table id="item-list">
+			<tr>
+				<th>Name</th>
+  		  		<th>Amount</th>
+  		  		<th>Subject</th>
+			</tr>
+		</table>
 	
-<div class="content">
-	    <form id = "add-trade-form">
-		    <select name="cars">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-</select>
-		    <button>Submit</button>
-            </form>
-	</div>
-
-	<table id="item-list">
-	  <tr>
-  		  <th>Name</th>
-  		  <th>Amount</th>
-  		  <th>Subject</th>
- 	 </tr>
-	</table>
-<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAM1ZdXb99R6nKZI9q71ox2VwsEbRNe1FQ",
-    authDomain: "jobsearch-ab253.firebaseapp.com",
-    databaseURL: "https://jobsearch-ab253.firebaseio.com",
-    projectId: "jobsearch-ab253",
-    storageBucket: "jobsearch-ab253.appspot.com",
-    messagingSenderId: "598138185831"
-  };
-  firebase.initializeApp(config);
-	
-const db = firebase.firestore();
-db.settings({ timestampsInSnapshots: true }); 
-</script>
-	
-<script src="/jobsearch/js/app.js"></script>	
-</body>	
+		<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyAM1ZdXb99R6nKZI9q71ox2VwsEbRNe1FQ",
+		    		authDomain: "jobsearch-ab253.firebaseapp.com",
+		    		databaseURL: "https://jobsearch-ab253.firebaseio.com",
+		    		projectId: "jobsearch-ab253",
+		    		storageBucket: "jobsearch-ab253.appspot.com",
+		    		messagingSenderId: "598138185831"
+			};
+			firebase.initializeApp(config);
+			
+			const db = firebase.firestore();
+			db.settings({ timestampsInSnapshots: true }); 
+		</script>
+		<script src="/jobsearch/js/app.js"></script>	
+	</body>	
 </html>
 
