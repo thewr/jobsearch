@@ -81,7 +81,7 @@ db.collection('items').get().then(snapshot => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     db.collection('items').add({
-        date: today;
+        date: todaysDate(),
         name: form.name.value,
         title: form.title.value,
         location: form.location.value,
