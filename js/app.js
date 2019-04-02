@@ -32,7 +32,14 @@ function renderCafe(doc){
     let location = document.createElement('td');
     let info = document.createElement('td');
   
-  date.textContent = doc.data().date;  
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = mm + '/' + dd + '/' + yyyy;
+  
+  date = today;
   name.textContent = doc.data().name;
   title.textContent = doc.data().title;
   location.textContent = doc.data().location;
