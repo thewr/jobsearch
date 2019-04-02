@@ -38,6 +38,10 @@ h1{
   width: 100%;
 }
 
+#item-list tr td:first-child {
+    width: 5%;
+}
+
 #item-list td, #item-list th {
   border: 1px solid #ddd;
   padding: 8px;
