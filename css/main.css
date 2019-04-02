@@ -58,6 +58,7 @@ h1{
 #item-list th {
   padding-top: 12px;
   padding-bottom: 12px;
+  text-transform: uppercase;
   text-align: left;
   background-color: #444c43;
   color: white;
