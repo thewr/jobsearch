@@ -26,18 +26,25 @@ function renderCafe(doc){
     // creates a table row
     let row = document.createElement("tr");
     itemList.setAttribute('data-id', doc.id);
+    let date = document.createElement('td');
     let name = document.createElement('td'); 
-    let amount = document.createElement('td');
-    let subject = document.createElement('td');
-    name.textContent = doc.data().name;
-    amount.textContent = doc.data().amount;
-    subject.textContent = doc.data().subject;
+    let title = document.createElement('td');
+    let location = document.createElement('td');
+    let info = document.createElement('td');
+  
+  date.textContent = doc.data().date;  
+  name.textContent = doc.data().name;
+  title.textContent = doc.data().title;
+  location.textContent = doc.data().location;
+  info.textContent = doc.data().info;
     
     // append row
+    row.appendChild(date);
     row.appendChild(name);
-    row.appendChild(amount);
-    row.appendChild(subject);
-    
+    row.appendChild(title);
+    row.appendChild(location);
+    row.appendChild(info);
+  
     // add the row to the end of the table body  
     tblBody.appendChild(row);
     
@@ -60,11 +67,15 @@ db.collection('items').get().then(snapshot => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     db.collection('items').add({
+        date: form.date.value,
         name: form.name.value,
-        amount: form.amount.value,
-        subject: form.subject.value
+        title: form.title.value,
+        location: form.location.value,
+        info: form.info.value
     });
+      form.date.value = '';
       form.name.value = '';
-      form.amount.value = '';
-      form.subject.value = '';
+      form.title.value = '';
+      form.location.value = '';
+      form.info.value = '';
 });
