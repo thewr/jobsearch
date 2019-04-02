@@ -19,6 +19,19 @@ var body = document.getElementsByTagName("body")[0];
 // create form element
 const form = document.querySelector('#add-item-form');
 
+function todaysDate()
+{    
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+  
+    return today;
+
+}
+
+
 
 // create element & render cafe
 function renderCafe(doc){
@@ -32,18 +45,12 @@ function renderCafe(doc){
     let location = document.createElement('td');
     let info = document.createElement('td');
   
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-
-    today = mm + '/' + dd + '/' + yyyy;
   
-  date.textContent = today;
-  name.textContent = doc.data().name;
-  title.textContent = doc.data().title;
-  location.textContent = doc.data().location;
-  info.textContent = doc.data().info;
+    date.textContent = doc.data().date;
+    name.textContent = doc.data().name;
+    title.textContent = doc.data().title;
+    location.textContent = doc.data().location;
+    info.textContent = doc.data().info;
     
     // append row
     row.appendChild(date);
@@ -73,7 +80,9 @@ db.collection('items').get().then(snapshot => {
 // saving data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+
     db.collection('items').add({
+        date: todaysDate();
         name: form.name.value,
         title: form.title.value,
         location: form.location.value,
