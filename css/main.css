@@ -22,7 +22,8 @@ h1{
 
 .content{
     background-color: #f2f2f2;
-    max-width: 960px;
+    max-width: 640px; //960px;
+    max-height: 280px;
     margin: 30px auto;
     padding:  20px 30px;
     border-radius: 10px 120px 10px 10px;
