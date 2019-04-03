@@ -141,7 +141,7 @@ button{
     line-height: 20px;
     border: 1px solid #ccc;
     box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
-    color: white;
+    color: black;
     font-size: 14px;
     font-family: ubuntu;
 }
