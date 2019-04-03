@@ -6,17 +6,19 @@ body {
   box-sizing: border-box;
 }
 
-
+.header
+{
+   background-color: #77ee80d1;
+   text-align: center;
+   text-transform: uppercase;
+   margin-bottom: 40px;
+   padding: 20px;
+}
 
 h1{
-    //background-color: #77ee80d1;
     color: #f0f1f2;
     font-size: 48px;
     letter-spacing: 2px;
-    padding: 20px;
-    margin-bottom: 40px;
-    text-align: center;
-    text-transform: uppercase;
     font-weight: bold;
     -webkit-text-stroke: 1px white;
     text-shadow: 2px 2px 2px black;
