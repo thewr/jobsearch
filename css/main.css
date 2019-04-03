@@ -25,8 +25,8 @@ h1{
     max-width: 640px; //960px;
     max-height: 480px;
     margin: 30px auto;
-    padding:  4px 6px;//20px 30px;
-    border-radius: 2px 24px 2px 2px;//10px 120px 10px 10px;
+    padding:  10px 15px;//20px 30px;
+    border-radius: 5px 60px 5px 5px;//10px 120px 10px 10px;
 }
 
 #item-list {
