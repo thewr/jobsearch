@@ -31,8 +31,10 @@ h1{
 
 a {
  color:	#C0C0C0;
-    background-color: transparent;
-    text-decoration: none !important;
+ background-color: transparent;
+ text-decoration: none !important;
+ display: inline-block;
+    margin: 10px auto;
 }
 
 #item-list {
