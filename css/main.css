@@ -148,4 +148,5 @@ button{
     color: black;
     font-size: 14px;
     font-family: ubuntu;
+    cursor: pointer;
 }
