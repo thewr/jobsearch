@@ -34,7 +34,8 @@ a {
  background-color: transparent;
  text-decoration: none !important;
  display: inline-block;
-    margin: 10px auto;
+    margin: 20px auto;
+    padding: 10px;
 }
 
 #item-list {
