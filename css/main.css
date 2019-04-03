@@ -10,13 +10,11 @@ body {
 
 .masthead
 {
-   position: relative;
    background-color: #101112;
+   padding: 20px;
 }
 
 .masthead h1{
-    top: 41px;
-    right: 0;
     color: #f0f1f2;
     font-size: 2.1875em;
     letter-spacing: 2px;
