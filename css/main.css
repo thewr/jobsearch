@@ -120,7 +120,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 8%;
+  width: 14%;
 }
 
 input[type=submit]:hover {
@@ -128,17 +128,20 @@ input[type=submit]:hover {
 }
 
 button{
-    border: 0;
+    border: 1px solid rgba(27, 31, 35, 0.2);
     background-color: #fff;
-    border-radius: 8px;
-    padding: 4px;
-    width: 5%;
+    border-radius: .25em;
+    padding: 6px 12px 6px 12px;
+    position: relative;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 20px;
     border: 1px solid #ccc;
     box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
     color: white;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 14px;
     font-family: ubuntu;
-    letter-spacing: 1px;
-    color: black;
 }
