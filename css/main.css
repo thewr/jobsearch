@@ -12,12 +12,13 @@ body {
    text-align: center;
    text-transform: uppercase;
    margin-bottom: 40px;
+   font-size: 24px;
    padding: 8px;
 }
 
 h1{
     color: #f0f1f2;
-    font-size: 48px;
+    
     letter-spacing: 2px;
     font-weight: bold;
     -webkit-text-stroke: 1px white;
