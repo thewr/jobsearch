@@ -2,9 +2,11 @@ body {
     background-color: #101112;
     font-family: ubuntu;
 }
+/*
 * {
   box-sizing: border-box;
 }
+*/
 
 .header
 {
