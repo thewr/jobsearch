@@ -29,6 +29,11 @@ h1{
     border-radius: 5px 60px 5px 5px;//10px 120px 10px 10px;
 }
 
+a {
+ color: red;
+    background-color: transparent;
+}
+
 #item-list {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   background-color:white;
