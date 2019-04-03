@@ -10,17 +10,17 @@ body {
 
 .masthead
 {
+   position: relative;
    background-color: #77ee80d1;
-   text-align: left;
-   text-transform: uppercase;
    margin-bottom: 40px;
    font-size: 14px;
   // padding: 8px;
 }
 
-h1{
+.masthead h1{
+    top: 41px;
+    right: 0;
     color: #f0f1f2;
-    
     letter-spacing: 2px;
     font-weight: bold;
     -webkit-text-stroke: 1px white;
