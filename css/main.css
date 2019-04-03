@@ -130,14 +130,15 @@ input[type=submit]:hover {
 button{
     border: 0;
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 4px;
     width: 5%;
     border: 1px solid #ccc;
     box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
     color: white;
     font-weight: bold;
+    text-transform: uppercase;
     font-family: ubuntu;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     color: black;
 }
