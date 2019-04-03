@@ -18,10 +18,6 @@ $(function(){
    // $("add_item_button").show();
   });
   $('btn btn-danger').click(function(){
-      form.name.value = '';
-      form.title.value = '';
-      form.location.value = '';
-      form.info.value = '';
     $(".content").show().fadeOut(1000);
   });
 });
