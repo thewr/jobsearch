@@ -1,3 +1,12 @@
+// creates a <table> element and a <tbody> element
+const itemList = document.querySelector('#item-list');
+let tblBody = document.createElement("tbody");    
+// get the reference for the body
+var body = document.getElementsByTagName("body")[0];
+
+// create form element
+const form = document.querySelector('#add-item-form');
+
 $(function(){
   $(".content").hide();
   $("#add_item_button").click(function(){
@@ -8,16 +17,16 @@ $(function(){
     $(".content").show().fadeOut(1000);
    // $("add_item_button").show();
   });
+  $('btn btn-danger').click(function(){
+      form.name.value = '';
+      form.title.value = '';
+      form.location.value = '';
+      form.info.value = '';
+    $(".content").show().fadeOut(1000);
+  });
 });
 
-// creates a <table> element and a <tbody> element
-const itemList = document.querySelector('#item-list');
-let tblBody = document.createElement("tbody");    
-// get the reference for the body
-var body = document.getElementsByTagName("body")[0];
 
-// create form element
-const form = document.querySelector('#add-item-form');
 
 function todaysDate()
 {    
