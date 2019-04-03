@@ -131,13 +131,13 @@ button{
     border: 0;
     background-color: #fff;
     border-radius: 4px;
-    padding: 13px;
-    width: 8%;
+    padding: 4px;
+    width: 5%;
     border: 1px solid #ccc;
     box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
     color: white;
     font-weight: bold;
     font-family: ubuntu;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: black;
 }
