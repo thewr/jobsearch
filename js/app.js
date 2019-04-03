@@ -17,9 +17,6 @@ $(function(){
     $(".content").show().fadeOut(1000);
    // $("add_item_button").show();
   });
-  $('btn btn-danger').click(function(){
-    $(".content").show().fadeOut(1000);
-  });
 });
 
 
