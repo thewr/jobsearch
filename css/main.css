@@ -37,7 +37,6 @@ header
 }
 
 .leftmenu{
-  text-align: center;
   height: 100%;
   width: 120px;
   position:absolute;
@@ -189,6 +188,7 @@ ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
+        text-align:center;
         width: 120px;
 }
 li {
