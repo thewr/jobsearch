@@ -10,8 +10,12 @@ body {
 .masthead
 {
    background-color: #101112;
-   padding: 20px;
    margin-bottom: 46px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0px 1rem 0px 1rem
+   height: 54px;
 }
 
 .masthead h1{
