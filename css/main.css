@@ -48,8 +48,8 @@ body {
 
 .content{
     background-color: #f0f1f2;
-    max-width: 640px; //960px;
-    max-height: 480px;
+    max-width: 272px; //960px;
+   // max-height: 480px;
     margin: 10px 30px 10px 30px;//30px auto;
     padding:  10px 15px;//20px 30px;
     border-radius: 5px 60px 5px 5px;//10px 120px 10px 10px;
