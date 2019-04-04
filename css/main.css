@@ -57,7 +57,7 @@ header
   height: 100%;
   display: flex;
   width: 240px;
-  //position:absolute;
+  position:absolute;
   //z-index: 1;
   top: 54px; left: 0;
   background-color: #282b2d;;
@@ -82,8 +82,8 @@ header
 
 .feedback
 {
-       // position: absolute;
-        //left:120px; top:54px; right:0; bottom:0;    
+        position: absolute;
+        left:120px; top:54px; right:0; bottom:0;    
         display: flex;
         background-color: #f0f1f2;
         font-size: 16px;
