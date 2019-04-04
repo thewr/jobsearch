@@ -60,7 +60,7 @@ header
   position:absolute;
   //z-index: 1;
   top: 54px; left: 0;
-  background-color: #7e878e;
+  background-color: #282b2d;;
   flex-direction: column;
   padding-top: 3%;
 }
