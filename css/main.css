@@ -58,11 +58,14 @@ header
     border: 1px solid rgba(27, 31, 35, 0.2);
 }
 
-.main
+.feedback
 {
         position: absolute;
         left:120px; top:54px; right:0; bottom:0;    
-    padding: 20px;
+         padding: 20px;
+        //display: flex;
+        background-color: #f0f1f2;
+
 }
 
 
