@@ -28,16 +28,15 @@ body {
     text-shadow: 2px 2px 2px black;
 }
 
-.app{
-     -webkit-box-flex: 1;
-     flex: 1;
-        flex-grow: 1;
-       flex-shrink: 1;
-          flex-basis: 0%;
-    display: -webkit-box;
+.leftmenu{
+    margin-top: 46px;
     display: flex;
-    -webkit-box-align: stretch;
     align-items: stretch;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 20px;
 }
 
 .content{
