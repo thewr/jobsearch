@@ -54,6 +54,7 @@ header
 }
 
 .content{
+    display:inline-flex;
     background-color: #f0f1f2;
     max-width: 640px; //960px;
     max-height: 480px;
