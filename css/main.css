@@ -11,13 +11,13 @@ body {
 {
    background-color: #101112;
    margin-bottom: 46px;
-  // display: flex;
+   display: flex;
    //align-items: center;
    justify-content: space-between;
    padding: 0px 1rem 0px 1rem;
    height: 54px; left: 0; right: 0;
    z-index:1000;
-   position:absolute;
+   //position:absolute;
 }
 
 .masthead h1{
