@@ -1,7 +1,3 @@
-html{
-    height:100%;
-}
-
 body {
     font-family: ubuntu;
     margin: 0;
@@ -54,7 +50,6 @@ header
 }
 
 .leftmenu{
-  height: 100%;
   display: flex;
   width: 240px;
   position:absolute;
