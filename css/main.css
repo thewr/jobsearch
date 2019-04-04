@@ -32,7 +32,7 @@ body {
 .leftmenu{
   text-align: center;
   height: 100%;
-  width: 160px;
+  width: 120px;
   position:absolute;
   //z-index: 1;
   top: 54px; left: 0;
@@ -54,7 +54,7 @@ body {
 .main
 {
         position: absolute;
-        left:160px; top:54px; right:0; bottom:0;    
+        left:120px; top:54px; right:0; bottom:0;    
     padding: 20px;
 }
 
@@ -155,15 +155,15 @@ input[type=submit] {
   background-color: #4285F4;
   border: 1px solid rgba(27, 31, 35, 0.2);
   color: white;
-  padding: 6px 12px 6px 12px;
-  border-radius: 4px;
+  padding: 3px 6px 3px 6px;
+  border-radius: 3px;
   position: relative;
   vertical-align: middle;
-    font-weight: 600;
-    line-height: 20px;
+    font-weight: 400;
+    line-height: 15px;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 input[type=submit]:hover {
