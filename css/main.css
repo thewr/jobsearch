@@ -29,6 +29,11 @@ body {
     text-shadow: 2px 2px 2px black;
 }
 
+header
+{
+    background-color:#b7bcc0;
+}
+
 .leftmenu{
   text-align: center;
   height: 100%;
