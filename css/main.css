@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
 }
 
-.masthead
+.topheader
 {
    background-color: #101112;
    margin-bottom: 46px;
@@ -20,7 +20,7 @@ body {
    //position:absolute;
 }
 
-.masthead h1{
+.topheader h1{
     color: #f0f1f2;
     font-size: 0.875rem;
     letter-spacing: 1px;
