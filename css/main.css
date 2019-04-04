@@ -34,7 +34,7 @@ body {
   height: 100%;
   width: 160px;
   position:absolute;
-  z-index: 1;
+  //z-index: 1;
   top: 54px; left: 0;
   background-color: #7e878e;
   //overflow-x: hidden;
@@ -74,8 +74,7 @@ a {
   border-collapse: collapse;
   padding: 20px;
   margin: 30px auto;
-  font-size: 16px;
-  border-radius: 10px 10px 10px 10px;//10px 120px 10px 10px;
+  font-size: 0.8 rem;
   width: 100%;
 }
 
