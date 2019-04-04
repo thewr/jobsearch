@@ -46,7 +46,7 @@ body {
     max-width: 272px; //960px;
     max-height: 480px;
     margin: 10px 30px 10px 30px;//30px auto;
-    padding:  10px 15px;//20px 30px;
+    padding:  10px 15px 5px 10px;//20px 30px;
     border-radius: 5px 60px 5px 5px;//10px 120px 10px 10px;
     border: 1px solid rgba(27, 31, 35, 0.2);
 }
