@@ -185,7 +185,7 @@ input[type=submit]:hover {
   background-color: #3F729B;
 }
 
-button{
+#new_item {
     border: 1px solid rgba(27, 31, 35, 0.2);
     background-color: #64b448;
     border-radius: 3px 3px 3px 3px;
