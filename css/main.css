@@ -14,7 +14,6 @@ body {
 {
     font-family:monospace;
     height: 100%;
-    display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
