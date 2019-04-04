@@ -179,7 +179,8 @@ button{
     background-color: #fff;
     border-radius: .25em;
     padding: 6px 12px 6px 12px;
-    position: relative;
+    //position: relative;
+    margin-left: 4px;
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
