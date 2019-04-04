@@ -73,7 +73,7 @@ header
 .leftmenu{
   height: 100%;
   display: flex;
-  width: 240px;
+  width: 120px;
   position:absolute;
   //z-index: 1;
   top: 54px; left: 0;
