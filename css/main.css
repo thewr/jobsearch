@@ -187,7 +187,6 @@ input[type=submit]:hover {
 ul {
         list-style-type: none;
         margin: auto;
-        text-align:center;
         width: 70%;
 }
 li {
