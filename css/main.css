@@ -17,6 +17,7 @@ body {
    padding: 0px 1rem 0px 1rem;
    z-index: 1000;
    height: 54px;
+   position:absolute;
 }
 
 .masthead h1{
@@ -30,17 +31,16 @@ body {
 
 .leftmenu{
    // margin-top: 46px;
-    display: flex;
-    align-items: stretch;
+    //display: flex;
+    //align-items: stretch;
     overflow-y: scroll;
     overflow-x: hidden;
     
   height: 100%;
   width: 160px;
-  position: fixed;
+  position:absolute;
   z-index: 1;
-  top: 0;
-  left: 0;
+  top: 54px; left: 0;
   background-color: #7e878e;
   overflow-x: hidden;
   padding-top: 20px;
@@ -176,7 +176,7 @@ button{
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    display: inline-block;
+    display: block;
     font-weight: 600;
     line-height: 20px;
     box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
