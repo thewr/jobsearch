@@ -192,6 +192,7 @@ input[type=submit]:hover {
 
 ul {
         list-style-type: none;
+        display: inline-flex;
         margin: auto;
         width: 70%;
 }
