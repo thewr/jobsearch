@@ -14,7 +14,8 @@ body {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 0px 1rem 0px 1rem
+   padding: 0px 1rem 0px 1rem;
+   z-index: 1000;
    height: 54px;
 }
 
