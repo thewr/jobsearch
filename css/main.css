@@ -196,13 +196,10 @@ li {
      border-radius: 30px 30px 30px 30px;
     cursor: pointer;
     font-size: 11px;
-    display: block;
-}
-
-#new_item {
-    border: 1px solid rgba(27, 31, 35, 0.2);
+        border: 1px solid rgba(27, 31, 35, 0.2);
     background-color: #64b448;
     padding: 8px 8px 8px 8px;   
     color: #fff;
     
+    display: block;
 }
