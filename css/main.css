@@ -30,7 +30,7 @@ body {
 }
 
 .leftmenu{
-  align-items: center;  
+  text-align: center;
   height: 100%;
   width: 160px;
   position:absolute;
@@ -46,7 +46,7 @@ body {
     max-width: 272px; //960px;
     max-height: 480px;
     margin: 10px 30px 10px 30px;//30px auto;
-    padding:  10px 15px 5px 10px;//20px 30px;
+    padding: 10px 15px 5px 10px;//20px 30px;
     border-radius: 5px 60px 5px 5px;//10px 120px 10px 10px;
     border: 1px solid rgba(27, 31, 35, 0.2);
 }
@@ -174,15 +174,11 @@ button{
     border: 1px solid rgba(27, 31, 35, 0.2);
     background-color: #fff;
     border-radius: .25em;
+    width: 30%;
     padding: 6px 12px 6px 12px;
-    position: relative;
-    margin-left: 30px auto;
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
+    margin: 20px 20px 10px 50px;
     display: block;
     font-weight: 600;
-    line-height: 20px;
     box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
     color: black;
     font-size: 14px;
