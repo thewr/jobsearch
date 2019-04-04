@@ -41,6 +41,7 @@ header
 
 .leftmenu{
   height: 100%;
+  display: flex;
   width: 120px;
   position:absolute;
   //z-index: 1;
