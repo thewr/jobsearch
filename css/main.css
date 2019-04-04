@@ -30,11 +30,6 @@ body {
 }
 
 .leftmenu{
-   // margin-top: 46px;
-    //display: flex;
-    //align-items: stretch;
-    //overflow-y: scroll;
-    //overflow-x: hidden;
   align-items: center;  
   height: 100%;
   width: 160px;
@@ -182,7 +177,7 @@ button{
     border-radius: .25em;
     padding: 6px 12px 6px 12px;
     //position: relative;
-    margin-left: 4px;
+    margin-left: 30px auto;
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
