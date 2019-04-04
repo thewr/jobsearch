@@ -12,6 +12,7 @@ body {
 
 .container
 {
+    font-family:monospace;
     height: 100%;
     display: -webkit-box;
     display: flex;
