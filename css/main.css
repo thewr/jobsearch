@@ -22,7 +22,6 @@ html {
 
 .container
 {
-    font-family:monospace;
     height: 100%;
     display: flex;
     -webkit-box-orient: vertical;
