@@ -15,7 +15,6 @@ body {
    align-items: center;
    justify-content: space-between;
    padding: 0px 1rem 0px 1rem;
-   z-index: 1000;
    height: 54px;
    position:absolute;
 }
@@ -53,7 +52,6 @@ body {
     margin: 10px 30px 10px 30px;//30px auto;
     padding:  10px 15px;//20px 30px;
     border-radius: 5px 60px 5px 5px;//10px 120px 10px 10px;
-    position: absolute;
 }
 
 a {
