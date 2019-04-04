@@ -55,6 +55,13 @@ body {
     border-radius: 5px 60px 5px 5px;//10px 120px 10px 10px;
 }
 
+.main
+{
+        position: absolute;
+        left:160px; top:54px; right:0; bottom:0;    
+}
+
+
 a {
  color:	#575e63;
  background-color: transparent;
