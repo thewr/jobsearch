@@ -2,9 +2,8 @@ body {
     font-family: ubuntu;
     margin: 0;
     padding: 0;
-}
-{
-  box-sizing: border-box;
+    display: flex;
+    box-sizing: border-box;
 }
 
 .mainheader
@@ -22,7 +21,7 @@ body {
 
 .mainheader h1{
     color: #f0f1f2;
-    font-size: 0.875rem;
+    font-size: 0.875rem; 
     letter-spacing: 1px;
     font-weight: 600;
 }
@@ -31,9 +30,9 @@ header
 {
     color: #26282b
     background-color:#b7bcc0;
-    padding-left: 16px;
-    padding-right:16px;
-    font-size: 16px;
+    padding-left:1rem;
+    padding-right:1rem;
+    font-size: 1.0625rem;
 }
 
 .leftmenu{
