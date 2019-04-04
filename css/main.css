@@ -15,14 +15,16 @@ body {
 {
    background-color: #101112;
     flex-shrink: 0;
-    display: inline-flex;
    margin-bottom: 46px;
    align-items: center;
    justify-content: space-between;
    padding: 0px 1rem 0px 1rem;
-   height: 54px; left: 0; right: 0;
    z-index:1000;
-   //position:absolute;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    padding: 0 1rem;
+    height: 54px;
 }
 
 .mainheader h1{
