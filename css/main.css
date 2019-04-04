@@ -190,8 +190,7 @@ input[type=submit]:hover {
     background-color: #64b448;
     border-radius: 3px 3px 3px 3px;
     width: 50%;
-    padding: 3px 6px 3px 6px;
-    margin: 20px 20px 10px 20px;
+    padding: 8px 8px 8px 8px;
     display: block;
     font-weight: 400;
     color: #fff;
