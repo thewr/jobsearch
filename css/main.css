@@ -57,12 +57,16 @@ header
   height: 100%;
   display: flex;
   width: 240px;
-  position:absolute;
+  //position:absolute;
   //z-index: 1;
   top: 54px; left: 0;
   background-color: #282b2d;;
   flex-direction: column;
   padding-top: 3%;
+  color: #b7bcc0;
+  border-right: 1px solid #3a3e41;
+  box-shadow: 1px 2px 8px rgba(0,0,0,0.45);
+  z-index: 100;
 }
 
 .content{
