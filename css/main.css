@@ -47,8 +47,8 @@ header
   //z-index: 1;
   top: 54px; left: 0;
   background-color: #7e878e;
-  //overflow-x: hidden;
-  padding-top: 20px;
+  flex-direction: column;
+  padding-top: 3%;
 }
 
 .content{
