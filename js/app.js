@@ -9,7 +9,7 @@ const form = document.querySelector('#add-item-form');
 
 $(function(){
   $(".content").hide();
-  $("#add_item_button").click(function(){
+  $("#new_item").click(function(){
     $(".content").hide().fadeIn(1000);
    // $("#add_item_button").hide();
   });
