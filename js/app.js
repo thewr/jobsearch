@@ -7,31 +7,6 @@ var body = document.getElementsByTagName("body")[0];
 // create form element
 const form = document.querySelector('#add-item-form');
 
-$(function(){
-  $(".content").hide();
-  $("#menutag").html("Menu");
-  $("#new_item").click(function(){
-    $('.leftmenu').css({width: '33%'})
-    $("#options").hide();
-   // $( ".feedback" ).css({"filter:blur(2px)"});
-    $(".content").hide().fadeIn(1000);
-  });
-  $('#item_submit').click(function(){
-    $(".content").show().fadeOut(1000);
-   // $("add_item_button").show();
-  });
-  
-$('#item-list').click(function() {
-      alert("Row selected");
-      $(this).toggleClass('selected');
-      
-});
-  
-  
-});
-
-
-
 function todaysDate()
 {    
     var today = new Date();
@@ -39,9 +14,7 @@ function todaysDate()
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
     today = mm + '/' + dd + '/' + yyyy;
-  
     return today;
-
 }
 
 
@@ -104,4 +77,28 @@ form.addEventListener('submit', (e) => {
       form.title.value = '';
       form.location.value = '';
       form.info.value = '';
+});
+
+
+$(function(){
+  $(".content").hide();
+  $("#menutag").html("Menu");
+  $("#new_item").click(function(){
+    $('.leftmenu').css({width: '33%'})
+    $("#options").hide();
+   // $( ".feedback" ).css({"filter:blur(2px)"});
+    $(".content").hide().fadeIn(1000);
+  });
+  $('#item_submit').click(function(){
+    $(".content").show().fadeOut(1000);
+   // $("add_item_button").show();
+  });
+  
+$('#item-list tr').click(function() {
+      alert("Row selected");
+      $(this).toggleClass('selected');
+      
+});
+  
+  
 });
