@@ -80,7 +80,7 @@ header
   background-color: #282b2d;;
   flex-direction: column;
   padding-top: 3%;
-  color: #b7bcc0;
+  color: #f0f1f2;
   border-right: 1px solid #3a3e41;
   box-shadow: 1px 2px 8px rgba(0,0,0,0.45);
   z-index: 100;
@@ -241,9 +241,8 @@ li {
     cursor: pointer;
     font-size: 11px;
     border: 1px solid rgba(27, 31, 35, 0.2);
-    background-color: #64b448;
+    background-color: #7e878e;
     padding: 2px;   
-    color: #fff;
     //text-align:center;
     display: block;
 }
