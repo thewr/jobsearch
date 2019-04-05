@@ -162,12 +162,8 @@ a {
   color: #26282b;
 }
 
-form label {
- // text-transform: uppercase;
-  font-size: 0.675rempx;
-  position: relative;
-  display: inline-block;
-  color: black;
+label {
+  color: #f0f1f2;
 }
 
 
