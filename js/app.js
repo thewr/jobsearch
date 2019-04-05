@@ -11,7 +11,7 @@ $(function(){
   $(".content").hide();
   $("#menu_header").html("Menu");
   $("#new_item").click(function(){
-    $('.leftmenu').css({width: '42%'})
+    $('.leftmenu').css({width: '33%'})
     $("#options").hide();
     $(".content").hide().fadeIn(1000);
   });
