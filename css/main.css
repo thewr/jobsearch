@@ -63,6 +63,7 @@ html>.container, body>.container {
 header
 {
     color: #26282b
+    position: absolute;
     background-color:#b7bcc0;
     padding-left:1rem;
     padding-right:1rem;
