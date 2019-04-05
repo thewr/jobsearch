@@ -21,7 +21,7 @@ $(function(){
    // $("add_item_button").show();
   });
   
-  $('tr').on('click', function() {
+  $('tr').click(function(){
    $(this).toggleClass('selected');
 });
   
