@@ -140,15 +140,12 @@ a {
     cursor : pointer;
 }
 
-/*
-table#item-list tr td:first-child {
+
+#item-list tr td:first-child {
     width: 5%;
 }
 
-table#item-list tr td:last-child {
-    width: 25%;
-}
-*/
+
 #item-list td, #item-list th {
   border: 1px solid #26282b;
   color: #26282b; 
