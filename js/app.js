@@ -96,7 +96,7 @@ $(function(){
    // $("add_item_button").show();
   });
   
-$('#item-list tbody').click(function() {
+$('#item-list tbody').on('click','tr',function() {
       $(this).toggleClass('selected');
 });
   
