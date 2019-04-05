@@ -123,15 +123,19 @@ a {
  display: inline-block;
 }
 
-#item-list {
+#item-list{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   box-sizing: border-box;
   position: relative;
-  color: #26282b; 
   text-align: left;  
   padding-left: 2px;
   width: 100%;
+}
+
+#item-list tbody
+{
+      color: #26282b; 
 }
 
 
