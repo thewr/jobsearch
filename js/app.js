@@ -101,8 +101,8 @@ $('#item-list').on('click','tr',function() {
        var tableData = $(this).children("td").map(function() {
               return $(this).text();}).get();
 	
-      // var td=tableData[0] '*' tableData[1] '*' tableData[2];
-    //   alert(td);
+       var td=tableData[0];
+       alert(td);
 });
     
 
