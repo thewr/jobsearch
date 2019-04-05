@@ -101,7 +101,7 @@ $('#item-list').on('click','tr',function() {
        var tableData = $(this).children("td").map(function() {
               return $(this).text();}).get();
 	
-       var td=tableData[0]+tableData[1];
+       var td=tableData[0]+' '+' 'tableData[1];
        alert(td);
 });
     
