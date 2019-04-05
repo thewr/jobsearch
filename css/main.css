@@ -128,7 +128,9 @@ a {
   border-collapse: collapse;
   box-sizing: border-box;
   position: relative;
-  color: black;
+  color: #26282b; 
+  text-align: left;  
+  padding-left: 2px;
   width: 100%;
 }
 
@@ -145,16 +147,22 @@ a {
   border: 1px solid #26282b;
 }
 
-#item-list tr:nth-child(even){background-color: #f2f2f2;}
+//#item-list tr:nth-child(even){background-color: #f2f2f2;}
 
-#item-list tr:hover {background-color: #ddd;}
+//#item-list tr:hover {background-color: #ddd;}
 
 #item-list th {
   padding-top: 4x;
   padding-bottom: 4px;
-  text-align: left;
   background-color: #70b0e0;
-  color: #26282b;
+}
+
+#item-list tr {
+  padding-top: 4x;
+  padding-bottom: 4px;
+  padding-left: 2px;
+  text-align: left;
+  color: #e7e9ea;
 }
 
 label {
