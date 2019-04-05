@@ -75,7 +75,6 @@ header
   display: flex;
   width: 78px;
   position:absolute;
-  //z-index: 1;
   top: 54px; left: 0;
   background-color: #282b2d;;
   flex-direction: column;
