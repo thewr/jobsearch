@@ -22,7 +22,7 @@ $(function(){
   });
   
 $( "#item-list tbody tr" ).click(function( ) {
- 
+      alert("Row selected");
       $(this).toggleClass('selected');
       
 });
