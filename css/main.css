@@ -50,6 +50,14 @@ html>.container, body>.container {
     font-weight: 600;
 }
 
+.menuheader {
+    padding: 0 1rem;
+    padding-top: 0px;
+    padding-right: 1rem;
+    padding-bottom: 0px;
+    padding-left: 1rem;
+}
+
 .app
 {
     -webkit-box-flex: 1;
