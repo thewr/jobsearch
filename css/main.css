@@ -70,6 +70,7 @@ section{
 }
 
 .menuheader {
+    display: inline-block;
     padding: 0 1rem;
     padding-top: 0px;
     padding-right: 1rem;
