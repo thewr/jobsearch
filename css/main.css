@@ -27,6 +27,9 @@ html>.container, body>.container {
     flex-wrap: initial;
 }
 
+section{
+    position: relative;
+}
 .selected {
     color: #000;
     background-color:#E4E80C;
