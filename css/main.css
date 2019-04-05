@@ -244,6 +244,6 @@ li {
     background-color: #64b448;
     padding: 2px;   
     color: #fff;
-    text-align:center;
+    //text-align:center;
     display: block;
 }
