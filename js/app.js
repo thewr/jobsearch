@@ -85,12 +85,13 @@ $(function(){
   $("#menutag").html("Menu");
 	
   $("#new_item").click(function(){
-	  $("#menutag").html("Add Entry");
+	  
     $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
     $("#options").hide();
      $(".content").hide().fadeIn(500); 
    $( ".feedback" ).toggleClass('blur-me');
+	  $("#menutag").html("Add Entry");
   });
 	
     
