@@ -88,15 +88,23 @@ header
 
 .content{
     position: absolute;
-    display:flex;
-    flix-direction: column;
+    display:block;
+    flex-basis:0px;
+    flex-grow:1;
+    flex-shrink:1;
     background-color: #f0f1f2;
     max-width: 640px; //960px;
     max-height: 480px;
-    margin: 10px 30px 10px 30px;//30px auto;
-    padding: 10px 15px 5px 10px;//20px 30px;
+    margin: 0;
+    border-top:2px;
     border-radius: 5px 60px 5px 5px;//10px 120px 10px 10px;
     border: 1px solid rgba(27, 31, 35, 0.2);
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 22.4px;
+    padding:16px;
 }
 
 .feedback
