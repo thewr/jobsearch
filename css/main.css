@@ -99,9 +99,6 @@ html>.container, body>.container {
     background-color: #f0f1f2;
     margin-left: 16px;  margin-right: 16px;
     border-radius: 5px; 
-    overflow-wrap: break-word;
-    overflow-x: hidden;
-    overflow-y: auto;
     line-height: 22.4px;
     padding:1rem;
 }
