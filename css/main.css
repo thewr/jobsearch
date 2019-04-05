@@ -28,7 +28,10 @@ html>.container, body>.container {
 }
 
 section{
-    position: relative;
+    flex: 0 6.25rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 6.25rem;
 }
 .selected {
     color: #000;
