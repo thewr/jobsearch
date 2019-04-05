@@ -73,7 +73,7 @@ header
 .leftmenu{
   height: 100%;
   display: flex;
-  width: 120px;
+  width: 78px;
   position:absolute;
   //z-index: 1;
   top: 54px; left: 0;
@@ -87,7 +87,9 @@ header
 }
 
 .content{
-    display:inline-flex;
+    position: absolute;
+    display:flex;
+    flix-direction: column;
     background-color: #f0f1f2;
     max-width: 640px; //960px;
     max-height: 480px;
@@ -99,12 +101,14 @@ header
 
 .feedback
 {
-        position: relative;
-        left:120px; top:54px; right:0; bottom:0;    
+        position: absolute;
+        left:78px; top:0; right:0; bottom:0;    
         display: flex;
         background-color: #f0f1f2;
         font-size: 16px;
         flex-flow: column;
+        flex-direction: column;
+        flex-wrap: initial;
 
 }
 
