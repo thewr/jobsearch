@@ -130,11 +130,11 @@ a {
 }
 
 table {
-  border-collapse: collapse;
-  box-sizing: border-box;
+  //border-collapse: collapse;
+  //box-sizing: border-box;
   position: relative;
   text-align: left;  
-  width: 50%;
+  width: 80%;
 }
 
 table#item-list tbody  tr {
