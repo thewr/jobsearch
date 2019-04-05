@@ -85,6 +85,7 @@ $(function(){
   $("#menutag").html("Menu");
 	
   $("#new_item").click(function(){
+	  $("#menutag").html("Add Entry");
     $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
     $("#options").hide();
@@ -95,6 +96,7 @@ $(function(){
     
   $('#item_submit').click(function(){
     $(".content").show().fadeOut(1000);
+	  $("#menutag").html("Menu");
    // $("add_item_button").show();
   });
 	
@@ -102,6 +104,7 @@ $(function(){
     $(".content").hide();
 	$('.leftmenu').animate({    
 	    width: '78px'});//css("width","350px").css("width","+=10%")
+	  $("#menutag").html("Menu");
 	$("#options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
   });
