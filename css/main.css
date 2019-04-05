@@ -62,7 +62,7 @@ html>.container, body>.container {
 
 header
 {
-    position: absolute;
+    position: relative;
     background-color:#b7bcc0;
     padding-left:1rem;
     padding-right:1rem;
