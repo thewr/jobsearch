@@ -94,7 +94,7 @@ $(function(){
    // $("add_item_button").show();
   });
   
-$('#item-list tr').click(function() {
+$('tr').click(function() {
       $(this).toggleClass('selected');
 });
   
