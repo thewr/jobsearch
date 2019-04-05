@@ -20,6 +20,12 @@ $(function(){
     $(".content").show().fadeOut(1000);
    // $("add_item_button").show();
   });
+  
+  $('tr').on('click', function() {
+   $(this).toggleClass('selected');
+});
+  
+  
 });
 
 
