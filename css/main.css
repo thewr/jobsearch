@@ -58,6 +58,11 @@ html>.container, body>.container {
     padding-left: 1rem;
 }
 
+.menuheader .menutag
+{
+    padding: 0.5rem;
+}
+
 .app
 {
     -webkit-box-flex: 1;
