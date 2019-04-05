@@ -228,7 +228,7 @@ input[type=submit]:hover {
   background-color: #3F729B;
 }
 
-.options {
+#options {
         list-style-type: none;
         flex-direction:column;
         display: flex;
