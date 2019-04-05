@@ -13,6 +13,7 @@ $(function(){
   $("#new_item").click(function(){
     $('.leftmenu').css({width: '33%'})
     $("#options").hide();
+    $( ".feedback" ).blur();
     $(".content").hide().fadeIn(1000);
   });
   $('#item_submit').click(function(){
