@@ -102,7 +102,7 @@ $(function(){
     $(".content").hide();
 	$('.leftmenu').animate({    
 	    width: '78px'});//css("width","350px").css("width","+=10%")
-	$("#options").show();
+	$("#options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
   });
 
