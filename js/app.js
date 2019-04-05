@@ -9,6 +9,7 @@ const form = document.querySelector('#add-item-form');
 
 $(function(){
   $(".content").hide();
+  $("#menu_header").html() = "Menu";
   $("#new_item").click(function(){
     $('.leftmenu').css({width: '33%'})
     $("#options").hide();
