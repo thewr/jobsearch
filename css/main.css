@@ -133,7 +133,7 @@ a {
 #item-list {
   border-collapse: collapse;
   box-sizing: border-box;
-  position: relative;
+  display: left;
   text-align: left;  
   width: 100%;
 }
