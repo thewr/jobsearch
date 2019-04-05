@@ -114,7 +114,7 @@ header
         padding: 16px;
         display: flex;
         height: 100%;
-        background-color: #f0f1f2;
+        //background-color: #f0f1f2;
         font-size: 16px;
         flex-flow: column;
         flex-direction: column;
