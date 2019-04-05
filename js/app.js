@@ -84,7 +84,7 @@ $(function(){
   $(".content").hide();
   $("#menutag").html("Menu");
   $("#new_item").click(function(){
-    $('.leftmenu').animate{    
+    $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
     $("#options").hide();
      $(".content").hide().fadeIn(500); 
