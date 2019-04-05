@@ -127,8 +127,6 @@ a {
   border-collapse: collapse;
   box-sizing: border-box;
   position: relative;
-  //padding: 20px;
- //margin: 30px auto;
   color: black;
   width: 100%;
 }
@@ -144,7 +142,6 @@ a {
 */
 #item-list td, #item-list th {
   border: 1px solid #26282b;
-  padding: 8px;
 }
 
 #item-list tr:nth-child(even){background-color: #f2f2f2;}
@@ -152,8 +149,8 @@ a {
 #item-list tr:hover {background-color: #ddd;}
 
 #item-list th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 4x;
+  padding-bottom: 4px;
   text-align: left;
   background-color: #70b0e0;
   color: #26282b;
