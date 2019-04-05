@@ -129,40 +129,42 @@ a {
  display: inline-block;
 }
 
-#item-list{
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+table {
   border-collapse: collapse;
   box-sizing: border-box;
   position: relative;
   text-align: left;  
-  width: 100%;
+  width: 50%;
 }
 
+table#sourcetable tbody  tr {
+    cursor : pointer;
+}
 
-#item-list tr td:first-child {
+table #item-list tr td:first-child {
     width: 5%;
 }
 
-#item-list tr td:last-child {
+table #item-list tr td:last-child {
     width: 25%;
 }
 
-#item-list td, #item-list th {
+table #item-list td, #item-list th {
   border: 1px solid #26282b;
   color: #26282b; 
 }
 
-//#item-list tr:nth-child(even){background-color: #f2f2f2;}
+//table #item-list tr:nth-child(even){background-color: #f2f2f2;}
 
-#item-list tr:hover {background-color: #ddd;}
+table #item-list tr:hover {background-color: #ddd;}
 
-#item-list th {
+table #item-list th {
      background-color: #7fabce;
      color: #26282b; 
 
 }
 
-#item-list tr {
+table #item-list tr {
   text-align: left;
   color: #26282b; 
 
