@@ -43,6 +43,9 @@ html>.container, body>.container {
     font-size: 0.875rem; 
 }
 
+.blur-me {
+  filter: blur(20px);
+}
 
 .mainheader h1{
     color: #70afe0;
