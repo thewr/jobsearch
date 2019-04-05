@@ -93,11 +93,10 @@ html>.container, body>.container {
 
 
 .content{
-    position: absolute;
     display:block;
-    flex-basis:0px; flex-shrink:1;
+    flex-shrink:1;
     background-color: #f0f1f2;
-    margin-top: 70px; margin-left: 16px;  margin-right: 16px;
+    margin-left: 16px;  margin-right: 16px;
     border-radius: 5px; 
     overflow-wrap: break-word;
     overflow-x: hidden;
