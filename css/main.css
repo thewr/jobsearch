@@ -72,6 +72,7 @@ section{
 .menuheader {
     align-items: center;
     display: flex;
+    justify-content: space-between;
     padding: 0 1rem;
     padding-top: 0px;
     padding-right: 1rem;
