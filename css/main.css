@@ -93,7 +93,7 @@ header
     flex-grow:1;
     flex-shrink:1;
     background-color: #f0f1f2;
-    //max-width: 640px; //960px;
+    max-width: 640px; //960px;
     //max-height: 480px;
     margin-left: 16px;
     margin-right: 16px;
