@@ -13,7 +13,7 @@ $(function(){
   $("#new_item").click(function(){
     $('.leftmenu').css({width: '33%'})
     $("#options").hide();
-    $( ".feedback" ).css({"filter:blur(2px)"});
+   // $( ".feedback" ).css({"filter:blur(2px)"});
     $(".content").hide().fadeIn(1000);
   });
   $('#item_submit').click(function(){
