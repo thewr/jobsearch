@@ -21,19 +21,11 @@ $(function(){
    // $("add_item_button").show();
   });
   
-  var rowselected;
 $( "#item-list tr" ).on( "click", function( event ) {
  
-          // get back to where it was before if it was selected :
-          if (rowselected != null) {
-              rowselected.css( "background-color", "#ffccff" );
-          }
- 
-          $("#fillname").val($(this).find("td").eq(1).html());
-          $( this ).css( "background-color", "red" );
- 
-          rowselected = $( this );
-    });
+      $(this).toggleClass('selected');
+      
+});
   
   
 });
