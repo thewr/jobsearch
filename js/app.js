@@ -95,9 +95,7 @@ $(function(){
   });
   
 $('#item-list tr').click(function() {
-      alert("Row selected");
       $(this).toggleClass('selected');
-      
 });
   
   
