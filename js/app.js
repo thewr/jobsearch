@@ -101,7 +101,7 @@ $(function(){
   $('#close_app').click(function(){
     $(".content").hide();
 	$('.leftmenu').animate({    
-	    width: '50px'});//css("width","350px").css("width","+=10%")
+	    width: '78px'});//css("width","350px").css("width","+=10%")
   });
 
   
