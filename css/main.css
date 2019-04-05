@@ -204,15 +204,13 @@ form:after{
 input[type=text],
 select,
 textarea {
+  margin: 2px 2px;
   width: 100%;
+  padding: 6px 12px 6px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
-}
-
-textarea {
-    maxlength: 100;
 }
 
 
