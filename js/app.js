@@ -84,7 +84,8 @@ $(function(){
   $(".content").hide();
   $("#menutag").html("Menu");
   $("#new_item").click(function(){
-    $('.leftmenu').css("width","350px").css("width","+=10%")
+    $('.leftmenu').animate{    
+	    width: '350px'});//css("width","350px").css("width","+=10%")
     $("#options").hide();
      $(".content").hide().fadeIn(500); 
    $( ".feedback" ).toggleClass('blur-me');
