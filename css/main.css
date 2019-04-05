@@ -112,7 +112,6 @@ html>.container, body>.container {
 {
         position: absolute;
         left:78px; top:67px; right:0; bottom:0;    
-       // padding-left: 16px; padding-right: 16px;
         display: flex;
         height: 100%;
         font-size: 0.875rem;
@@ -129,7 +128,7 @@ a {
  display: inline-block;
 }
 
-table {
+#item-list {
   border-collapse: collapse;
   box-sizing: border-box;
   position: relative;
