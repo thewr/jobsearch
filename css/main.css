@@ -118,7 +118,6 @@ a {
   box-sizing: border-box;
   position: relative;
   text-align: left;  
-  padding-left: 2px;
   width: 100%;
 }
 
@@ -141,17 +140,12 @@ a {
 #item-list tr:hover {background-color: #ddd;}
 
 #item-list th {
-  padding-top: 4x;
-  padding-bottom: 4px;
   background-color: #7fabce;
  color: #26282b; 
 
 }
 
 #item-list tr {
-  padding-top: 4x;
-  padding-bottom: 4px;
-  padding-left: 2px;
   text-align: left;
   color: #26282b; 
 
