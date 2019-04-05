@@ -82,6 +82,7 @@ form.addEventListener('submit', (e) => {
 
 $(function(){
   $(".content").hide();
+   $('#close_app').hide();
   $("#menutag").html("Menu");
 	
   $("#new_item").click(function(){
@@ -92,6 +93,7 @@ $(function(){
      $(".content").hide().fadeIn(500); 
    $( ".feedback" ).toggleClass('blur-me');
 	  $("#menutag").html("Add Entry");
+	  $('#close_app').show();
   });
 	
     
