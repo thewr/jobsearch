@@ -136,11 +136,6 @@ a {
   width: 100%;
 }
 
-#item-list tbody  tr {
-    cursor : pointer;
-}
-
-
 #item-list tr td:first-child {
     width: 5%;
 }
@@ -167,6 +162,7 @@ a {
 }
 
 #item-list tr {
+  cursor: pointer;
   text-align: left;
   color: #26282b; 
 }
