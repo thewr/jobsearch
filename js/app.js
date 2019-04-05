@@ -99,11 +99,11 @@ $(function(){
 $('#item-list').on('click','tr',function() {
       $(this).toggleClass('selected');
        var tableData = $(this).children("td").map(function() {
-              return $(this).text();
-}).get();
-                 var td=tableData[0] '*' tableData[1] '*' tableData[2] '*' tableData[3] '*' tableData[4];
-                    alert(td);
-				});
+              return $(this).text();}).get();
+	
+       var td=tableData[0] '*' tableData[1] '*' tableData[2];
+       alert(td);
+});
     
 
 
