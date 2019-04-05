@@ -83,19 +83,27 @@ form.addEventListener('submit', (e) => {
 $(function(){
   $(".content").hide();
   $("#menutag").html("Menu");
+	
   $("#new_item").click(function(){
     $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
     $("#options").hide();
      $(".content").hide().fadeIn(500); 
    $( ".feedback" ).toggleClass('blur-me');
-    
   });
+	
     
   $('#item_submit').click(function(){
     $(".content").show().fadeOut(1000);
    // $("add_item_button").show();
   });
+	
+  $('#close_app').click(function(){
+    $(".content").hide();
+	$('.leftmenu').animate({    
+	    width: '50px'});//css("width","350px").css("width","+=10%")
+  });
+
   
 $('#item-list').on('click','tr',function() {
       $(this).toggleClass('selected');
