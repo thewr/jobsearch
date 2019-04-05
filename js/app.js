@@ -86,9 +86,10 @@ $(function(){
   $("#new_item").click(function(){
     $('.leftmenu').css({width: '33%'})
     $("#options").hide();
-   // $( ".feedback" ).css({"filter:blur(2px)"});
+   $( ".feedback" ).$(this).toggleClass('blue-me');
     $(".content").hide().fadeIn(1000);
   });
+    
   $('#item_submit').click(function(){
     $(".content").show().fadeOut(1000);
    // $("add_item_button").show();
