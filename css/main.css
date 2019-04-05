@@ -133,8 +133,9 @@ a {
   border-collapse: collapse;
   box-sizing: border-box;
   position: relative;
-  padding: 20px;
-  margin: 30px auto;
+  //padding: 20px;
+ //margin: 30px auto;
+  color: white;
   width: 100%;
 }
 
