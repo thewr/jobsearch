@@ -10,7 +10,7 @@ const form = document.querySelector('#add-item-form');
 $(function(){
   $(".content").hide();
   $("#new_item").click(function(){
-    $('#leftMenu').css({width: 350px})
+    $('#leftmenu').css({width: 350px})
    // $(".content").hide().fadeIn(1000);
    // $("#add_item_button").hide();
   });
