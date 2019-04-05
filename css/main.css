@@ -110,8 +110,8 @@ html>.container, body>.container {
 
 .feedback
 {
-        position: absolute;
-        left:78px; top:67px; right:0; bottom:0;    
+        position: relative;
+        left:78px; top:0; right:0; bottom:0;    
         display: flex;
         height: 100%;
         font-size: 0.875rem;
