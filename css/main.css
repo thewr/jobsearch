@@ -93,8 +93,9 @@ html>.container, body>.container {
 
 
 .content{
+    position: relative;
     display:block;
-    flex-shrink:1;
+    flex-basis: 0px; flex-shrink:1;
     background-color: #f0f1f2;
     margin-left: 16px;  margin-right: 16px;
     border-radius: 5px; 
