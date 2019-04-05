@@ -139,6 +139,7 @@ section{
  background-color: transparent;
  text-decoration: none !important;
  display: inline-block;
+ float: right;
  cursor: pointer;
 }
 
