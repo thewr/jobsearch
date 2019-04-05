@@ -62,7 +62,6 @@ html>.container, body>.container {
 
 header
 {
-    color: #26282b
     position: absolute;
     background-color:#b7bcc0;
     padding-left:1rem;
@@ -76,7 +75,7 @@ header
   width: 78px;
   position:absolute;
   top: 54px; left: 0;
-  background-color: #282b2d;;
+  background-color: #282b2d;
   flex-direction: column;
   font-size:1rem;
   color: #f0f1f2;
