@@ -49,7 +49,7 @@ html>.container, body>.container {
 }
 
 .blur-me {
-  filter: blur(20px);
+  filter: blur(2px);
 }
 
 .mainheader h1{
