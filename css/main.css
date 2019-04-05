@@ -145,6 +145,14 @@ a {
     width: 5%;
 }
 
+#item-list tr td:second-child {
+    width: 15%;
+}
+
+#item-list tr td:third-child {
+    width: 10%;
+}
+
 
 #item-list td, #item-list th {
   border: 1px solid #26282b;
