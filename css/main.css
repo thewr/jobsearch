@@ -90,13 +90,13 @@ html>.container, body>.container {
 
 
 .content{
-    position: relative;
+    position: absolute;
     display:block;
     flex-basis:0px;  flex-grow:1; flex-shrink:1;
     background-color: #f0f1f2;
     min-width: 640px; //960px;
     min-height: 480px;
-    margin-left: 16px;  margin-right: 16px;
+    margin-top: 70px; margin-left: 16px;  margin-right: 16px;
     border-top:2px; border-radius: 5px;  border: 1px solid rgba(27, 31, 35, 0.2);
     overflow-wrap: break-word;
     overflow-x: hidden;
