@@ -136,14 +136,14 @@ a {
 #item-list tr td:first-child {
     width: 5%;
 }
-/*
+
 #item-list tr td:last-child {
     width: 25%;
 }
-*/
+
 #item-list td, #item-list th {
   border: 1px solid #26282b;
-          color: #26282b; 
+  color: #26282b; 
 
 }
 
@@ -155,7 +155,7 @@ a {
   padding-top: 4x;
   padding-bottom: 4px;
   background-color: #7fabce;
-          color: #26282b; 
+ color: #26282b; 
 
 }
 
