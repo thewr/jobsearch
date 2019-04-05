@@ -70,7 +70,8 @@ section{
 }
 
 .menuheader {
-    display: inline-block;
+    align-items: center;
+    display: flex;
     padding: 0 1rem;
     padding-top: 0px;
     padding-right: 1rem;
