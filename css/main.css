@@ -60,6 +60,7 @@ section{
 }
 
 .blur-me {
+    z-index: 1;
   filter: blur(2px);
 }
 
