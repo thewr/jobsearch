@@ -99,7 +99,7 @@ section{
   height: 100%;
   display: flex;
   width: 78px;
-  position:absolute;
+  //position:absolute;
   top: 54px; left: 0;
   font-size: 0.75rem;
   background-color: #282b2d;
