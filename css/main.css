@@ -173,7 +173,7 @@ section{
  color: #26282b; 
 }
 
-#item-list tr:hover {background-color: #ddd;}
+//#item-list tr:hover {background-color: #ddd;}
 
 #item-list th {
      background-color: #7fabce;
