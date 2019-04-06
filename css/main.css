@@ -259,7 +259,7 @@ input[type=submit]:hover {
 li {
     font-weight: 600;
     background-color: #f0f1f2;
-    
+    color: black;
     text-transform: uppercase;
     cursor: pointer; 
     border-radius: 50%;
