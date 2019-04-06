@@ -24,7 +24,7 @@ function renderCafe(doc){
     
     // creates a table row
     let row = document.createElement("tr");
-    itemList.setAttribute('data-id', doc.id);
+    row.setAttribute('data-id', doc.id);
     let date = document.createElement('td');
     let name = document.createElement('td'); 
     let title = document.createElement('td');
