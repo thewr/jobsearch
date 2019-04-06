@@ -250,7 +250,9 @@ input[type=submit]:hover {
         display: flex;
         margin: 0;
         padding: 0;
-       
+        width: 100%;
+        text-align:center;
+
         height: 1.125rem;
 }
 
