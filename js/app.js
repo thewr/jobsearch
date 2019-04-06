@@ -85,7 +85,7 @@ $(function(){
    $('#close_app').hide();
   $("#menutag").html("Menu");
 
-// Create new document button show
+// Add new document button show
   $("#new_item").click(function(){
     $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
@@ -96,14 +96,14 @@ $(function(){
 	  $('#close_app').show();
   });
 	
-// Create new document button show
+// Edit new document button show
   $("#edit_item").click(function(){
     $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
     $("#options").hide();
      $(".content").hide().fadeIn(500); 
    $( ".feedback" ).toggleClass('blur-me');
-	  $("#menutag").html("Add Entry");
+	  $("#menutag").html("Edit Entry");
 	  $('#close_app').show();
   });
 	
