@@ -256,12 +256,13 @@ input[type=submit]:hover {
 
 li {
     font-weight: 600;
+    background-color: #666699
+    color: yellow;
     cursor: pointer; 
     border-radius: 50%;
     width: 33%;
     font-size: 11px;
     border: 1px solid rgba(27, 31, 35, 0.2);
-    background-color: #7e878e;
     padding: 2px;   
     text-align:center;
     margin-bottom:2px;
