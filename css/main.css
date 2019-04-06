@@ -262,8 +262,6 @@ li {
     color: black;
     text-transform: uppercase;
     cursor: pointer; 
-    border-radius: 80%;
-    width: 33%;
     font-size: 8px;
     border: 1px solid rgba(27, 31, 35, 0.2);
     padding: 6%;   
