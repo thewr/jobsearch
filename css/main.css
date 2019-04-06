@@ -134,6 +134,7 @@ section{
         flex-flow: column;
         flex-direction: column;
         flex-wrap: initial;
+        overflow: scroll;
 }
 
 
