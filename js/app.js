@@ -84,7 +84,7 @@ $(function(){
   $(".content").hide();
    $('#close_app').hide();
   $("#menutag").html("Menu");
-	
+
   $("#new_item").click(function(){
 	  
     $('.leftmenu').animate({    
@@ -101,6 +101,7 @@ $(function(){
     $(".content").show().fadeOut(1000);
 	  $("#menutag").html("Menu");
    // $("add_item_button").show();
+	     $('#close_app').hide();
   });
 	
   $('#close_app').click(function(){
@@ -110,6 +111,7 @@ $(function(){
 	  $("#menutag").html("Menu");
 	$("#options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
+	     $('#close_app').hide();
   });
 
   
