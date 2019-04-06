@@ -131,7 +131,8 @@ $('#item-list').on('click','tr',function() {
       $(this).toggleClass('selected');
        var tableData = $(this).children("td").map(function() {
               return $(this).text();}).get();
-	
+	var id = $(this).getAttribute('data-id');
+	db.collection('cafes').doc('AKk1EHWl4LuQHwZDpvRu').update({name: 'IBM'})
        var td=tableData[0]+' '+' '+tableData[1];
        alert(td);
 });
