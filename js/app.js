@@ -93,9 +93,6 @@ function display_add(){
  $("#options").hide();	  
     $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
-   
-	  $("edit_submit").hide();
-  	$("item_submit").show();
      $(".content").hide().fadeIn(500); 
 
 	  $("#menutag").html("Add Entry");
@@ -112,10 +109,7 @@ function display_edit(){
   $("#options").hide();	
 	 $('.leftmenu').animate({    
 	    width: '350px'});
- $(".content").hide().fadeIn(500); 
-  $("item_submit").hide();
-  $("edit_submit").show();
-    
+ $(".content").hide().fadeIn(500);     
    $( ".feedback" ).toggleClass('blur-me');
 	  $("#menutag").html("Edit Entry");
 	  $('#close_app').show();
