@@ -146,8 +146,8 @@ $('#item-list').on('click','tr',function() {
        var tableData = $(this).children("td").map(function() {
               return $(this).text();}).get();
 	var id = $(this).attr('data-id');
-	display_edit();  
-	$("#item_submit").attr('value', 'Apply').attr('type','Edit'); //versions older than 1.6
+
+     $("#item_submit").attr('value', 'Apply').attr('type','Edit'); //versions older than 1.6
 
 
       form.name.value = tableData[1];
