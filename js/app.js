@@ -50,10 +50,6 @@ function renderCafe(doc){
     
     // put the <tbody> in the <table>
     itemList.appendChild(tblBody);
-  // appends <table> into <body>
- //   body.appendChild(itemList);
-  // sets the border attribute of tbl to 2;
-   //itemList.setAttribute("border", "2");
 }
 
 // getting data
@@ -79,8 +75,24 @@ form.addEventListener('submit', (e) => {
       form.info.value = '';
 });
 
+// apply edit
+form.addEventListener('apply', (e) => {
+    e.preventDefault();
+    db.collection('items').doc(id).update({
+        name: form.name.value,
+        title: form.title.value,
+        location: form.location.value,
+        info: form.info.value
+    });
+      form.name.value = '';
+      form.title.value = '';
+      form.location.value = '';
+      form.info.value = '';
+});
+
 
 $(function(){
+  var id = ' ';
   $(".content").hide();
    $('#close_app').hide();
   $("#menutag").html("Menu");
@@ -107,8 +119,7 @@ function display_add(){
 // Animate slide for edit form
 function display_edit(){
   $("#options").hide();	
-	 $('.leftmenu').animate({    
-	    width: '350px'});
+	 $('.leftmenu').animate({width: '350px'});
  $(".content").hide().fadeIn(500);     
    $( ".feedback" ).toggleClass('blur-me');
 	  $("#menutag").html("Edit Entry");
@@ -125,21 +136,18 @@ function display_edit(){
   $('#item_submit').click(function(){
     $(".content").show().fadeOut(1000);
 	  $("#menutag").html("Menu");
-   // $("add_item_button").show();
 	     $('#close_app').hide();
   });
 	
 	
   $('#close_app').click(function(){
     $(".content").hide();
-	$('.leftmenu').animate({    
-	    width: '78px'});//css("width","350px").css("width","+=10%")
+	$('.leftmenu').animate({width: '78px'});
 	  $("#menutag").html("Menu");
 	$("#options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
 	     $('#close_app').hide();
   });
-
   
 $('#item-list').on('click','tr',function() {
       $(this).toggleClass('selected');
