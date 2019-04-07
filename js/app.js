@@ -187,12 +187,10 @@ $('#item-list').on('click','tr',function() {
 	else
 	{
 			$("#edit_item").hide();
-		/*
 				form.name.value = '';
       				form.title.value = '';
       				form.location.value = '';
       				form.info.value = '';
-		*/
 	}
 	
      
