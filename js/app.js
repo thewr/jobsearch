@@ -17,8 +17,7 @@ function todaysDate()
     return today;
 }
 
-
-
+var id;  //global
 // create element & render cafe
 function renderCafe(doc){
     
@@ -76,7 +75,6 @@ form.addEventListener('submit', (e) => {
 });
 
 // apply edit
-/*
 form.addEventListener('apply', (e) => {
     e.preventDefault();
     db.collection('items').doc(id).update({
@@ -90,7 +88,6 @@ form.addEventListener('apply', (e) => {
       form.location.value = '';
       form.info.value = '';
 });
-*/
 
 
 $(function(){
@@ -165,7 +162,7 @@ $('#item-list').on('click','tr',function() {
 
        var tableData = $(this).children("td").map(function() {
               return $(this).text();}).get();
-	var id = $(this).attr('data-id');
+     id = $(this).attr('data-id');
 
      $("#item_submit").attr('value', 'Apply').attr('type','apply');
 
