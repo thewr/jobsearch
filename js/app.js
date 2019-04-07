@@ -132,7 +132,7 @@ $('#item-list').on('click','tr',function() {
        var tableData = $(this).children("td").map(function() {
               return $(this).text();}).get();
 	var id = tableData[0];
-	console.log($(this).getAttribute('data-id'));
+	console.log($(this).attr('data-id'));
 	//db.collection('items').doc(id).update({name: 'IBM'});
 	
        alert(id);
