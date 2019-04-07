@@ -152,7 +152,14 @@ function display_edit(){
   
 $('#item-list').on('click','tr',function() {
       $(this).toggleClass('selected');
-	$("#edit_item").show();
+	if($(this).hasClass('selected'))
+	{
+		$("#edit_item").show();
+	}
+	else
+	{
+		$("#edit_item").hide();
+	}
 
        var tableData = $(this).children("td").map(function() {
               return $(this).text();}).get();
