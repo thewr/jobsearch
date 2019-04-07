@@ -159,16 +159,14 @@ $('#item-list').on('click','tr',function() {
       form.location.value = tableData[3];
       form.info.value = tableData[4];
 	/*
-*/	
+
     db.collection('items').doc(id).update({
         name: form.name.value,
         title: form.title.value,
         location: form.location.value,
         info: form.info.value
     });
-		
-	//db.collection('items').update({name: 'IBM'});
- 
+	*/		 
 
        //alert(id);
 });
