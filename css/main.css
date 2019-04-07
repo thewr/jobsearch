@@ -212,6 +212,9 @@ input[name=fname], input[name=lname]
     width: 40%;
 }
 
+input[name=age]{
+    width: 5%;
+}
 
 input[type=submit],input[type=apply]{
   background-color: #4285F4;
