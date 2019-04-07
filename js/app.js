@@ -186,7 +186,7 @@ $('#item-list').on('click','tr',function() {
 
 	var scope = $(this);
 	$('#close_app').click(function (e){
-		console.log(id);
+		//console.log(id);
 	      scope.toggleClass('selected');
 	})
 	/*
