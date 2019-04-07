@@ -186,28 +186,6 @@ section{
   color: #26282b; 
 }
 
-
-/*
-form input{
-    float: left;
-    width: 50%;
-    margin: 0;
-    border: 0;
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    display: block;
-    box-sizing: border-box;
-    font-size: 18px;
-}
-
-form input:focus{
-    outline: none;
-    border-bottom: 3px solid #88236f;
-    padding-bottom: 8px;
-    transition: all ease 0.2s;
-}
-*/
-
 form:after{
     content: '';
     clear: both;
@@ -233,8 +211,6 @@ input[name=fname], input[name=lname]
 {
     width: 40%;
 }
-
-
 
 
 input[type=submit],input[type=apply]{
