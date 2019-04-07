@@ -153,13 +153,14 @@ function display_edit(){
 
 $('#item-list').on('click','tr',function() {
 	$(this).toggleClass('selected');
-	var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
-	$("#item_submit").attr('value', 'Apply').attr('type','apply');
-	var id = $(this).attr('data-id')
 	
 	if($(this).hasClass('selected'))
 	{       	
-		$("#edit_item").show();
+		$("#item_submit").attr('value', 'Apply').attr('type','apply');
+		$("#edit_item").show();	
+		var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
+		var id = $(this).attr('data-id')
+
 		//form.addEventListener('apply', (e) => {
     		//	e.preventDefault();
 			/*
