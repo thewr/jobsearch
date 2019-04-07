@@ -85,28 +85,42 @@ $(function(){
    $('#close_app').hide();
   $("#menutag").html("Menu");
 
-// Add new document button show
-  $("#new_item").click(function(){
+
+	
+// Animate slide for create new form	
+function display_add(){
+	 $( ".feedback" ).toggleClass('blur-me');
+ $("#options").hide();	  
     $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
-    $("#options").hide();
+   
+	  $("edit_submit").hide();
+  	$("item_submit").show();
      $(".content").hide().fadeIn(500); 
-   $( ".feedback" ).toggleClass('blur-me');
+
 	  $("#menutag").html("Add Entry");
 	  $('#close_app').show();
-  });
+}
+ 
+// Add new document button show
+	$("#new_item").click(function(){
+		display_add();
+	});
 	
-// Edit new document button show
+// Animate slide for edit form
 function display_edit(){
+  $("#options").hide();	
 	 $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
-    $("#options").hide();
+  $("item_submit").hide();
+  $("edit_submit").show();
      $(".content").hide().fadeIn(500); 
    $( ".feedback" ).toggleClass('blur-me');
 	  $("#menutag").html("Edit Entry");
 	  $('#close_app').show();
 }
 	
+//Edit new document button show	
   $("#edit_item").click(function(){
 	  display_edit();   
   });
