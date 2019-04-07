@@ -159,7 +159,14 @@ $('#item-list').on('click','tr',function() {
 		$("#item_submit").attr('value', 'Apply').attr('type','apply');
 		$("#edit_item").show();	
 		var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
-		var id = $(this).attr('data-id')
+		var id = $(this).attr('data-id');
+		
+		// put data on form
+		form.name.value = tableData[1];
+      		form.title.value = tableData[2];
+      		form.location.value = tableData[3];
+      		form.info.value = tableData[4];
+		
 
 		//form.addEventListener('apply', (e) => {
     		//	e.preventDefault();
