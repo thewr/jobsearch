@@ -113,7 +113,7 @@ function display_add(){
 // Add new document button show
 	$("#new_item").click(function(){
 		clearForm();
-		$("#item_submit").attr('value', 'Submit').attr('type','submit');
+		//$("#item_submit").attr('value', 'Submit').attr('type','submit');
 		display_add();
 	});
 	
@@ -156,7 +156,7 @@ $('#item-list').on('click','tr',function() {
 	
 	if($(this).hasClass('selected'))
 	{       	
-		$("#item_submit").attr('value', 'Apply').attr('type','apply');
+		//$("#item_submit").attr('value', 'Apply').attr('type','apply');
 		$("#edit_item").show();	
 		var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
 		var id = $(this).attr('data-id');
@@ -168,7 +168,7 @@ $('#item-list').on('click','tr',function() {
       		form.info.value = tableData[4];
 		
 
-		form.addEventListener('apply', (e) => {
+		form.addEventListener('submit', (e) => {
     			e.preventDefault();
     			db.collection('items').doc(id).update({
         			name: form.name.value,
