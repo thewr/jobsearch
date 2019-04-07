@@ -134,7 +134,7 @@ $('#item-list').on('click','tr',function() {
 	var id = tableData[0];//$(this).getAttribute('data-id');
 	db.collection('items').doc(id).update({name: 'IBM'});
 	
-       alert(td);
+       alert(id);
 });
     
 
