@@ -131,8 +131,8 @@ $('#item-list').on('click','tr',function() {
       $(this).toggleClass('selected');
        var tableData = $(this).children("td").map(function() {
               return $(this).text();}).get();
-	var id = tableData[0];
-	console.log($(this).attr('data-id'));
+	var key = $(this).attr('data-id');
+	var id = tableData[0]+" "+key;
 	//db.collection('items').doc(id).update({name: 'IBM'});
 	
        alert(id);
