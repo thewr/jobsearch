@@ -155,11 +155,6 @@ $('#item-list').on('click','tr',function() {
 	if($(this).hasClass('selected'))
 	{
 		$("#edit_item").show();
-		var scope = $(this);
-		$('#close_app').click(function (e){
-	      		scope.toggleClass('selected');
-			})
-	}
 	else
 	{
 		$("#edit_item").hide();
@@ -179,6 +174,7 @@ $('#item-list').on('click','tr',function() {
 
 	var scope = $(this);
 	$('#close_app').click(function (e){
+		console.log(id);
 	      scope.toggleClass('selected');
 	})
 	/*
