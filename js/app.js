@@ -7,6 +7,7 @@ var body = document.getElementsByTagName("body")[0];
 // create form element
 const form = document.querySelector('#add-item-form');
 
+
 function todaysDate()
 {    
     var today = new Date();
@@ -17,8 +18,9 @@ function todaysDate()
     return today;
 }
 
-var id;  //global
+//var id;  //global
 // create element & render cafe
+/*
 function renderCafe(doc){
     
     // creates a table row
@@ -50,6 +52,7 @@ function renderCafe(doc){
     // put the <tbody> in the <table>
     itemList.appendChild(tblBody);
 }
+*/
 
 // getting data
 db.collection('items').get().then(snapshot => {
@@ -89,6 +92,7 @@ function clearForm(){
       	form.location.value = '';
       	form.info.value = '';
 }
+
 
 $(function(){
   $(".content").hide();
