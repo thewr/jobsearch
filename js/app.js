@@ -177,7 +177,7 @@ $('#item-list').on('click','tr',function() {
 
 	
 	$('#close_app').click(function (e){
-	      $(this).toggleClass('selected');
+	      $('tr').toggleClass('selected');
 	})
 	/*
     db.collection('items').doc(id).update({
