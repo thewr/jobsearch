@@ -18,9 +18,8 @@ function todaysDate()
     return today;
 }
 
-//var id;  //global
+var id;  //global
 // create element & render cafe
-/*
 function renderCafe(doc){
     
     // creates a table row
@@ -52,16 +51,14 @@ function renderCafe(doc){
     // put the <tbody> in the <table>
     itemList.appendChild(tblBody);
 }
-*/
+
 
 // getting data
-/*
 db.collection('items').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
         renderCafe(doc);
     });
 });
-*/
 
 // clear form
 function clearForm(){
