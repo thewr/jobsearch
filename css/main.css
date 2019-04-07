@@ -242,7 +242,7 @@ input[type=submit],input[type=apply]{
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=submit],input[type=apply]:hover {
   background-color: #3F729B;
 }
 
