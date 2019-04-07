@@ -58,6 +58,14 @@ db.collection('items').get().then(snapshot => {
     });
 });
 
+// clear form
+function clearForm(){
+	form.name.value = '';
+      	form.title.value = '';
+      	form.location.value = '';
+      	form.info.value = '';
+}
+
 // saving data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -68,11 +76,16 @@ form.addEventListener('submit', (e) => {
         location: form.location.value,
         info: form.info.value
     });
-      form.name.value = '';
-      form.title.value = '';
-      form.location.value = '';
-      form.info.value = '';
+	clearForm();
 });
+
+// clear form
+function clearForm(){
+	form.name.value = '';
+      	form.title.value = '';
+      	form.location.value = '';
+      	form.info.value = '';
+}
 
 // apply edit
 form.addEventListener('apply', (e) => {
@@ -83,10 +96,7 @@ form.addEventListener('apply', (e) => {
         location: form.location.value,
         info: form.info.value
     });
-      form.name.value = '';
-      form.title.value = '';
-      form.location.value = '';
-      form.info.value = '';
+	clearForm();
 });
 
 
@@ -150,27 +160,29 @@ function display_edit(){
   });
   
 $('#item-list').on('click','tr',function() {
-	
-      $(this).toggleClass('selected');
+	$(this).toggleClass('selected');
 	if($(this).hasClass('selected'))
 	{
 		$("#edit_item").show();
+		$("#item_submit").attr('value', 'Apply').attr('type','apply');
+		id = $(this).attr('data-id');
+			form.name.value = tableData[1];
+      			form.title.value = tableData[2];
+      			form.location.value = tableData[3];
+      			form.info.value = tableData[4];
 	else
 	{
 		$("#edit_item").hide();
+		clearForm();
 	}
 
-       var tableData = $(this).children("td").map(function() {
-              return $(this).text();}).get();
-     id = $(this).attr('data-id');
+       var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
+     	
+	
+     //Change Submit button to apply
 
-     $("#item_submit").attr('value', 'Apply').attr('type','apply');
 
 
-      form.name.value = tableData[1];
-      form.title.value = tableData[2];
-      form.location.value = tableData[3];
-      form.info.value = tableData[4];
 
 	var scope = $(this);
 	$('#close_app').click(function (e){
