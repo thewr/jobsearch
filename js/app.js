@@ -137,7 +137,7 @@ function display_edit(){
     $(".content").show().fadeOut(1000);
 	  $("#menutag").html("Menu");
 	     $('#close_app').hide();
-  });
+  });	
 	
 	
   $('#close_app').click(function(){
