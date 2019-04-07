@@ -153,6 +153,7 @@ function display_edit(){
 
 $('#item-list').on('click','tr',function() {
 	$(this).toggleClass('selected');
+	/*
 	if($(this).hasClass('selected'))
 	{       
 		var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
@@ -179,6 +180,7 @@ $('#item-list').on('click','tr',function() {
       				form.location.value = '';
       				form.info.value = '';
 	}
+	*/
      
 });
 
