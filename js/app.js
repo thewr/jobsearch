@@ -153,6 +153,7 @@ $('#item-list').on('click','tr',function() {
               return $(this).text();}).get();
 	var id = $(this).attr('data-id');
 	display_edit();  
+	$("#item_submit").attr('value', 'Apply'); //versions older than 1.6
 
 
       form.name.value = tableData[1];
