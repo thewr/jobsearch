@@ -113,6 +113,7 @@ function display_add(){
 // Add new document button show
 	$("#new_item").click(function(){
 		clearForm();
+		$("#item_submit").attr('value', 'Submit').attr('type','submit');
 		display_add();
 	});
 	
