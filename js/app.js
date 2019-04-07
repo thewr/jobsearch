@@ -167,8 +167,8 @@ $('#item-list').on('click','tr',function() {
         			name: form.name.value,
         			title: form.title.value,
         			location: form.location.value,
-        			info: form.info.value
-    			});
+        			info: form.info.value });
+				
 				form.name.value = '';
       				form.title.value = '';
       				form.location.value = '';
