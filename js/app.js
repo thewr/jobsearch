@@ -138,8 +138,22 @@ $('#item-list').on('click','tr',function() {
               return $(this).text();}).get();
 	var key = $(this).attr('data-id');
 	var id = tableData[0]+" "+key;
+	
+
+      form.name.value = tableData[1];
+      form.title.value = tableData[2];
+      form.location.value = tableData[3];
+      form.info.value = tableData[4];
+	
+    db.collection('items').update({
+        name: form.name.value,
+        title: form.title.value,
+        location: form.location.value,
+        info: form.info.value
+    });
+	display_edit();  	
 	//db.collection('items').doc(id).update({name: 'IBM'});
-	display_edit();   
+ 
 
        alert(id);
 });
