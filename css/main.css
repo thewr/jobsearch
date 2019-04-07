@@ -213,8 +213,6 @@ form:after{
     clear: both;
     display: block;
 }
- width: 100%;
-
 
 input[type=text],
 select,
