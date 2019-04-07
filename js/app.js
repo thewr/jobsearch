@@ -115,7 +115,7 @@ function display_add(){
 	 $( ".feedback" ).toggleClass('blur-me');
  $("#options").hide();	  
     $('.leftmenu').animate({    
-	    width: '350px'});//css("width","350px").css("width","+=10%")
+	    width: '350px'});
      $(".content").hide().fadeIn(500); 
 
 	  $("#menutag").html("Add Entry");
