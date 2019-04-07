@@ -150,11 +150,12 @@ function display_edit(){
 	     $('#close_app').hide();
   });
   
-/*
+
 $('#item-list').on('click','tr',function() {
 	$(this).toggleClass('selected');
 	var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
-	$("#edit_item").show(); 
+	$("#edit_item").show();
+	/*
 	$("#item_submit").attr('value', 'Apply').attr('type','apply');
 	
 	if($(this).hasClass('selected'))
