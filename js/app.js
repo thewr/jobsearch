@@ -59,12 +59,14 @@ db.collection('items').get().then(snapshot => {
 });
 
 // clear form
+/*
 function clearForm(){
 	form.name.value = '';
       	form.title.value = '';
       	form.location.value = '';
       	form.info.value = '';
 }
+*/
 
 // saving data
 form.addEventListener('submit', (e) => {
@@ -76,7 +78,10 @@ form.addEventListener('submit', (e) => {
         location: form.location.value,
         info: form.info.value
     });
-	clearForm();
+		form.name.value = '';
+      	form.title.value = '';
+      	form.location.value = '';
+      	form.info.value = '';
 });
 
 // clear form
@@ -161,12 +166,18 @@ $('#item-list').on('click','tr',function() {
         			location: form.location.value,
         			info: form.info.value
     			});
-			clearForm();
+				form.name.value = '';
+      				form.title.value = '';
+      				form.location.value = '';
+      				form.info.value = '';
 			});
 	else
 	{
 			$("#edit_item").hide();
-			clearForm();
+				form.name.value = '';
+      				form.title.value = '';
+      				form.location.value = '';
+      				form.info.value = '';
 	}
 
      	
