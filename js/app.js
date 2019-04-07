@@ -87,20 +87,6 @@ function clearForm(){
       	form.info.value = '';
 }
 
-/*
-// apply edit
-form.addEventListener('apply', (e) => {
-    e.preventDefault();
-    db.collection('items').doc(id).update({
-        name: form.name.value,
-        title: form.title.value,
-        location: form.location.value,
-        info: form.info.value
-    });
-	clearForm();
-});
-*/
-
 $(function(){
  // var id = ' ';
   $(".content").hide();
