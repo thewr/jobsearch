@@ -174,8 +174,12 @@ $('#item-list').on('click','tr',function() {
       form.title.value = tableData[2];
       form.location.value = tableData[3];
       form.info.value = tableData[4];
-	/*
 
+	
+	$('#close_app').click(function (e){
+	      $(this).toggleClass('selected');
+	})
+	/*
     db.collection('items').doc(id).update({
         name: form.name.value,
         title: form.title.value,
