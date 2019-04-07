@@ -59,14 +59,12 @@ db.collection('items').get().then(snapshot => {
 });
 
 // clear form
-/*
 function clearForm(){
 	form.name.value = '';
       	form.title.value = '';
       	form.location.value = '';
       	form.info.value = '';
 }
-*/
 
 // saving data
 form.addEventListener('submit', (e) => {
@@ -114,6 +112,7 @@ function display_add(){
  
 // Add new document button show
 	$("#new_item").click(function(){
+		clearForm();
 		display_add();
 	});
 	
