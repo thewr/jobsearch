@@ -55,11 +55,13 @@ function renderCafe(doc){
 */
 
 // getting data
+/*
 db.collection('items').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
         renderCafe(doc);
     });
 });
+*/
 
 // clear form
 function clearForm(){
