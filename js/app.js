@@ -78,7 +78,7 @@ form.addEventListener('submit', (e) => {
         location: form.location.value,
         info: form.info.value
     });
-		form.name.value = '';
+	form.name.value = '';
       	form.title.value = '';
       	form.location.value = '';
       	form.info.value = '';
@@ -150,14 +150,15 @@ function display_edit(){
 	     $('#close_app').hide();
   });
   
-
+/*
 $('#item-list').on('click','tr',function() {
 	$(this).toggleClass('selected');
-	/*
+	var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
+	$("#edit_item").show(); 
+	$("#item_submit").attr('value', 'Apply').attr('type','apply');
+	
 	if($(this).hasClass('selected'))
 	{       
-		var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
-		$("#edit_item").show(); $("#item_submit").attr('value', 'Apply').attr('type','apply');
 		var id = $(this).attr('data-id');
 		form.addEventListener('apply', (e) => {
     			e.preventDefault();
