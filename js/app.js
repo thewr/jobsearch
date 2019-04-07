@@ -154,15 +154,15 @@ function display_edit(){
 $('#item-list').on('click','tr',function() {
 	$(this).toggleClass('selected');
 	var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
-	$("#edit_item").show();
 	$("#item_submit").attr('value', 'Apply').attr('type','apply');
-	var id = $(this).attr('data-id');
+	var id = $(this).attr('data-id')
+	
 	if($(this).hasClass('selected'))
 	{       	
-
-		/*
-		form.addEventListener('apply', (e) => {
-    			e.preventDefault();
+		$("#edit_item").show();
+		//form.addEventListener('apply', (e) => {
+    		//	e.preventDefault();
+			/*
     			db.collection('items').doc(id).update({
         			name: form.name.value,
         			title: form.title.value,
@@ -174,7 +174,8 @@ $('#item-list').on('click','tr',function() {
       				form.location.value = '';
       				form.info.value = '';
 			});
-		*/
+			*/
+		}
 	else
 	{
 			$("#edit_item").hide();
