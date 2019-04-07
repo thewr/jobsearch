@@ -87,6 +87,7 @@ function clearForm(){
       	form.info.value = '';
 }
 
+/*
 // apply edit
 form.addEventListener('apply', (e) => {
     e.preventDefault();
@@ -98,7 +99,7 @@ form.addEventListener('apply', (e) => {
     });
 	clearForm();
 });
-
+*/
 
 $(function(){
  // var id = ' ';
@@ -162,30 +163,33 @@ function display_edit(){
 $('#item-list').on('click','tr',function() {
 	$(this).toggleClass('selected');
 	if($(this).hasClass('selected'))
-	{
-		$("#edit_item").show();
-		$("#item_submit").attr('value', 'Apply').attr('type','apply');
+	{       
+		var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
+		$("#edit_item").show(); $("#item_submit").attr('value', 'Apply').attr('type','apply');
 		id = $(this).attr('data-id');
-			form.name.value = tableData[1];
-      			form.title.value = tableData[2];
-      			form.location.value = tableData[3];
-      			form.info.value = tableData[4];
+		form.addEventListener('apply', (e) => {
+    			e.preventDefault();
+    			db.collection('items').doc(id).update({
+        			name: form.name.value,
+        			title: form.title.value,
+        			location: form.location.value,
+        			info: form.info.value
+    			});
+			clearForm();
+			});
 	else
 	{
-		$("#edit_item").hide();
-		clearForm();
+			$("#edit_item").hide();
+			clearForm();
 	}
 
-       var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
      	
 	
      //Change Submit button to apply
 
-
-
-
+	/*
 	var scope = $(this);
-	$('#close_app').click(function (e){
+	//$('#close_app').click(function (e){
 		//console.log(id);
 	      scope.toggleClass('selected');
 	})
