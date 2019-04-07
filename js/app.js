@@ -76,6 +76,7 @@ form.addEventListener('submit', (e) => {
 });
 
 // apply edit
+/*
 form.addEventListener('apply', (e) => {
     e.preventDefault();
     db.collection('items').doc(id).update({
@@ -89,6 +90,7 @@ form.addEventListener('apply', (e) => {
       form.location.value = '';
       form.info.value = '';
 });
+*/
 
 
 $(function(){
@@ -165,7 +167,7 @@ $('#item-list').on('click','tr',function() {
               return $(this).text();}).get();
 	var id = $(this).attr('data-id');
 
-     $("#item_submit").attr('value', 'Apply').attr('type','Edit'); //versions older than 1.6
+     $("#item_submit").attr('value', 'Apply').attr('type','Edit');
 
 
       form.name.value = tableData[1];
