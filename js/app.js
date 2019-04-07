@@ -184,16 +184,14 @@ $('#item-list').on('click','tr',function() {
 	}
 
      	
-	
-     //Change Submit button to apply
-
 	/*
+     //Change Submit button to apply
 	var scope = $(this);
 	//$('#close_app').click(function (e){
 		//console.log(id);
 	      scope.toggleClass('selected');
 	})
-	/*
+	
     db.collection('items').doc(id).update({
         name: form.name.value,
         title: form.title.value,
