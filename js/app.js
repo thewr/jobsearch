@@ -111,10 +111,11 @@ function display_add(){
 function display_edit(){
   $("#options").hide();	
 	 $('.leftmenu').animate({    
-	    width: '350px'});//css("width","350px").css("width","+=10%")
+	    width: '350px'});
+ $(".content").hide().fadeIn(500); 
   $("item_submit").hide();
   $("edit_submit").show();
-     $(".content").hide().fadeIn(500); 
+    
    $( ".feedback" ).toggleClass('blur-me');
 	  $("#menutag").html("Edit Entry");
 	  $('#close_app').show();
