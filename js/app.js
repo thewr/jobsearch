@@ -150,10 +150,15 @@ function display_edit(){
   });
   
 $('#item-list').on('click','tr',function() {
+	
       $(this).toggleClass('selected');
 	if($(this).hasClass('selected'))
 	{
 		$("#edit_item").show();
+		var scope = $(this);
+		$('#close_app').click(function (e){
+	      		scope.toggleClass('selected');
+			})
 	}
 	else
 	{
