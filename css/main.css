@@ -233,7 +233,7 @@ input[type=submit],input[type=apply]{
   color: white;
   padding: 3px 6px 3px 6px;
   border-radius: 3px;
-  position: relative;
+  position: fixed;
   float: bottom;
   vertical-align: middle;
   font-weight: 400;
