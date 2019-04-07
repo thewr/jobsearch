@@ -167,9 +167,8 @@ $('#item-list').on('click','tr',function() {
       		form.info.value = tableData[4];
 		
 
-		//form.addEventListener('apply', (e) => {
-    		//	e.preventDefault();
-			/*
+		form.addEventListener('apply', (e) => {
+    			e.preventDefault();
     			db.collection('items').doc(id).update({
         			name: form.name.value,
         			title: form.title.value,
@@ -181,15 +180,11 @@ $('#item-list').on('click','tr',function() {
       				form.location.value = '';
       				form.info.value = '';
 			});
-			*/
 		}
 	else
 	{
 			$("#edit_item").hide();
-				form.name.value = '';
-      				form.title.value = '';
-      				form.location.value = '';
-      				form.info.value = '';
+			clearForm();
 	}
 	
      
