@@ -97,15 +97,20 @@ $(function(){
   });
 	
 // Edit new document button show
-  $("#edit_item").click(function(){
-    $('.leftmenu').animate({    
+function display_edit(){
+	 $('.leftmenu').animate({    
 	    width: '350px'});//css("width","350px").css("width","+=10%")
     $("#options").hide();
      $(".content").hide().fadeIn(500); 
    $( ".feedback" ).toggleClass('blur-me');
 	  $("#menutag").html("Edit Entry");
 	  $('#close_app').show();
+}
+	
+  $("#edit_item").click(function(){
+	  display_edit();   
   });
+
 	
     
   $('#item_submit').click(function(){
