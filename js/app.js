@@ -101,7 +101,7 @@ $("#edit_item").hide();
 // Animate slide for create new form	
 function display_add(){
 	 $( ".feedback" ).toggleClass('blur-me');
- $("#options").hide();	  
+	 $("#options").hide();	  
     $('.leftmenu').animate({    
 	    width: '350px'});
      $(".content").hide().fadeIn(500); 
@@ -135,8 +135,11 @@ function display_edit(){
 	
     
   $('#item_submit').click(function(){
-    $(".content").show().fadeOut(1000);
+    $(".content").hide();
+	  $('.leftmenu').animate({width: '78px'});
 	  $("#menutag").html("Menu");
+	  	$("#options").hide().fadeIn(2000);
+	$( ".feedback" ).toggleClass('blur-me');
 	     $('#close_app').hide();
   });	
 	
