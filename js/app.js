@@ -92,9 +92,10 @@ form.addEventListener('apply', (e) => {
 
 
 $(function(){
-  var id = ' ';
+ // var id = ' ';
   $(".content").hide();
    $('#close_app').hide();
+$("#edit_item").hide();
   $("#menutag").html("Menu");
 
 
@@ -151,6 +152,8 @@ function display_edit(){
   
 $('#item-list').on('click','tr',function() {
       $(this).toggleClass('selected');
+	$("#edit_item").show();
+
        var tableData = $(this).children("td").map(function() {
               return $(this).text();}).get();
 	var id = $(this).attr('data-id');
