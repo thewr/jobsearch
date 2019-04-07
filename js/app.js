@@ -172,9 +172,9 @@ $('#item-list').on('click','tr',function() {
       form.location.value = tableData[3];
       form.info.value = tableData[4];
 
-	
+	var scope = $(this);
 	$('#close_app').click(function (e){
-	      $('tr').toggleClass('selected');
+	      scope.toggleClass('selected');
 	})
 	/*
     db.collection('items').doc(id).update({
