@@ -151,7 +151,8 @@ function display_edit(){
   
 
 $('#item-list').on('click','tr',function() {
-	$(this).toggleClass('selected');
+	$(this).toggleClass('selected').siblings().removeClass('selected');
+	//$(this).toggleClass('active').siblings().removeClass('active');
 	
 	if($(this).hasClass('selected'))
 	{       	
