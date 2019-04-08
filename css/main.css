@@ -223,7 +223,7 @@ input[name=fname], input[name=lname], input[name:email]
 
 input[type=submit],input[type=apply]{
   background-color: #4285F4;
-  border: 1px solid rgba(27, 31, 35, 0.2);
+  //border: 1px solid rgba(27, 31, 35, 0.2);
   color: white;
   padding: 3px 6px 3px 6px;
   border-radius: 3px;
