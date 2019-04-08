@@ -99,6 +99,8 @@ $(function(){
 	$("edit_submit").hide();
 	// Animate slide for create new form	
 	function display_add(){
+		$('#item_submit').attr('id','submit');
+
 		 $( ".feedback" ).toggleClass('blur-me');
 		 $("#options").hide();	  
 	    	 $('.leftmenu').animate({width: '350px'});
@@ -116,6 +118,8 @@ $(function(){
 	
 // Animate slide for edit form
 function display_edit(){
+$('#item_submit').attr('id','apply');
+
   $("#options").hide();	
 	 $('.leftmenu').animate({width: '350px'});
  $(".content").hide().fadeIn(500);     
@@ -155,7 +159,6 @@ $('#item-list').on('click','tr',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
 	if($(this).hasClass('selected'))
 	{       	
-		$('#item_submit').attr('id','apply');
 		//show available options 
 		$("#edit_item").show();	
 		$("#del_item").show();
