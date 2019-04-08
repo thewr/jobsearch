@@ -137,7 +137,7 @@ function display_edit(){
 	  	$("#options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
 	     $('#close_app').hide();
-	  location.reload();
+	  location.reload(true);
   });	
 	
 	
