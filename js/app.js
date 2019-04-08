@@ -131,12 +131,13 @@ function display_edit(){
 	
    
   $('#item_submit').click(function(){
-    $(".content").hide();
+    	$(".content").hide();
 	  $('.leftmenu').animate({width: '78px'});
 	  $("#menutag").html("Menu");
 	  	$("#options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
 	     $('#close_app').hide();
+	  location.reload();
   });	
 	
 	
