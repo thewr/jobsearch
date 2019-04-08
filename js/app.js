@@ -191,13 +191,13 @@ $('#item-list').on('click','tr',function() {
 							  db.collection('items').doc(id).delete();
 							 })
 		
-		*/
 		
-   			$('#del_item').on('click', function() {
+		
+   		//	$('#del_item').on('click', function() {
 		    		//db.collection('items').doc(id).delete();
 				//$(this).toggleClass('selected');
-		});
-		*/
+		//});
+		
 				      
 		}
 	else
