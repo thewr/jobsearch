@@ -171,7 +171,7 @@ $('#item-list').on('click','tr',function() {
 		
 		//$('#edit_item').click(function(){
 		form.addEventListener('submit', (e) => {
-    			e.stopPropagation();
+    			e.preventDefault();
     			db.collection('items').doc(id).update({
 				date: todaysDate(),
         			fname: form.fname.value,
