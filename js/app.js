@@ -180,9 +180,8 @@ $('#item-list').on('click','tr',function() {
         			lname: form.lname.value,
         			email: form.email.value,
 				dob: form.dob.value,
-        			info: form.info.value
-			});
-				clearForm();
+        			info: form.info.value});
+				//clearForm();
 				
 			});
 		
