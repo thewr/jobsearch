@@ -153,9 +153,9 @@ function display_edit(){
 
 $('#item-list').on('click','tr',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
-	
 	if($(this).hasClass('selected'))
 	{       	
+		$('#item_submit').attr('id','apply');
 		//show available options 
 		$("#edit_item").show();	
 		$("#del_item").show();
@@ -171,7 +171,7 @@ $('#item-list').on('click','tr',function() {
       		form.info.value = tableData[5];
 		
 		//$('#edit_item').click(function(){
-		form.addEventListener('submit', (e) => {
+		form.addEventListener('apply', (e) => {
     			e.preventDefault();
     			db.collection('items').doc(id).update({
 				date: todaysDate(),
