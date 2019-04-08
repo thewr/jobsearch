@@ -181,16 +181,15 @@ $('#item-list').on('click','tr',function() {
         			email: form.email.value,
 				dob: form.dob.value,
         			info: form.info.value});
-				//clearForm();
-				
 			});
-		
+		//clearForm();
    		$('#del_item').on('click',function(){
         		//alert("Deleteing!");			
 			
 			if(confirm("Are you sure you want to delete this?")){
         			db.collection('items').doc(id).delete(); 
 				// getting data
+				$("#itemList tr").remove();
 				db.collection('items').get().then(snapshot => {
     					snapshot.docs.forEach(doc => {
         				renderCafe(doc);
