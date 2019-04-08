@@ -168,7 +168,7 @@ $('#item-list').on('click','tr',function() {
       		form.dob.value = tableData[4];
       		form.info.value = tableData[5];
 		
-		$('#edit_item').click(function(){
+		//$('#edit_item').click(function(){
 		form.addEventListener('submit', (e) => {
     			e.preventDefault();
     			db.collection('items').doc(id).update({
@@ -182,7 +182,7 @@ $('#item-list').on('click','tr',function() {
 				clearForm();
 				
 			});
-		}
+		//}
 				      
 		}
 	else
