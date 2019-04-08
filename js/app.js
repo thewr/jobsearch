@@ -6,7 +6,7 @@ var body = document.getElementsByTagName("body")[0];
 
 // create form element
 const form = document.querySelector('#add-item-form');
-//const execute = document.querySelector('#options');
+let execute = document.querySelector('#options');
 
 
 function todaysDate()
@@ -184,10 +184,16 @@ $('#item-list').on('click','tr',function() {
 				
 			});
 		
-		form.addEventListener('submit', (e) => {
-
-		$('#del_item').on('click', function() {
+		/*
+		execute.addEventListener('click', (e) => {e.stopPropagation(); 
+							  let id = e.target.parentElement.getAttribute('data-id');
+							  db.collection('items').doc(id).delete();
+							 })
+		
+		*/
+   			$('#del_item').on('click', function() {
 		    		db.collection('items').doc(id).delete();
+				$(this).toggleClass('selected');
 		});
 				      
 		}
