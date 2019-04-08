@@ -191,7 +191,12 @@ $('#item-list').on('click','tr',function() {
 			
 			if(confirm("Are you sure you want to delete this?")){
         			db.collection('items').doc(id).delete(); 
-				location.reload(true);
+				// getting data
+				db.collection('items').get().then(snapshot => {
+    					snapshot.docs.forEach(doc => {
+        				renderCafe(doc);
+					});
+				});
 			}
 			else{
 				return false;
