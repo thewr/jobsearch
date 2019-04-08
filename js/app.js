@@ -37,7 +37,7 @@ function renderCafe(doc){
     fname.textContent = doc.data().fname;
     lname.textContent = doc.data().lname;
     email.textContent = doc.data().email;
-    dob.textContent = doc.data().location;
+    dob.textContent = doc.data().dob;
     info.textContent = doc.data().info;
     
     // append row
