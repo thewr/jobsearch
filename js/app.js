@@ -153,7 +153,6 @@ function display_edit(){
 
 $('#item-list').on('click','tr',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
-	//$(this).toggleClass('active').siblings().removeClass('active');
 	
 	if($(this).hasClass('selected'))
 	{       	
@@ -181,6 +180,7 @@ $('#item-list').on('click','tr',function() {
         			email: form.email.value,
 				dob: form.dob.value,
         			info: form.info.value});
+			$(this).removeClass('selected');
 			clearForm();
 			});
    		
