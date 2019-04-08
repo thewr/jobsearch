@@ -207,7 +207,7 @@ textarea {
      width: 100%;
 }
 
-input[name=fname], input[name=lname], input[name:e-mail]
+input[name=fname], input[name=lname], input[name:email]
 {
     width: 40%;
     
