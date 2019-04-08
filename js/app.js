@@ -28,21 +28,21 @@ function renderCafe(doc){
     let date = document.createElement('td');
     let name = document.createElement('td'); 
     let title = document.createElement('td');
-    let location = document.createElement('td');
+    let dob = document.createElement('td');
     let info = document.createElement('td');
   
   
     date.textContent = doc.data().date;
     name.textContent = doc.data().name;
     title.textContent = doc.data().title;
-    location.textContent = doc.data().location;
+    dob.textContent = doc.data().location;
     info.textContent = doc.data().info;
     
     // append row
     row.appendChild(date);
     row.appendChild(name);
     row.appendChild(title);
-    row.appendChild(location);
+    row.appendChild(dob);
     row.appendChild(info);
   
     // add the row to the end of the table body  
@@ -64,7 +64,7 @@ db.collection('items').get().then(snapshot => {
 function clearForm(){
 	form.name.value = '';
       	form.title.value = '';
-      	form.location.value = '';
+      	form.dob.value = '';
       	form.info.value = '';
 }
 
@@ -75,12 +75,12 @@ form.addEventListener('submit', (e) => {
         date: todaysDate(),
         name: form.name.value,
         title: form.title.value,
-        location: form.location.value,
+        dob: form.dob.value,
         info: form.info.value
     });
 	form.name.value = '';
       	form.title.value = '';
-      	form.location.value = '';
+      	form.dob.value = '';
       	form.info.value = '';
 });
 
@@ -88,7 +88,7 @@ form.addEventListener('submit', (e) => {
 function clearForm(){
 	form.name.value = '';
       	form.title.value = '';
-      	form.location.value = '';
+      	form.dob.value = '';
       	form.info.value = '';
 }
 
@@ -170,7 +170,7 @@ $('#item-list').on('click','tr',function() {
 		// put data on form
 		form.name.value = tableData[1];
       		form.title.value = tableData[2];
-      		form.location.value = tableData[3];
+      		form.dob.value = tableData[3];
       		form.info.value = tableData[4];
 		
 
@@ -179,12 +179,12 @@ $('#item-list').on('click','tr',function() {
     			db.collection('items').doc(id).update({
         			name: form.name.value,
         			title: form.title.value,
-        			location: form.location.value,
+        			location: form.dob.value,
         			info: form.info.value });
 				
 				form.name.value = '';
       				form.title.value = '';
-      				form.location.value = '';
+      				form.dob.value = '';
       				form.info.value = '';
 			});
 		}
