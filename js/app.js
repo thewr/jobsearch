@@ -91,7 +91,7 @@ $(function(){
 	$(".content").hide();
 	$('#close_app').hide();
 	$("#edit_item").hide();
-	$('#del_item').hide();
+	$("#del_item").hide();
 	$("#menutag").html("Menu");
 
 
