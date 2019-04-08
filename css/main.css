@@ -207,13 +207,10 @@ textarea {
      width: 100%;
 }
 
-input[name=fname], input[name=lname]
+input[name=fname], input[name=lname], input[name:e-mail]
 {
-    width: 40%;
-}
-
-input[name=age]{
-    width: 5%;
+    width: 45%;
+    
 }
 
 input[type=submit],input[type=apply]{
