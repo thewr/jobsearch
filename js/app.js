@@ -187,7 +187,7 @@ $('#item-list').on('click','tr',function() {
 		form.addEventListener('submit', (e) => {
 
 		$('#del_item').on('click', function() {
-		    		db.collection('items').doc(id).remove();
+		    		db.collection('items').doc(id).delete();
 		});
 				      
 		}
