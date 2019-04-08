@@ -188,6 +188,7 @@ $('#item-list').on('click','tr',function() {
 	else
 	{
 			$("#edit_item").hide();
+			$("del_item").hide();
 			clearForm();
 	}
 	
