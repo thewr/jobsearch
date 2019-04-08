@@ -189,7 +189,9 @@ $('#item-list').on('click','tr',function() {
         		//alert("Deleteing!");			
 			
 			if(confirm("Are you sure you want to delete this?")){
-        			db.collection('items').doc(id).delete(); }
+        			db.collection('items').doc(id).delete(); 
+				location.reload();
+			}
 			else{
 				return false;
 			}
