@@ -62,8 +62,9 @@ db.collection('items').get().then(snapshot => {
 
 // clear form
 function clearForm(){
-	form.name.value = '';
-      	form.title.value = '';
+	form.fname.value = '';
+	form.lname.value = '';
+      	form.email.value = '';
       	form.dob.value = '';
       	form.info.value = '';
 }
@@ -73,45 +74,33 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     db.collection('items').add({
         date: todaysDate(),
-        name: form.name.value,
-        title: form.title.value,
-        dob: form.dob.value,
+        fname: form.fname.value,
+        lname: form.lname.value,
+        email: form.email.value,
+	dob: form.dob.value,
         info: form.info.value
     });
-	form.name.value = '';
-      	form.title.value = '';
-      	form.dob.value = '';
-      	form.info.value = '';
+	clearForm();
 });
-
-// clear form
-function clearForm(){
-	form.name.value = '';
-      	form.title.value = '';
-      	form.dob.value = '';
-      	form.info.value = '';
-}
 
 
 $(function(){
-  $(".content").hide();
-   $('#close_app').hide();
-$("#edit_item").hide();
-  $("#menutag").html("Menu");
+	$(".content").hide();
+	$('#close_app').hide();
+	$("#edit_item").hide();
+	$("#menutag").html("Menu");
 
 
-	 $("edit_submit").hide();
-// Animate slide for create new form	
-function display_add(){
-	 $( ".feedback" ).toggleClass('blur-me');
-	 $("#options").hide();	  
-    $('.leftmenu').animate({    
-	    width: '350px'});
-     $(".content").hide().fadeIn(500); 
-
-	  $("#menutag").html("Add Entry");
-	  $('#close_app').show();
-}
+	$("edit_submit").hide();
+	// Animate slide for create new form	
+	function display_add(){
+		 $( ".feedback" ).toggleClass('blur-me');
+		 $("#options").hide();	  
+	    	 $('.leftmenu').animate({width: '350px'});
+	         $(".content").hide().fadeIn(500);
+		 $("#menutag").html("Add Entry");
+		 $('#close_app').show();
+	}
  
 // Add new document button show
 	$("#new_item").click(function(){
@@ -168,24 +157,23 @@ $('#item-list').on('click','tr',function() {
 		var id = $(this).attr('data-id');
 		
 		// put data on form
-		form.name.value = tableData[1];
-      		form.title.value = tableData[2];
-      		form.dob.value = tableData[3];
-      		form.info.value = tableData[4];
+		form.fname.value = tableData[1];
+		form.lname.value = tableData[2];
+      		form.email.value = tableData[3];
+      		form.dob.value = tableData[4];
+      		form.info.value = tableData[5];
 		
 
 		form.addEventListener('submit', (e) => {
     			e.preventDefault();
     			db.collection('items').doc(id).update({
-        			name: form.name.value,
-        			title: form.title.value,
-        			location: form.dob.value,
-        			info: form.info.value });
-				
-				form.name.value = '';
-      				form.title.value = '';
-      				form.dob.value = '';
-      				form.info.value = '';
+        			fname: form.fname.value,
+        			lname: form.lname.value,
+        			email: form.email.value,
+				dob: form.dob.value,
+        			info: form.info.value
+			});
+				clearForm();
 			});
 		}
 	else
