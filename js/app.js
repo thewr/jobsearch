@@ -99,8 +99,7 @@ $(function(){
 	$("edit_submit").hide();
 	// Animate slide for create new form	
 	function display_add(){
-		$('#item_submit').attr('id','submit');
-
+		//$('#item_submit').attr('id','submit');
 		 $( ".feedback" ).toggleClass('blur-me');
 		 $("#options").hide();	  
 	    	 $('.leftmenu').animate({width: '350px'});
@@ -111,26 +110,25 @@ $(function(){
  
 // Add new document button show
 	$("#new_item").click(function(){
-		clearForm();
-		//$("#item_submit").attr('value', 'Submit').attr('type','submit');
+		$("#item_submit").attr('type','submit');
 		display_add();
+		$("#item_submit").attr('type','submit');
 	});
 	
 // Animate slide for edit form
 function display_edit(){
-$('#item_submit').attr('id','apply');
-
-  $("#options").hide();	
-	 $('.leftmenu').animate({width: '350px'});
- $(".content").hide().fadeIn(500);     
-   $( ".feedback" ).toggleClass('blur-me');
-	  $("#menutag").html("Edit Entry");
-	  $('#close_app').show();
+  	$("#options").hide();	
+	$('.leftmenu').animate({width: '350px'});
+ 	$(".content").hide().fadeIn(500);     
+   	$( ".feedback" ).toggleClass('blur-me');
+	$("#menutag").html("Edit Entry");
+	$('#close_app').show();
 }
 	
 //Edit new document button show	
   $("#edit_item").click(function(){
 	  display_edit();   
+	  $('#item_submit').attr('id','apply');
   });
 	
    
