@@ -191,7 +191,7 @@ $('#item-list').on('click','tr',function() {
 			
 			if(confirm("Are you sure you want to delete this?")){
         			db.collection('items').doc(id).delete(); 
-				location.reload();
+			//	location.reload();
 			}
 			else{
 				return false;
