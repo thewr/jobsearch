@@ -26,22 +26,25 @@ function renderCafe(doc){
     let row = document.createElement("tr");
     row.setAttribute('data-id', doc.id);
     let date = document.createElement('td');
-    let name = document.createElement('td'); 
-    let title = document.createElement('td');
+    let fname = document.createElement('td'); 
+    let lname = document.createElement('td');
+    let email = document.createElement('td');
     let dob = document.createElement('td');
     let info = document.createElement('td');
   
   
     date.textContent = doc.data().date;
-    name.textContent = doc.data().name;
-    title.textContent = doc.data().title;
+    fname.textContent = doc.data().fname;
+    lname.textContent = doc.data().lname;
+    email.textContent = doc.data().email;
     dob.textContent = doc.data().location;
     info.textContent = doc.data().info;
     
     // append row
     row.appendChild(date);
-    row.appendChild(name);
-    row.appendChild(title);
+    row.appendChild(fname);
+    row.appendChild(lname);
+    row.appendChild(email);
     row.appendChild(dob);
     row.appendChild(info);
   
