@@ -6,6 +6,7 @@ var body = document.getElementsByTagName("body")[0];
 
 // create form element
 const form = document.querySelector('#add-item-form');
+//const execute = document.querySelector('#options');
 
 
 function todaysDate()
@@ -170,7 +171,7 @@ $('#item-list').on('click','tr',function() {
 		
 		//$('#edit_item').click(function(){
 		form.addEventListener('submit', (e) => {
-    			e.preventDefault();
+    			e.stopPropagation();
     			db.collection('items').doc(id).update({
 				date: todaysDate(),
         			fname: form.fname.value,
@@ -182,7 +183,12 @@ $('#item-list').on('click','tr',function() {
 				clearForm();
 				
 			});
-		//}
+		
+		form.addEventListener('submit', (e) => {
+
+		$('#del_item').on('click', function() {
+		    		db.collection('items').doc(id).remove();
+		});
 				      
 		}
 	else
