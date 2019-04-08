@@ -189,12 +189,13 @@ $('#item-list').on('click','tr',function() {
 			if(confirm("Are you sure you want to delete this?")){
         			db.collection('items').doc(id).delete(); 
 				// getting data
+				/*
 				$("#itemList tr").remove();
 				db.collection('items').get().then(snapshot => {
     					snapshot.docs.forEach(doc => {
-        				renderCafe(doc);
-					});
+        				renderCafe(doc);});
 				});
+				*/
 			}
 			else{
 				return false;
