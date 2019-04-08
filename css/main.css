@@ -153,7 +153,6 @@ section{
         overflow: visible;
 }
 
-
 #close_app {
  background-color: transparent;
  text-decoration: none !important;
@@ -202,14 +201,14 @@ form:after{
 }
 
 input[type=text],
-select, textarea, input[type=submit]{
+select, textarea{
   margin: 2%;
   padding: 6px 12px 6px 12px;
   border: 2px solid #13160d;
   border-radius: 4px;
   box-sizing: border-box;
   display: inline-block;
-  resize: horizontal;
+  resize: vertical;
 }
 
 textarea {
