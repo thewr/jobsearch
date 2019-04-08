@@ -91,7 +91,7 @@ $(function(){
 	$(".content").hide();
 	$('#close_app').hide();
 	$("#edit_item").hide();
-	$('#delete_item').hide();
+	$('#del_item').hide();
 	$("#menutag").html("Menu");
 
 
@@ -156,7 +156,7 @@ $('#item-list').on('click','tr',function() {
 	{       	
 		//show available options 
 		$("#edit_item").show();	
-		$("delete_item").show();
+		$("del_item").show();
 		
 		var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
 		var id = $(this).attr('data-id');
