@@ -190,13 +190,14 @@ $('#item-list').on('click','tr',function() {
 							  let id = e.target.parentElement.getAttribute('data-id');
 							  db.collection('items').doc(id).delete();
 							 })
-		
+		*/
 		
 		
    		//	$('#del_item').on('click', function() {
 		    		//db.collection('items').doc(id).delete();
 				//$(this).toggleClass('selected');
 		//});
+
 		
 				      
 		}
