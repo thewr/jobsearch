@@ -185,18 +185,10 @@ $('#item-list').on('click','tr',function() {
 				
 			});
 		
-		/*
-		execute.addEventListener('click', (e) => {e.stopPropagation(); 
-							  let id = e.target.parentElement.getAttribute('data-id');
-							  db.collection('items').doc(id).delete();
-							 })
-		*/
-		
-		
-   		//	$('#del_item').on('click', function() {
-		    		//db.collection('items').doc(id).delete();
-				//$(this).toggleClass('selected');
-		//});
+   		$('#del_item').on('click',function(){
+        alert("Deleteing!!!");
+        db.collection('items').doc(id).delete();
+      });
 
 		
 				      
