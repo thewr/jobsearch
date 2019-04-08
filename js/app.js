@@ -186,8 +186,14 @@ $('#item-list').on('click','tr',function() {
 			});
 		
    		$('#del_item').on('click',function(){
-        alert("Deleteing!!!");
-        db.collection('items').doc(id).delete();
+        		//alert("Deleteing!");			
+			
+			if(confirm("Are you sure you want to delete this?")){
+        			db.collection('items').doc(id).delete(); }
+			else{
+				return false;
+			}
+			
       });
 
 		
