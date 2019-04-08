@@ -91,6 +91,7 @@ $(function(){
 	$(".content").hide();
 	$('#close_app').hide();
 	$("#edit_item").hide();
+	$('#delete_item').hide();
 	$("#menutag").html("Menu");
 
 
@@ -126,9 +127,8 @@ function display_edit(){
   $("#edit_item").click(function(){
 	  display_edit();   
   });
-
 	
-    
+   
   $('#item_submit').click(function(){
     $(".content").hide();
 	  $('.leftmenu').animate({width: '78px'});
@@ -154,8 +154,10 @@ $('#item-list').on('click','tr',function() {
 	
 	if($(this).hasClass('selected'))
 	{       	
-		//$("#item_submit").attr('value', 'Apply').attr('type','apply');
+		//show available options 
 		$("#edit_item").show();	
+		$("delete_item").show();
+		
 		var tableData = $(this).children("td").map(function(){return $(this).text();}).get();
 		var id = $(this).attr('data-id');
 		
