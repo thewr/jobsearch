@@ -170,6 +170,7 @@ $('#item-list').on('click','tr',function() {
 		form.addEventListener('submit', (e) => {
     			e.preventDefault();
     			db.collection('items').doc(id).update({
+				date: todaysDate(),
         			fname: form.fname.value,
         			lname: form.lname.value,
         			email: form.email.value,
@@ -177,6 +178,7 @@ $('#item-list').on('click','tr',function() {
         			info: form.info.value
 			});
 				clearForm();
+				
 			});
 		}
 	else
