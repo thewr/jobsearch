@@ -166,7 +166,6 @@ $('#item-list').on('click','tr',function() {
       		form.dob.value = tableData[4];
       		form.info.value = tableData[5];
 		
-
 		form.addEventListener('submit', (e) => {
     			e.preventDefault();
     			db.collection('items').doc(id).update({
