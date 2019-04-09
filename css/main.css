@@ -39,8 +39,8 @@ section{
     padding-left: 1rem;
 }
 .selected {
-  //color: #000;
-  //background-color:#E4E80C;
+  color: #000;
+  background-color:#E4E80C;
 }
 
 .container .mainheader
@@ -109,7 +109,6 @@ section{
   height: 100%;
   display: flex;
   width: 78px;
-  //position:absolute;
   top: 54px;
   left: 0;
   font-size: 0.75rem;
@@ -275,7 +274,7 @@ input[type=submit],input[type=apply]:hover {
     display: block;
 }
 
-ul{
+#item-list{
     list-style-type: none;
     padding: 0;
 }
@@ -291,10 +290,12 @@ li{
     cursor: pointer;
 }
 
+/*
 li:hover{
   color: #000;
   background-color:#E4E80C;
 }
+*/
 
 li span{
     display: block;
