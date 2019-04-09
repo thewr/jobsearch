@@ -126,11 +126,11 @@ section{
     display:block;
     flex-basis: 0px; flex-shrink:1;
     //background-color: #f0f1f2;
-    margin-left: 16px;  margin-right: 16px;
+    padding:16px;
     border-radius: 5px;
     line-height: 22.4px;
-    padding:1rem;
-}
+    margin-right:16px;
+  }
 
 .feedback
 {
@@ -194,7 +194,6 @@ section{
 }
 */
 
-
 form:after{
     content: '';
     clear: both;
@@ -203,9 +202,9 @@ form:after{
 
 input[type=text],
 select, textarea, input[type=submit]{
-  margin: 2%;
   padding: 6px 12px 6px 12px;
-  border: 2px solid #13160d;
+  margin-bottom: 6px;
+  border: 1px solid rgba(27, 31, 35, 0.2);
   border-radius: 4px;
   box-sizing: border-box;
   display: inline-block;
@@ -213,7 +212,7 @@ select, textarea, input[type=submit]{
 }
 
 textarea {
-     width: 100%;
+     width: 80%;
      height: 33%;
 }
 
@@ -224,22 +223,20 @@ input[name=fname], input[name=lname], input[name:email]
 
 input[type=submit],input[type=apply]{
   background-color: #4285F4;
+  position:absolute;
+  display:block;
   border: 1px solid rgba(27, 31, 35, 0.2);
   color: white;
   padding: 3px 6px 3px 6px;
   border-radius: 3px;
-  position: fixed;
-  float: bottom;
-  vertical-align: middle;
+  float: bottom-left;
   font-weight: 400;
   line-height: 15px;
-  white-space: nowrap;
   cursor: pointer;
 }
 
 input[type=submit],input[type=apply]:hover {
   background-color: #3F729B;
-
 }
 
 #options {
