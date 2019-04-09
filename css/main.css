@@ -39,8 +39,8 @@ section{
     padding-left: 1rem;
 }
 .selected {
-    color: #000;
-    background-color:#E4E80C;
+  //color: #000;
+  //background-color:#E4E80C;
 }
 
 .container .mainheader
@@ -288,6 +288,12 @@ li{
     border: 1px solid #7ec2d7;
     height: 100%;
     margin-bottom: 3px;
+    cursor: pointer;
+}
+
+li:hover{
+  color: #000;
+  background-color:#E4E80C;
 }
 
 li span{
