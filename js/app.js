@@ -104,6 +104,7 @@ form.addEventListener('submit', (e) => {
 
 
 $(function(){
+
 	$(".content").hide();
 	$('#close_app').hide();
 	$("#edit_item").hide();
@@ -164,6 +165,23 @@ function display_edit(){
 	     $('#close_app').hide();
   });
 
+function hover(a){
+  if(a=='on')
+  {
+    $('li').hover(function(){
+      $(this).css("background-color", "yellow");
+      }, function(){
+      $(this).css("background-color", "");
+    });
+  }
+  else {
+    $('li').hover(function(){
+      $(this).css("background-color", "");
+      }, function(){
+      $(this).css("background-color", "");
+    });
+  }
+}
 
 $('#item-list').on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
@@ -171,6 +189,7 @@ $('#item-list').on('click','li',function() {
 
 	if($(this).hasClass('selected'))
 	{
+    hover('off');
 		//show available options
 		$("#edit_item").show();
 		$("#del_item").show();
@@ -208,6 +227,7 @@ $('#item-list').on('click','li',function() {
 		}
   	else
   	{
+        hover('on');
   			$("#edit_item").hide();
   			$("#del_item").hide();
   			clearForm();
