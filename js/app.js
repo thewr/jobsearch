@@ -199,6 +199,7 @@ $('#item-list').on('click','li',function() {
 		docRef.get().then(function(doc) {
 		    if (doc.exists) {
 			console.log("Document data:", doc.data());
+			var tableData = doc.data().map(function(){return $(this).text();}).get();
 		    } else {
 			// doc.data() will be undefined in this case
 			console.log("No such document!");
