@@ -206,9 +206,11 @@ $('#item-list').on('click','li',function() {
 		}).catch(function(error) {
 		    console.log("Error getting document:", error);
 		});
+		
+		var tableData = doc.data().map(function(){return $(this).text;}).get();
 
 		// put data on form
-		form.fname.value = tableData[1]; //db.collection('items').get().snapshot.doc(id).doc.data().fname;
+		form.fname.value =  doc.data().fname; //db.collection('items').get().snapshot.doc(id).doc.data().fname;
 		form.lname.value = tableData[2];
       		form.email.value = tableData[3];
       		form.dob.value = tableData[4];
