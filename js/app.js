@@ -51,7 +51,7 @@ function renderCafe(doc){
   email.textContent = "E-mail:  "+doc.data().email;
   dob.textContent = "Date-of-Birth:  "+doc.data().dob;
   info.textContent = doc.data().info;
-  blank_line.textContent = "";
+ 
   // append row
   li.appendChild(date);
   //li.appendChild(fname);
