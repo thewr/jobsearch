@@ -43,7 +43,6 @@ function renderCafe(doc){
   let email = document.createElement('span');
   let dob = document.createElement('span');
   let info = document.createElement('span');
-  let blank_line = document.createElement('span');
 
   date.textContent = doc.data().date;
   //fname.textContent = doc.data().fname;
@@ -60,7 +59,6 @@ function renderCafe(doc){
   li.appendChild(name);
   li.appendChild(email);
   li.appendChild(dob);
-  li.appendChild(blank_line);
   li.appendChild(info);
 
     // add the li to the end of the table body
