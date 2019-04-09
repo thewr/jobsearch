@@ -198,7 +198,7 @@ $('#item-list').on('click','li',function() {
 		var id = $(this).attr('data-id');
 
 		// put data on form
-		form.fname.value = tableData[1];
+		form.fname.value = db.collection('items').doc(id).data().fname;
 		form.lname.value = tableData[2];
       		form.email.value = tableData[3];
       		form.dob.value = tableData[4];
