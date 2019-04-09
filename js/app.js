@@ -211,7 +211,7 @@ $('#item-list').on('click','li',function() {
 		//var tableData = docRef.get().get().doc.data().fname;//map(function(){return $(this).text();}).get();
 
 		// put data on form
-		form.fname.value =  docRef.get().then(function(doc){doc.data().fname};//db.collection('items').get().snapshot.doc(id).doc.data().fname;
+		form.fname.value =  docRef.get().then(function(doc){doc.data().fname});//db.collection('items').get().snapshot.doc(id).doc.data().fname;
 
 		//form.fname.value =  docRef.get().doc.data().fname;//db.collection('items').get().snapshot.doc(id).doc.data().fname;
 		form.lname.value = tableData[2];
