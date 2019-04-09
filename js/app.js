@@ -207,7 +207,7 @@ $('#item-list').on('click','li',function() {
 		    console.log("Error getting document:", error);
 		});
 		
-		var tableData = doc.data().map(function(){return $(this).text;}).get();
+		var tableData = doc.data().map(function(){return $(this).text();}).get();
 
 		// put data on form
 		form.fname.value =  doc.data().fname; //db.collection('items').get().snapshot.doc(id).doc.data().fname;
