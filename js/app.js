@@ -194,6 +194,18 @@ $('#item-list').on('click','li',function() {
 
 		var tableData = $(this).children("span").map(function(){return $(this).text();}).get();
 		var id = $(this).attr('data-id');
+		var docRef = db.collection("items").doc(id);
+
+		docRef.get().then(function(doc) {
+		    if (doc.exists) {
+			console.log("Document data:", doc.data());
+		    } else {
+			// doc.data() will be undefined in this case
+			console.log("No such document!");
+		    }
+		}).catch(function(error) {
+		    console.log("Error getting document:", error);
+		});
 
 		// put data on form
 		form.fname.value = db.collection('items').get().snapshot.doc(id).doc.data().fname;
