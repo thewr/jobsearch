@@ -199,7 +199,7 @@ $('#item-list').on('click','li',function() {
 		docRef.get().then(function(doc) {
 		    if (doc.exists) {
 			console.log("Document data:", doc.data());
-			var tableData = doc.data().map(function(){return $(this).text();}).get();
+			//var tableData = doc.data().map(function(){return $(this).text();}).get();
 		    } else {
 			// doc.data() will be undefined in this case
 			console.log("No such document!");
@@ -208,10 +208,10 @@ $('#item-list').on('click','li',function() {
 		    console.log("Error getting document:", error);
 		});
 		
-		var tableData = doc.data().map(function(){return $(this).text();}).get();
+		//var tableData = docRef.get().get().doc.data().fname;//map(function(){return $(this).text();}).get();
 
 		// put data on form
-		form.fname.value =  doc.data().fname; //db.collection('items').get().snapshot.doc(id).doc.data().fname;
+		form.fname.value =  docRef.get().doc.data().fname;//db.collection('items').get().snapshot.doc(id).doc.data().fname;
 		form.lname.value = tableData[2];
       		form.email.value = tableData[3];
       		form.dob.value = tableData[4];
