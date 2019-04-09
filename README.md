@@ -1,3 +1,3 @@
 # research project
 
-Currently using firestore DB to edit a from a table
+Currently used to edit firestore DB and display as interactive tabs.
