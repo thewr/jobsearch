@@ -192,14 +192,14 @@ $('#item-list').on('click','li',function() {
 		$("#edit_item").show();
 		$("#del_item").show();
 
-		var tableData = $(this).children("span").map(function(){return $(this).text();}).get();
+		var tableData; //= $(this).children("span").map(function(){return $(this).text();}).get();
 		var id = $(this).attr('data-id');
 		var docRef = db.collection("items").doc(id);
 
 		docRef.get().then(function(doc) {
 		    if (doc.exists) {
 			console.log("Document data:", doc.data().fname);
-			//var tableData = doc.data().map(function(){return $(this).text();}).get();
+			var tableData = doc.data().map();
 		    } else {
 			// doc.data() will be undefined in this case
 			console.log("No such document!");
@@ -208,11 +208,6 @@ $('#item-list').on('click','li',function() {
 		    console.log("Error getting document:", error);
 		});
 		
-		querySnapshot.forEach(function (documentSnapshot) {
-  			var data = documentSnapshot.data();
-			console.log(data);
-  			// do something with the data of each document.
-		});
 		
 		var refData = docRef.get().get().doc.data().fname;//map(function(){return $(this).text();}).get();
 
