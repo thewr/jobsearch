@@ -167,9 +167,9 @@ function hover(a){
   if(a=='on')
   {
     $('li').hover(function(){
-      $(this).css("background-color", "yellow");
+      $(this).addClass('selected');//$(this).css("background-color", "yellow");
       }, function(){
-      $(this).css("background-color", "");
+      $(this).removeClass('selected');//$(this).css("background-color", "");
     });
   }
   else {
