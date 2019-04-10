@@ -104,10 +104,11 @@ section{
     -webkit-box-align: stretch;
     align-items: stretch;
     background-color: #282b2d;
+    height: 100%;
+
 }
 
 .leftmenu{
-  height: 100%;
   //display: flex;
   width: 78px;
   top: 54px;
