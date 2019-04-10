@@ -48,7 +48,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #101112;
+    background-color: #282b2d;
     padding: 0 1rem;
     padding-top: 0px;
     padding-right: 1rem;
@@ -103,6 +103,7 @@ section{
     display: flex;
     -webkit-box-align: stretch;
     align-items: stretch;
+    background-color: #282b2d;
 }
 
 .leftmenu{
@@ -112,7 +113,6 @@ section{
   top: 54px;
   left: 0;
   font-size: 0.75rem;
-  background-color: #282b2d;
   flex-direction: column;
   color: #f0f1f2;
   border-right: 1px solid #3a3e41;
