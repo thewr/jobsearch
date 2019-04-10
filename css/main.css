@@ -107,7 +107,7 @@ section{
 
 .leftmenu{
   height: 100%;
-  display: flex;
+  //display: flex;
   width: 78px;
   top: 54px;
   left: 0;
