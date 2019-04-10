@@ -208,7 +208,13 @@ $('#item-list').on('click','li',function() {
 		    console.log("Error getting document:", error);
 		});
 		
-		//var tableData = docRef.get().get().doc.data().fname;//map(function(){return $(this).text();}).get();
+		querySnapshot.forEach(function (documentSnapshot) {
+  			var data = documentSnapshot.data();
+			console.log(data);
+  			// do something with the data of each document.
+		});
+		
+		var refData = docRef.get().get().doc.data().fname;//map(function(){return $(this).text();}).get();
 
 		// put data on form
 		form.fname.value =  docRef.get().then(function(doc){doc.data().fname});//db.collection('items').get().snapshot.doc(id).doc.data().fname;
