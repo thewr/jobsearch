@@ -68,6 +68,7 @@ section{
     color: #70afe0;
     letter-spacing: 1px;
     font-weight: 600;
+    float-right;
 }
 
 .feedheader h1{
