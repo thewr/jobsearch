@@ -79,7 +79,7 @@ html>.container, body>.container {
     z-index: 1000;
 }
 
-.sidebar>.min .options, .sidebar>.full .list {
+.sidebar>.min .options{
     -webkit-box-flex: 1;
     flex: 1 1 0;
     display: -webkit-box;
