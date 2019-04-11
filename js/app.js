@@ -110,7 +110,7 @@ $(function(){
 	$(".label").html("Menu");
 
 
-	$("edit_submit").hide();
+	$("#edit_submit").hide();
 	// Animate slide for create new form
 	function display_add(){
 		 $( ".feedback" ).toggleClass('blur-me');
