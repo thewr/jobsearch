@@ -213,6 +213,7 @@ section{
 }
 
 
+/*
 body>.container>.app>.feedback {
     position: absolute;
     top: 0;
@@ -220,6 +221,7 @@ body>.container>.app>.feedback {
     left: 108px;
     right: 0;
 }
+*/
 
 body>.container{
   height: 100%;
