@@ -212,11 +212,11 @@ $('#item-list').on('click','li',function() {
 		//var refData = docRef.get().get().doc.data().fname;//map(function(){return $(this).text();}).get();
 
 		// put data on form
-		form.fname.value =  tableData[1];//docRef.get().doc.data().fname;//db.collection('items').get().snapshot.doc(id).doc.data().fname;
-		form.lname.value = tableData[2];
-      		form.email.value = tableData[3];
-      		form.dob.value = tableData[4];
-      		form.info.value = tableData[5];
+		form.fname.value =  tableData.fname;//docRef.get().doc.data().fname;//db.collection('items').get().snapshot.doc(id).doc.data().fname;
+		form.lname.value = tableData.lname;
+      		//form.email.value = tableData[3];
+      		//form.dob.value = tableData[4];
+      		//form.info.value = tableData[5];
 
 		//$('#edit_item').click(function(){
 		form.addEventListener('submit', (e) => {
