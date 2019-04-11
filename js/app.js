@@ -181,13 +181,13 @@ function hover(a){
   }
 }
 
-$('#item-list').on('click','li',function() {
+$('ol').on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
 	//$(this).toggleClass('active').siblings().removeClass('active');
 
 	if($(this).hasClass('selected'))
 	{
-    hover('off');
+   		 hover('off');
 		//show available options
 		$("#edit_item").show();
 		$("#del_item").show();
