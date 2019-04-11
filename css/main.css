@@ -305,6 +305,7 @@ body>.container>.app>.doc>.blocker {
     z-index: 10;
 }
 
+/*
 #close_app {
  background-color: transparent;
  text-decoration: none !important;
@@ -313,7 +314,7 @@ body>.container>.app>.doc>.blocker {
  color: white;
  cursor: pointer;
 }
-
+*/
 
 
 /*
