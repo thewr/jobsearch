@@ -130,7 +130,7 @@ $(function(){
 
 // Animate slide for edit form
 function display_edit(){
-  $("#options").hide();
+  $(".options").hide();
 	 $('.leftmenu').animate({width: '350px'});
  $(".content").hide().fadeIn(500);
    $( ".feedback" ).toggleClass('blur-me');
@@ -158,7 +158,7 @@ function display_edit(){
     $(".content").hide();
 	$('.leftmenu').animate({width: '78px'});
 	  $("#.label").html("Menu");
-	$("#options").hide().fadeIn(2000);
+	$(".options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
 	     $('#close_app').hide();
   });
