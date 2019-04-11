@@ -104,7 +104,7 @@ form.addEventListener('submit', (e) => {
 $(function(){
 
 	$(".content").hide();
-	$('#close_app').hide();
+	//$('#close_app').hide();
 	$("#edit_item").hide();
 	$("#del_item").hide();
 	$("#menutag").html("Menu");
