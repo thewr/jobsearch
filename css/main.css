@@ -416,6 +416,7 @@ input[type=submit],input[type=apply]:hover {
 }
 
 .options li {
+    text-align:center;
     font-weight: 400;
     background-color: #f0f1f2;
     text-transform: uppercase;
