@@ -79,6 +79,11 @@ html>.container, body>.container {
     z-index: 1000;
 }
 
+.container .header ul {
+    padding: 0;
+    white-space: nowrap;
+}
+
 .mainheader h1{
     color: #70afe0;
     text-align: center;
