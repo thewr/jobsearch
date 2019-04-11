@@ -181,7 +181,7 @@ function hover(a){
   }
 }
 
-$('ol').on('click','li',function() {
+$(itemList).on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
 	//$(this).toggleClass('active').siblings().removeClass('active');
 
