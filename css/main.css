@@ -172,8 +172,8 @@ height: 100%;
   }
 
 body>.container>.app>.leftmenu {
-    width: 108px;
-    min-width: 108px;
+    width: 50px;
+    min-width: 50px;
     box-shadow: 1px 2px 8px rgba(0,0,0,0.45);
     opacity: 1;
 }
@@ -207,6 +207,7 @@ section{
     padding-bottom: 0px;
     padding-left: 1rem;
 }
+
 .selected {
   color: #000;
   background-color:#E4E80C;
@@ -273,7 +274,7 @@ body>.container{
   flex-flow: column;
 }
 
-.feedback >section.text>.log {
+.feedback >section.text>.documents {
     position: relative;
     box-sizing: border-box;
     display: -webkit-box;
@@ -283,7 +284,7 @@ body>.container{
     padding: 1rem 0 1rem 1rem;
 }
 
-.feedback>section.text>.log>.pad {
+.feedback>section.text>.documents>.pad {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
