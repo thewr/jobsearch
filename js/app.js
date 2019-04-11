@@ -104,7 +104,7 @@ form.addEventListener('submit', (e) => {
 $(function(){
 
 	$(".content").hide();
-	//$('#close_app').hide();
+	$('#close_app').hide();
 	$("#edit_item").hide();
 	$("#del_item").hide();
 	$(".label").html("Menu");
@@ -114,7 +114,7 @@ $(function(){
 	// Animate slide for create new form
 	function display_add(){
 		 $( ".feedback" ).toggleClass('blur-me');
-		 $("#options").hide();
+		 $(".options").hide();
 	    	 $('.leftmenu').animate({width: '350px'});
 	         $(".content").hide().fadeIn(500);
 		 $(".label").html("Add Entry");
@@ -132,8 +132,8 @@ $(function(){
 function display_edit(){
   $(".options").hide();
 	 $('.leftmenu').animate({width: '350px'});
- $(".content").hide().fadeIn(500);
-   $( ".feedback" ).toggleClass('blur-me');
+ 	$(".content").hide().fadeIn(500);
+   	$( ".feedback" ).toggleClass('blur-me');
 	  $("#.label").html("Edit Entry");
 	  $('#close_app').show();
 }
