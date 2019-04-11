@@ -126,7 +126,7 @@ ul, menu, dir {
 height: 100%;
   display: flex;
   width: 108px;
-  min-width:108x;
+  min-width:108px;
   background-color: #282b2d;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
