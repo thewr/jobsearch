@@ -113,10 +113,27 @@ height: 100%;
   z-index: 5;
 }
 
-.leftmenu header.menuheader{
+.leftmenu header.row{
     -webkit-box-flex: 0;
     flex: 0 0 2.5rem;
     padding: 0;
+}
+
+.leftmenu header.row .backrow {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    padding: .5rem 0;
+}
+
+.leftmenu .row .label, .letmenu .options>li input, .leftmenu .options>li .label {
+    -webkit-box-flex: 1;
+    flex: 1;
 }
 
 .content{
