@@ -279,6 +279,7 @@ body>.container>.app>.doc>.blocker {
  text-decoration: none !important;
  display: inline-block;
  float: right;
+ color: white;
  cursor: pointer;
 }
 
