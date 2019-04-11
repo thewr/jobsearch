@@ -157,7 +157,7 @@ function display_edit(){
   $('#close_app').click(function(){
     $(".content").hide();
 	$('.leftmenu').animate({width: '78px'});
-	  $("#.label").html("Menu");
+	  $(".label").html("Menu");
 	$(".options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
 	     $('#close_app').hide();
