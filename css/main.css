@@ -409,18 +409,15 @@ input[type=submit],input[type=apply]:hover {
   background-color: #3F729B;
 }
 
-
-
-#options {
-        position: relative;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align:center;
-
-        height: 1.125rem;
+.options {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
-
 
 #new_item, #edit_item, #del_item {
     font-weight: 600;
