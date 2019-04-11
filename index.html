@@ -9,39 +9,36 @@
 		<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
 		<link rel="stylesheet" type="text/css" href="/research_project/css/main.css">
 	</head>
-	<body>
-		<div class = "container">
-		<header class = "mainheader">
-			<h1>Support Resources</h1>
-		</header>
-		
-		<div class = "app">		
-		<aside class = "leftmenu" id>
-		<header class = "menuheader">
-			    <h1 id = "menutag"></h1>
-			<a class ="btn btn-danger" id="close_app">X</a>
+			<body>
+			<div class = "container">
+			<header class = "mainheader">
+				<h1>Support Resources</h1>
 			</header>
-				<ul id = "options">
-					<li id="new_item">New</li>
-					<li id="edit_item">Edit</li>
-					<li id="del_item" type="execute">Del</li>
-				</ul>
-			
-			<div class="content">
-			<form id = "add-item-form">
-			        <input type="text" name="fname" placeholder="first" maxlength="30";>
-				<input type="text" name="lname" placeholder="last" maxlength="30";>
-				<input type="text" name="email" placeholder="e-mail" maxlength="30";>
-			        <input type="text" name="dob" placeholder="date of birth" maxlength="15";>
-				<textarea id="subject" name="info" placeholder="about me ..." rows="4" maxlength="240";></textarea>
-				<input id = "item_submit" type="submit" value="Submit">
-			</form>   				
+
+			<div class = "app">
+
+			<aside class = "leftmenu" id>
+			<header class = "menuheader">
+				    <label id = "menutag">
+			</header>
+
+					<ul id = "options">
+						<li id="new_item">New</li>
+						<li id="edit_item">Edit</li>
+						<li id="del_item" type="execute">Delete</li>
+					</ul>
+				<div class="content">
+				<form id = "add-item-form">
+				        <input type="text" name="fname" placeholder="first" maxlength="15";>
+					<input type="text" name="lname" placeholder="last" maxlength="25";>
+					<input type="text" name="email" placeholder="e-mail" maxlength="25";>
+				        <input type="text" name="dob" placeholder="date of birth" maxlength="10";>
+					<textarea id="subject" name="info" placeholder="about me ..." rows="2" maxlength="50";></textarea>
+					<input id = "item_submit" type="submit" value="Submit">
+				</form>
 			</div>
-			
-		</aside>
-			
-		</div>
-			
+			</aside>
+
 			<div class = "feedback">
 		    <section class = "text">
 					<header><h1>Log</h1></header>
