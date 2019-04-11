@@ -91,7 +91,8 @@ html>.container, body>.container {
     border-bottom: 2px solid #3a3e41;
 }
 
-ul, menu, dir {
+/*
+ul{
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -100,17 +101,11 @@ ul, menu, dir {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
+*/
 
 .container .header ul {
     padding: 0;
     white-space: nowrap;
-}
-
-.mainheader h1{
-    color: #70afe0;
-    text-align: center;
-    letter-spacing: 1px;
-    font-weight: 600;
 }
 
 .container .header ul.keys {
@@ -155,10 +150,12 @@ height: 100%;
     padding: .5rem 0;
 }
 
+/*
 .leftmenu .row .label, .letmenu .options>li input, .leftmenu .options>li .label {
     -webkit-box-flex: 1;
     flex: 1;
 }
+*/
 
 .leftmenu .content{
     position: relative;
