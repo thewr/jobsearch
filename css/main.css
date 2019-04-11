@@ -6,12 +6,26 @@ html, body
     height: 100%;
     min-height: 540px;
     min-width: 500px;
+    font-size: 16px;
     user-select: none;
     cursor: default;
+    color: #f0f1f2;
+    -webkit-user-select: none;
 }
 
 html {
     display: block;
+}
+*::-webkit-scrollbar {
+    width: .5em;
+    height: .5em;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #7e878e;
+    border-radius: .5em;
+}
+*::-webkit-scrollbar-track {
+    background: rgba(126,135,142,0.25);
 }
 
 
@@ -26,21 +40,32 @@ html>.container, body>.container {
     flex-wrap: initial;
 }
 
-section{
-    //position: relative;
-    flex: 0 6.25rem;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 6.25rem;
-    padding: 0 1rem;
-    padding-top: 0px;
-    padding-right: 1rem;
-    padding-bottom: 0px;
-    padding-left: 1rem;
+element.style {
 }
-.selected {
-  color: #000;
-  background-color:#E4E80C;
+
+@media (max-width: 900px) body>.container>.app
+{
+  display: block;
+  position:relative;
+  background: #e7e9ea;
+}
+
+html>.container>.app, body>.container>.app {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+html>.container, body>.container {
+    height: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column;
 }
 
 .container .mainheader
@@ -59,11 +84,6 @@ section{
     font-size: 0.875rem;
 }
 
-.blur-me {
-    z-index: 1;
-  filter: blur(2px);
-}
-
 .mainheader h1{
     color: #70afe0;
     text-align: center;
@@ -71,46 +91,25 @@ section{
     font-weight: 600;
 }
 
-.feedheader h1{
-  color: #131007;
-  letter-spacing: 2px;
-  font-weight: 400;
-  text-align: center;
-}
-
-
-
-.menuheader {
-    text-align: left;
-    margin-top: 16px;
-    margin-left:16px;
-}
-
-label .menutag {
-  padding-right: 5rem;
-}
-
-.app
-{
-    margin-right: 16px;
-    flex: 1;
-    display: flex;
-    -webkit-box-align: stretch;
-    align-items: stretch;
+.app .leftmenu, .container .header{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 .leftmenu{
-  height: 100%;
+//height: 100%;
   display: flex;
   width: 108px;
-  top: 54px;
-  left: 16px;
-  font-size: 0.75rem;
+  min-width:108px;
+//  top: 54px;
+//  left: 16px;
   background-color: #282b2d;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   color: #f0f1f2;
   border-right: 1px solid #3a3e41;
-  box-shadow: 1px 2px 8px rgba(0,0,0,0.45);
+  //box-shadow: 1px 2px 8px rgba(0,0,0,0.45);
   z-index: 5;
 }
 
@@ -126,20 +125,142 @@ label .menutag {
     margin-right:16px;
   }
 
-.feedback
-{
-        position: absolute;
-        left:108px;
-        top:54px;
-        right:0;
-        bottom:0;
-        flex-grow: 8;
-        flex-shrink: 1;
-        flex-basis: 400px;
-        flex-flow: column;
-        flex-direction: column;
-        flex-wrap: initial;
-        overflow: visible;
+
+.menuheader {
+    text-align: left;
+    margin-top: 16px;
+    margin-left:16px;
+}
+
+.menuheader .menutag {
+  padding-right: 5rem;
+}
+
+
+body>.container>.app>.leftmenu {
+    width: 108px;
+    min-width: 108px;
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.45);
+    opacity: 1;
+}
+
+/*
+body>.container>.app>.leftmenu .expand{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    transition: width .2s ease-out;
+//    width: calc(10% + 350px);
+    box-shadow: 10px 0 12px rgba(0,0,0,0.45);
+    background: #282b2d;
+    opacity: .94;
+}
+*/
+
+section{
+    //position: blocker;
+    display: block;
+    overflow-y: scroll;
+    flex: 0 6.25rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 6.25rem;
+    padding: 0 1rem;
+    padding-top: 0px;
+    padding-right: 1rem;
+    padding-bottom: 0px;
+    padding-left: 1rem;
+}
+.selected {
+  color: #000;
+  background-color:#E4E80C;
+}
+
+.blur-me {
+    z-index: 1;
+  filter: blur(2px);
+}
+
+
+.feedback>section.documents {
+    -webkit-box-flex: 0;
+    flex: 0 6.25rem;
+}
+
+.feedbac>section.log>.documents {
+    position: relative;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.feedback>section {
+    background: #f0f1f2;
+    color: #575e63;
+    -webkit-box-flex: 1;
+    flex: 1 1 0;
+    transition: -webkit-box-flex .2s ease-out;
+    transition: flex .2s ease-out;
+    transition: flex .2s ease-out,-webkit-box-flex .2s ease-out;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+
+
+
+body>.container>.app>.feedback {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 108px;
+    right: 0;
+}
+
+body>.container{
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column;
+}
+
+.feedback >section.text>.editor {
+    position: relative;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.feedback {
+    -webkit-box-flex: 8;
+    flex: 8 800px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column;
+}
+
+body>.container>.app>.doc>.blocker {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(215,218,220,0.5);
+    z-index: 10;
 }
 
 #close_app {
@@ -187,7 +308,6 @@ label .menutag {
 }
 */
 
-
 form:after{
     content: '';
     clear: both;
@@ -233,13 +353,13 @@ input[type=submit],input[type=apply]:hover {
   background-color: #3F729B;
 }
 
+
+
 #options {
+        position: relative;
         list-style-type: none;
-        flex-direction:column;
-        display: flex;
-        margin: 15%;
+        margin: 0;
         padding: 0;
-        width:70%;
         text-align:center;
 
         height: 1.125rem;
@@ -249,18 +369,19 @@ input[type=submit],input[type=apply]:hover {
 #new_item, #edit_item, #del_item {
     font-weight: 600;
     background-color: #f0f1f2;
-    color: black;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 10px;
     margin-bottom:12px;
     display: block;
 }
+
+
 
 #item-list{
     list-style-type: none;
     padding: 0;
 }
+
 
 li{
     padding: 16px 16px;
@@ -272,13 +393,6 @@ li{
     margin-bottom: 3px;
     cursor: pointer;
 }
-
-/*
-li:hover{
-  color: #000;
-  background-color:#E4E80C;
-}
-*/
 
 li span{
     display: block;
