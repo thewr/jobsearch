@@ -234,7 +234,7 @@ body>.container{
   flex-flow: column;
 }
 
-.feedback >section.text>.editor {
+.feedback >section.text>.log {
     position: relative;
     box-sizing: border-box;
     display: -webkit-box;
@@ -242,6 +242,15 @@ body>.container{
     height: 100%;
     width: 100%;
     padding: 1rem 0 1rem 1rem;
+}
+
+.feedback>section.text>.log>.pad {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    -webkit-box-flex: 1;
+    flex: 1;
 }
 
 .feedback {
