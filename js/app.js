@@ -199,7 +199,7 @@ $('#item-list').on('click','li',function() {
 		docRef.get().then(function(doc) {
 		    if (doc.exists) {
 			var tableData = doc.data();    
-			console.log("Document data:", tableData);	
+			console.log("Document data:", tableData.fname);	
 		    } else {
 			// doc.data() will be undefined in this case
 			console.log("No such document!");
@@ -214,9 +214,9 @@ $('#item-list').on('click','li',function() {
 		// put data on form
 		form.fname.value =  tableData.fname;//docRef.get().doc.data().fname;//db.collection('items').get().snapshot.doc(id).doc.data().fname;
 		form.lname.value = tableData.lname;
-      		//form.email.value = tableData[3];
-      		//form.dob.value = tableData[4];
-      		//form.info.value = tableData[5];
+      		form.email.value = tableData.email;
+      		form.dob.value = tableData.dob;
+      		form.info.value = tableData.info;
 
 		//$('#edit_item').click(function(){
 		form.addEventListener('submit', (e) => {
