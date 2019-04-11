@@ -107,7 +107,7 @@ $(function(){
 	//$('#close_app').hide();
 	$("#edit_item").hide();
 	$("#del_item").hide();
-	$("#menutag").html("Menu");
+	$(".label").html("Menu");
 
 
 	$("edit_submit").hide();
@@ -117,7 +117,7 @@ $(function(){
 		 $("#options").hide();
 	    	 $('.leftmenu').animate({width: '350px'});
 	         $(".content").hide().fadeIn(500);
-		 $("#menutag").html("Add Entry");
+		 $(".label").html("Add Entry");
 		 $('#close_app').show();
 	}
 
@@ -134,7 +134,7 @@ function display_edit(){
 	 $('.leftmenu').animate({width: '350px'});
  $(".content").hide().fadeIn(500);
    $( ".feedback" ).toggleClass('blur-me');
-	  $("#menutag").html("Edit Entry");
+	  $("#.label").html("Edit Entry");
 	  $('#close_app').show();
 }
 
@@ -147,7 +147,7 @@ function display_edit(){
   $('#item_submit').click(function(){
     $(".content").hide();
 	  $('.leftmenu').animate({width: '78px'});
-	  $("#menutag").html("Menu");
+	  $(".label").html("Menu");
 	  	$("#options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
 	     $('#close_app').hide();
@@ -157,7 +157,7 @@ function display_edit(){
   $('#close_app').click(function(){
     $(".content").hide();
 	$('.leftmenu').animate({width: '78px'});
-	  $("#menutag").html("Menu");
+	  $("#.label").html("Menu");
 	$("#options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
 	     $('#close_app').hide();
