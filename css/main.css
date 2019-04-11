@@ -40,7 +40,7 @@ section{
 }
 .selected {
   color: #000;
-  background-color:yellow;
+  background-color:#E4E80C;
 }
 
 .container .mainheader
@@ -48,7 +48,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #282b2d;
+    background: #101112;
     padding: 0 1rem;
     padding-top: 0px;
     padding-right: 1rem;
@@ -66,9 +66,9 @@ section{
 
 .mainheader h1{
     color: #70afe0;
+    text-align: center;
     letter-spacing: 1px;
     font-weight: 600;
-    float-right;
 }
 
 .feedheader h1{
@@ -81,46 +81,37 @@ section{
 
 
 .menuheader {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    padding-top: 0px;
-    padding-right: 1rem;
-    padding-bottom: 0px;
-    padding-left: 1rem;
+    text-align: left;
+    margin-top: 16px;
+    margin-left:16px;
 }
 
-.menuheader .menutag
-{
-    padding: 0.5rem;
+label .menutag {
+  padding-right: 5rem;
 }
 
 .app
 {
-    -webkit-box-flex: 1;
+    margin-right: 16px;
     flex: 1;
-    display: -webkit-box;
     display: flex;
     -webkit-box-align: stretch;
     align-items: stretch;
-    height: 100%;
-
 }
 
 .leftmenu{
-  //display: flex;
-  width: 78px;
+  height: 100%;
+  display: flex;
+  width: 108px;
   top: 54px;
-  left: 0;
+  left: 16px;
   font-size: 0.75rem;
+  background-color: #282b2d;
   flex-direction: column;
   color: #f0f1f2;
   border-right: 1px solid #3a3e41;
   box-shadow: 1px 2px 8px rgba(0,0,0,0.45);
   z-index: 5;
-  background-color: #282b2d;
-
 }
 
 
@@ -138,7 +129,7 @@ section{
 .feedback
 {
         position: absolute;
-        left:78px;
+        left:108px;
         top:54px;
         right:0;
         bottom:0;
@@ -150,7 +141,6 @@ section{
         flex-wrap: initial;
         overflow: visible;
 }
-
 
 #close_app {
  background-color: transparent;
@@ -196,6 +186,7 @@ section{
   color: #26282b;
 }
 */
+
 
 form:after{
     content: '';
@@ -262,14 +253,6 @@ input[type=submit],input[type=apply]:hover {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 10px;
-    border: 1px solid #13160d;
-    padding: 10%;
-    border-radius: 10px;
-    padding: 6px;
-    letter-spacing: 1px;
-    text-align:center;
-    margin-right = 16px;
-    margin-left = 16px;
     margin-bottom:12px;
     display: block;
 }
@@ -281,10 +264,10 @@ input[type=submit],input[type=apply]:hover {
 
 li{
     padding: 16px 16px;
-    background: #f9f9f9a8;
+    background: #f6f6f6;
     color: #555;
     position: relative;
-    border: 1px solid #2b6779;
+    border: 1px solid #7ec2d7;
     height: 100%;
     margin-bottom: 3px;
     cursor: pointer;
@@ -307,10 +290,9 @@ li span{
 }
 
 li span:nth-child(1){
-  margin-right: 300px;
+  float: right;
   font-weight: 500;
   font-size: 10px;
-  
 }
 
 li span:nth-child(2), li span:nth-child(3),
