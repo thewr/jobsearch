@@ -439,7 +439,7 @@ li{
     padding: 16px 16px;
     background: #f6f6f6;
     color: #555;
-    min-width: 500px;
+    max-width: 500px;
     position: relative;
     border: 1px solid #7ec2d7;
     height: 100%;
