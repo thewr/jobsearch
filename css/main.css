@@ -79,6 +79,18 @@ html>.container, body>.container {
     z-index: 1000;
 }
 
+.sidebar>.min .options, .sidebar>.full .list {
+    -webkit-box-flex: 1;
+    flex: 1 1 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    overflow-y: auto;
+    background: #3a3e41;
+    border-bottom: 2px solid #3a3e41;
+}
+
 ul, menu, dir {
     display: block;
     list-style-type: disc;
