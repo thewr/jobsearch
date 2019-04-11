@@ -91,6 +91,10 @@ html>.container, body>.container {
     font-weight: 600;
 }
 
+.container .header ul.choice {
+    text-align: right;
+}
+
 .app .leftmenu, .container .header{
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
