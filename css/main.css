@@ -418,8 +418,8 @@ input[type=submit],input[type=apply]:hover {
     padding: 0;
 }
 
-#new_item, #edit_item, #del_item {
-    font-weight: 600;
+.options li {
+    font-weight: 400;
     background-color: #f0f1f2;
     text-transform: uppercase;
     cursor: pointer;
