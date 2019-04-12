@@ -441,13 +441,13 @@ li{
     padding: 16px 16px;
     background: #f6f6f6;
     color: #555;
-    max-width: 640px;
+    max-width: 740px;
     position: relative;
-    border: 1px solid #7ec2d7;
     height: 100%;
     margin-bottom: 3px;
+    border: 1px solid #7ec2d7;
+    border-bottom: 16px solid #7ec2d7;
     cursor: pointer;
-    border-bottom: 16px solid black;
 }
 
 li span{
