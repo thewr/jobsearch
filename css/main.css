@@ -438,7 +438,6 @@ input[name=fname], input[name=lname], input[name:email]
 .options li {
     text-align:center;
     font-weight: 400;
-    background-color: #f0f1f2;
     text-transform: uppercase;
     cursor: pointer;
     margin-bottom: 6px;
