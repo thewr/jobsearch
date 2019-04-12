@@ -210,12 +210,6 @@ section{
   background-color:#E4E80C;
 }
 
-li .hover {
-  color: #000;
-  background-color:#E4E80C;
-}
-    
-
 .blur-me {
     z-index: 1;
   filter: blur(2px);
