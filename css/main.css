@@ -150,14 +150,17 @@ height: 100%;
     padding: .5rem 0;
 }
 
+.backrow .label
+{
+        text-size: 10px;
+}
 
 
-/*
+
 .leftmenu .row .label, .letmenu .options>li input, .leftmenu .options>li .label {
     -webkit-box-flex: 1;
     flex: 1;
 }
-*/
 
 .leftmenu .content{
     position: relative;
