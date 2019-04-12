@@ -169,7 +169,7 @@ height: 100%;
     
   }
 
-.leftmenu .content #form_footer{
+.leftmenu .content .form_footer{
      position: relative;
      display:block;
      margin:0;
@@ -240,8 +240,8 @@ section{
 }
 
 .feedback>section {
-    background: #f0f1f2;
-    color: #575e63;
+    //background: #f0f1f2;
+    //color: #575e63;
     -webkit-box-flex: 1;
     flex: 1 1 0;
     transition: -webkit-box-flex .2s ease-out;
@@ -255,8 +255,8 @@ section{
 }
 
 .feedback>section>header {
-    color: white;
-    background: blue;
+    //color: white;
+    //background: blue;
 }
 
 
