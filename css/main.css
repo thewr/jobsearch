@@ -138,6 +138,7 @@ height: 100%;
     margin: 0;
     padding: 0;
     border-top: 2px solid #282b2d;
+    text-size: 10px;
 }
 
 .leftmenu header.row.backrow {
@@ -154,7 +155,6 @@ height: 100%;
 
 .label
 {
-    text-size: 8px;
     color: white;
 }
 
