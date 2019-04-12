@@ -443,8 +443,8 @@ li{
     max-width: 740px;
     position: relative;
     height: 100%;
-    border: 1px solid #7ec2d7;
-    border-bottom: 16px solid #7ec2d7;
+    border: 1px solid #282b2d;
+    border-bottom: 16px solid #282b2d;
     cursor: pointer;
 }
 
