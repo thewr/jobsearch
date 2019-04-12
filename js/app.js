@@ -134,7 +134,7 @@ function display_edit(){
 	 $('.leftmenu').animate({width: '350px'});
  	$(".content").hide().fadeIn(500);
    	$( ".feedback" ).toggleClass('blur-me');
-	  $("#.label").html("Edit Entry");
+	  $(".label").html("Edit Entry");
 	  $('#close_app').show();
 }
 
