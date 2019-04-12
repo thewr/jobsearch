@@ -180,9 +180,13 @@ function hover(a){
     });
   }
 }
+	
+$('.selected').on('click','li',functio(){
+	$(this).removeClass('selected');
+}
 
 $(itemList).on('click','li',function() {
-	$(this).toggleClass('selected').siblings().removeClass('selected');
+	$(this).addClass('selected').siblings().removeClass('selected');
 
 	if($(this).hasClass('selected'))
 	{
@@ -240,9 +244,10 @@ $(itemList).on('click','li',function() {
       });
 
 		}
-  	else
-  	{
-        hover('on');
+  		else
+  		{
+        		hover('on');
+			
   			$("#edit_item").hide();
   			$("#del_item").hide();
   			clearForm();
