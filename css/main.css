@@ -133,7 +133,7 @@ height: 100%;
 .leftmenu header.row{
     -webkit-box-flex: 0;
     flex: 0 0 2.5rem;
-    margin-left: 50px;
+    margin: 0;
     padding: 0;
 }
 
