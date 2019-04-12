@@ -148,7 +148,7 @@ function display_edit(){
     $(".content").hide();
 	  $('.leftmenu').animate({width: '50px'});
 	  $(".label").html("Menu");
-	  	$("#options").hide().fadeIn(2000);
+	  	$(".options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
 	     $('#close_app').hide();
   });
