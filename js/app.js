@@ -131,7 +131,7 @@ $(function(){
 // Animate slide for edit form
 function display_edit(){
   $(".options").hide();
-	 $('.leftmenu').animate({width: '350px'});
+	 $('.leftmenu').animate({width: '378px'});
  	$(".content").hide().fadeIn(500);
    	$( ".feedback" ).toggleClass('blur-me');
 	  $(".label").html("Edit Entry");
@@ -146,7 +146,7 @@ function display_edit(){
 
   $('#item_submit').click(function(){
     $(".content").hide();
-	  $('.leftmenu').animate({width: '78px'});
+	  $('.leftmenu').animate({width: '50px'});
 	  $(".label").html("Menu");
 	  	$("#options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
@@ -156,7 +156,7 @@ function display_edit(){
 
   $('#close_app').click(function(){
     $(".content").hide();
-	$('.leftmenu').animate({width: '78px'});
+	$('.leftmenu').animate({width: '50px'});
 	  $(".label").html("Menu");
 	$(".options").hide().fadeIn(2000);
 	$( ".feedback" ).toggleClass('blur-me');
