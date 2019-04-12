@@ -183,11 +183,10 @@ function hover(a){
 
 $(itemList).on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
-	//$(this).toggleClass('active').siblings().removeClass('active');
 
 	if($(this).hasClass('selected'))
 	{
-   		 hover('off');
+   		// hover('off');
 		//show available options
 		$("#edit_item").show();
 		$("#del_item").show();
@@ -234,8 +233,8 @@ $(itemList).on('click','li',function() {
 			});
 
    		$('#del_item').on('click',function(){
-        alert("Deleteing!!!");
-        db.collection('items').doc(id).delete();
+        		alert("Deleteing!!!");
+       		 db.collection('items').doc(id).delete();
       });
 
 		}
