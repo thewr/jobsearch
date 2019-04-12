@@ -176,10 +176,37 @@ height: 100%;
     background-repeat: repeat;
     background-attachment: scroll;
     background-position: 0% 0%;
-    position: fixed;
+    position: relative;
     bottom: 0pt;
     left: 0pt;
 }
+
+input[type=submit]{
+  background-color: #4285F4;
+  position:absolute;
+  display:inline-block;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  color: white;
+  padding: 3px 6px 3px 6px;
+  border-radius: 3px;
+  float: bottom-left;
+  font-weight: 400;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #3F729B;
+}
+
+#close_app {
+ background-color: transparent;
+ text-decoration: none !important;
+ display: inline-block;
+ color: white;
+ cursor: pointer;
+}
+
 
 body>.container>.app>.leftmenu {
     width: 50px;
@@ -234,7 +261,7 @@ section{
     flex: 0 6.25rem;
 }
 
-.feedback>section.log>.documents {
+.feedback>section.text>.documents {
     position: relative;
     box-sizing: border-box;
     display: -webkit-box;
@@ -327,31 +354,7 @@ body>.container>.app>.doc>.blocker {
     z-index: 10;
 }
 
-input[type=submit]{
-  background-color: #4285F4;
-  position:absolute;
-  display:block;
-  border: 1px solid rgba(27, 31, 35, 0.2);
-  color: white;
-  padding: 3px 6px 3px 6px;
-  border-radius: 3px;
-  float: bottom-left;
-  font-weight: 400;
-  line-height: 15px;
-  cursor: pointer;
-}
 
-input[type=submit]:hover {
-  background-color: #3F729B;
-}
-
-#close_app {
- background-color: transparent;
- text-decoration: none !important;
- display: inline-block;
- color: white;
- cursor: pointer;
-}
 
 
 
