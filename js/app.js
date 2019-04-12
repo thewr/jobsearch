@@ -211,6 +211,7 @@ $(itemList).on('click','li',function() {
 		//var refData = docRef.get().get().doc.data().fname;//map(function(){return $(this).text();}).get();
 
 		// put data on form
+		/*
 		form.fname.value =  tableData.fname;//docRef.get().doc.data().fname;//db.collection('items').get().snapshot.doc(id).doc.data().fname;
 		form.lname.value = tableData.lname;
       		form.email.value = tableData.email;
@@ -231,6 +232,7 @@ $(itemList).on('click','li',function() {
 				clearForm();
 
 			});
+			*/
 
    		$('#del_item').on('click',function(){
         		alert("Deleteing!!!");
