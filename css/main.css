@@ -319,7 +319,6 @@ body>.container>.app>.doc>.blocker {
  background-color: transparent;
  text-decoration: none !important;
  display: inline-block;
- float: right;
  color: white;
  cursor: pointer;
 }
