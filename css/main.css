@@ -440,8 +440,6 @@ input[name=fname], input[name=lname], input[name:email]
     background-color: #f0f1f2;
     text-transform: uppercase;
     cursor: pointer;
-    margin-left:3px;
-    margin-right:3px;
     margin-bottom: 6px;
     display: block;
 }
