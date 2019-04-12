@@ -447,7 +447,7 @@ li{
     height: 100%;
     margin-bottom: 3px;
     cursor: pointer;
-    border-bottom: 1px solid black;
+    border-bottom: 16px solid black;
 }
 
 li span{
