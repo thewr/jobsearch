@@ -91,7 +91,6 @@ html>.container, body>.container {
     border-bottom: 2px solid #3a3e41;
 }
 
-/*
 ul{
     display: block;
     list-style-type: disc;
@@ -101,7 +100,6 @@ ul{
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-*/
 
 .container .header ul {
     padding: 0;
@@ -135,6 +133,7 @@ height: 100%;
 .leftmenu header.row{
     -webkit-box-flex: 0;
     flex: 0 0 2.5rem;
+    margin-left: 16px;
     padding: 0;
 }
 
