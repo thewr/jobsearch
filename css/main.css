@@ -327,6 +327,23 @@ body>.container>.app>.doc>.blocker {
     z-index: 10;
 }
 
+input[type=submit]{
+  background-color: #4285F4;
+  position:absolute;
+  display:block;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  color: white;
+  padding: 3px 6px 3px 6px;
+  border-radius: 3px;
+  float: bottom-left;
+  font-weight: 400;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #3F729B;
+}
 
 #close_app {
  background-color: transparent;
@@ -398,24 +415,6 @@ textarea {
 input[name=fname], input[name=lname], input[name:email]
 {
     width: 100%;
-}
-
-input[type=submit],input[type=apply]{
-  background-color: #4285F4;
-  position:absolute;
-  display:block;
-  border: 1px solid rgba(27, 31, 35, 0.2);
-  color: white;
-  padding: 3px 6px 3px 6px;
-  border-radius: 3px;
-  float: bottom-left;
-  font-weight: 400;
-  line-height: 15px;
-  cursor: pointer;
-}
-
-input[type=submit],input[type=apply]:hover {
-  background-color: #3F729B;
 }
 
 .options {
