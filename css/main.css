@@ -445,7 +445,7 @@ input[type=submit],input[type=apply]:hover {
 
 
 li{
-    padding: 16px 16px;
+    padding: 2px;
     background: #f6f6f6;
     color: #555;
     max-width: 740px;
