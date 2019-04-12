@@ -186,7 +186,7 @@ $(itemList).on('click','li',function() {
 
 	if($(this).hasClass('selected'))
 	{
-   		// hover('off');
+   		 hover('off');
 		//show available options
 		$("#edit_item").show();
 		$("#del_item").show();
