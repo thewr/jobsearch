@@ -149,6 +149,8 @@ height: 100%;
     padding: .5rem 0;
 }
 
+
+
 /*
 .leftmenu .row .label, .letmenu .options>li input, .leftmenu .options>li .label {
     -webkit-box-flex: 1;
@@ -161,11 +163,18 @@ height: 100%;
     display: none;
     flex-basis: 0px; flex-shrink:1;
     //background-color: #f0f1f2;
-    padding:8px;
-    border-radius: 5px;
-    line-height: 22.4px;
+    padding-left:16px;
+    line-height: 16.4px;
     margin:0;
+    
   }
+
+.leftmenu .content #form_footer{
+     position: relative;
+     display:block;
+     margin:0;
+    padding:0;
+}
 
 body>.container>.app>.leftmenu {
     width: 108px;
