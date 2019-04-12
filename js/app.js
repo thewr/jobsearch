@@ -180,13 +180,9 @@ function hover(a){
     });
   }
 }
-	
-$('.selected').click(function(){
-	$(this).removeClass('selected');
-}
 
 $(itemList).on('click','li',function() {
-	$(this).addClass('selected').siblings().removeClass('selected');
+	$(this).toggleClass('selected').siblings().removeClass('selected');
 
 	if($(this).hasClass('selected'))
 	{
