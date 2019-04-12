@@ -181,7 +181,7 @@ function hover(a){
   }
 }
 	
-$('.selected').on('click','li',functio(){
+$('.selected').on('click','li',function(){
 	$(this).removeClass('selected');
 }
 
