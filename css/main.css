@@ -435,6 +435,8 @@ input[name=fname], input[name=lname], input[name:email]
     margin: 0;
     padding: 0;
     padding-bottom: 16px;
+    background: #282b2d;
+
 }
 
 .options li {
@@ -444,9 +446,6 @@ input[name=fname], input[name=lname], input[name:email]
     text-transform: uppercase;
     cursor: pointer;
     margin-bottom: 6px;
-    border-top: 2px solid #282b2d;
-    border-bottom: 2px solid #282b2d;
-
     display: block;
 }
 
