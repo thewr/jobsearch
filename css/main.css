@@ -434,6 +434,7 @@ input[name=fname], input[name=lname], input[name:email]
     flex-direction: column;
     margin: 0;
     padding: 0;
+    margin-bottom: 16px;
 }
 
 .options li {
@@ -444,6 +445,8 @@ input[name=fname], input[name=lname], input[name:email]
     cursor: pointer;
     margin-bottom: 6px;
     border-top: 2px solid #282b2d;
+    border-bottom: 2px solid #282b2d;
+
     display: block;
 }
 
