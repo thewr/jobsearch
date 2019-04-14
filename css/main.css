@@ -153,8 +153,9 @@ height: 100%;
     padding: .5rem 0;
 }
 
-.label
+h1 .label
 {
+    text-size: 10px;
     color: white;
 }
 
