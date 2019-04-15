@@ -37,8 +37,8 @@ function renderCafe(doc){
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
 
   let date = document.createElement('span');
-let label = document.createElement('span').addClass('inline');
-  //let fname = document.createElement('span');
+  let label = document.createElement('span').setAttribute("style","display: inline-block;");
+	//let fname = document.createElement('span');
   //let lname = document.createElement('span');
   let name = document.createElement('span');
   let email = document.createElement('span');
