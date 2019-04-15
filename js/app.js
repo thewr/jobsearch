@@ -55,9 +55,8 @@ function renderCafe(doc){
  
   // append row
   label.textContent = "Date: ";
-  label.style.display = "inline-block";
- // label.setAttribute("style","display: inline-block;");
-  li.appendChild(label);
+  label.style.display = "inline-block"; li.appendChild(label);
+  date.style.display = "inline-block";
   li.appendChild(date);
   //li.appendChild(fname);
   //li.appendChild(lname);
