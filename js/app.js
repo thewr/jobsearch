@@ -38,7 +38,7 @@ function renderCafe(doc){
 
   let date = document.createElement('span');
   let label = document.createElement('span').setAttribute("style","display: inline-block;");
-	//let fname = document.createElement('span');
+  //let fname = document.createElement('span');
   //let lname = document.createElement('span');
   let name = document.createElement('span');
   let email = document.createElement('span');
@@ -54,6 +54,8 @@ function renderCafe(doc){
   info.textContent = doc.data().info;
  
   // append row
+  label.textContent = "Date: ";
+  li.appendChild(label);
   li.appendChild(date);
   //li.appendChild(fname);
   //li.appendChild(lname);
