@@ -46,11 +46,10 @@ function renderCafe(doc){
   let info = document.createElement('span');
 
   date.textContent = doc.data().date;
-  //fname.textContent = doc.data().fname;
-  //lname.textContent = doc.data().lname;
-  name.textContent = "Name:  "+doc.data().lname + ", " + doc.data().fname;
-  email.textContent = "E-mail:  "+doc.data().email;
-  dob.textContent = "Date-of-Birth:  "+doc.data().dob;
+  fname.textContent = doc.data().fname;
+  lname.textContent = doc.data().lname;
+  email.textContent = doc.data().email;
+  dob.textContent =  doc.data().dob;
   info.textContent = doc.data().info;
  
   // append row
@@ -58,9 +57,13 @@ function renderCafe(doc){
   label.style.display = "inline-block"; li.appendChild(label);
   date.style.display = "inline-block";
   li.appendChild(date);
-  //li.appendChild(fname);
-  //li.appendChild(lname);
-  li.appendChild(name);
+
+  
+  label.textContent = "Name: "; label.style.display = "block"; li.appendChild(label);
+  fname.style.display = "inline-block"; li.appendChild(fname);
+	
+	
+  li.appendChild(lname);
   li.appendChild(email);
   li.appendChild(dob);
   li.appendChild(info);
