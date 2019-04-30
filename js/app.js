@@ -35,7 +35,7 @@ function myFunction() {
 function myFunc(evt)
 {
 	let id = evt.target.parentElement.getAttribute('data-id');
-	var docRef = db.collection("spells").doc(id);
+	var docRef = db.collection("applications").doc(id);
 	       
 	try {
 		var tableData = {};
@@ -67,7 +67,7 @@ function myFunc(evt)
 						$('#item_submit').click(function(){ 
 							//form.addEventListener('click','append', (e) => {
     							//e.preventDefault();
-							db.collection("spells").doc(id).update({
+							db.collection("applications").doc(id).update({
 								name: form.name.value,
 								wordsA: form.wordsA.value,
 								wordsB: form.wordsB.value,
@@ -77,7 +77,7 @@ function myFunc(evt)
 							refresh();
 							// getting data
 							/*
-							db.collection('spells').get().then(snapshot => {
+							db.collection('applications').get().then(snapshot => {
     							snapshot.docs.forEach(doc => {
         						renderDB(doc);
 							});		
@@ -174,13 +174,13 @@ function renderDB(doc){
     cross.addEventListener('click', (e) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
-        db.collection('spells').doc(id).delete();
+        db.collection('applications').doc(id).delete();
     });
     */
 }
 
 // getting data
-db.collection('spells').get().then(snapshot => {
+db.collection('applications').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
         renderDB(doc);
     });
@@ -189,7 +189,7 @@ db.collection('spells').get().then(snapshot => {
 // saving data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('spells').add({
+    db.collection('applications').add({
         name: form.name.value,
         wordsA: form.wordsA.value,
 	wordsB: form.wordsB.value,
