@@ -142,8 +142,8 @@ function renderDB(doc){
   label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 	
   let label_contact = document.createElement('span');
-  label_phone.textContent = "CONTACT";
-  label_phone.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+  label_contact.textContent = "CONTACT";
+  label_contact.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 	
   let label_subject = document.createElement('span');
   label_subject.textContent = "LOG ENTRY";
