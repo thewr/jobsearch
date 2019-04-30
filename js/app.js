@@ -109,7 +109,7 @@ function renderDB(doc){
   //let cross = document.createElement('div');
   //cross.textContent = 'x';
 
-  let date = document.createElement('span');
+  let date = document.createElement('div');
 
 
   // create elements for labels for each data to display
@@ -285,14 +285,14 @@ $('#item_cancel').click(function(){
 	$('#item-list').on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
 		if($(this).hasClass('selected')){
-			$(this).append($div);
+			//$(this).append($div);
 			$("#edit_item").show();
 			$("#delete_item").show();
 			// change selected's background-color
 			$(this).css("background-color", "rgb(225, 255, 107)");
 		} else {
 			$(this).css("background-color", "");
-			 $div.remove();
+			// $div.remove();
       			$("#edit_item").hide();
 			$("#delete_item").hide();
 
