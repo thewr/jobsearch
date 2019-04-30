@@ -114,11 +114,11 @@ function renderDB(doc){
 
   // create elements for labels for each data to display
   let label_name = document.createElement('span');
-  label_name.textContent = "NAME";
+  label_name.textContent = "COMPANY/AGENCY";
   label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
   let label_address = document.createElement('span');
-  label_address.textContent = "ADDRESS";
+  label_address.textContent = "LOCATION";
   label_address.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
   let label_website = document.createElement('span');
