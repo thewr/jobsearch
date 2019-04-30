@@ -15,22 +15,15 @@ function refresh() {
 // for selections
 var $div = $("<div id='edit_item'>"+"Edit"+"</div>");  //{id: "foo", "class": "a"});
 
-////// code to keep top content
-/*
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("top-container");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
+function todaysDate()
+{
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    return today;
 }
-*/
-///////
 
 function myFunc(evt)
 {
