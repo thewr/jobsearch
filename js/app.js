@@ -109,6 +109,7 @@ function renderDB(doc){
   //let cross = document.createElement('div');
   //cross.textContent = 'x';
 
+  let date = document.createElement('span');
 
 
   // create elements for labels for each data to display
@@ -136,7 +137,8 @@ function renderDB(doc){
   label_subject.textContent = "LOG ENTRY";
   label_subject.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
-  // generate content for fields
+  // render document contents
+  date.textContent = doc.data().date;
   name.textContent = doc.data().name;
   wordsA.textContent = doc.data().wordsA;
   wordsB.textContent = doc.data().wordsB;
@@ -145,6 +147,8 @@ function renderDB(doc){
   subject.textContent = doc.data().subject;
 
   // append list
+  li.appendChild(date);
+
   li.appendChild(label_name);
   li.appendChild(name);
 
@@ -190,6 +194,7 @@ db.collection('applications').get().then(snapshot => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     db.collection('applications').add({
+	date: todaysDate(),
         name: form.name.value,
         wordsA: form.wordsA.value,
 	wordsB: form.wordsB.value,
