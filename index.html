@@ -9,66 +9,69 @@
 		<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
 		<link rel="stylesheet" type="text/css" href="/research_project/css/main.css">
 	</head>
-			<body>
+	<body>
+	
 			<div class = "container">
-			<header class = "header">
-				<h1>Support Resources</h1>
-			</header>
-
-			<div class = "app">
-			<div class = "min">
-			<aside class = "leftmenu" id>
-			<header class = "row">
-					<h1 class="label"></li>
-			</header>
-					<ul class = "options">
-						<li id="new_item">New</li>
-						<li id="edit_item">Edit</li>
-						<li id="del_item" type="execute">Del</li>
-					</ul>
-				</div>
-				<div class="content">
-				<form id = "add-item-form">
-				        <input type="text" name="fname" placeholder="first" maxlength="15";>
-					<input type="text" name="lname" placeholder="last" maxlength="25";>
-					<input type="text" name="email" placeholder="e-mail" maxlength="25";>
-				        <input type="text" name="dob" placeholder="date of birth" maxlength="10";>
-					<textarea id="subject" name="info" placeholder="about me ..." rows="2" maxlength="50";></textarea>
-					<div id = "footer">
-						<input id = "item_submit" type="submit" value="Submit">
-						<a href="https://thewr.github.io/research_project/" id = "close_app">Cancel</a>
-					</div>
-					</form>
-			</aside>
+		
+		<div class = "top">
+			<div class = "header">
+				<h1>Inventory</h1>
 			</div>
-
-			<div class = "feedback">
-				<header><h1>Under construction ...</h1></header>
-		    		<section class = "text">
-					<div class = "pad">
-					<article class = "documents">
-						<ol id="item-list"></ol>
-					</article>
-					</div>
-		 		</section>
-			</div>
+			<div class="min">
+				<ul class = "options">
+					<li id = "new_item">New</li>
+					<li id = "edit_item">Edit</li>
+					<li id = "delete_item">Delete</li>
+				</ul>
 			</div>
 		</div>
-		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-		<script>
-		  // Initialize Firebase
-		  var config = {
-		    apiKey: "AIzaSyABLPPnvg2DVPjuSMQxjXjPCjhcFCk7rRg",
-		    authDomain: "researchproject-ff86c.firebaseapp.com",
-		    databaseURL: "https://researchproject-ff86c.firebaseio.com",
-		    projectId: "researchproject-ff86c",
-		    storageBucket: "researchproject-ff86c.appspot.com",
-		    messagingSenderId: "934179260423"
-		  };
-		  firebase.initializeApp(config);
-			
-		const db = firebase.firestore();
-		</script>
+		
+		<div class = "app">
+		<div class="sidebar">
+
+			<div class = "max">
+				<div class = "content">
+				<form id = "add-item-form">
+					<label>Name</label>
+	                		<input type="text" name="name">
+					<label>Address</label>
+	                		<input type="text" name="wordsA">
+					<label>Website</label>
+	                		<input type="text" name="wordsB">
+					<label>Contact</label>
+	                		<input type="text" name="wordsC">
+					<!--<label>Hours</label>
+	                		<input type="text" name="hours">-->
+					<label for="subject">Subject</label>
+	                		<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+	                		<input id = "item_submit" type="submit" value="Submit">
+					<!--<a href="https://thewr.github.io/flip_book/" id = "close_app">Cancel</a>-->
+					<input class = "btn btn-danger" id = "item_cancel" type="cancel" value="Cancel">
+	            		</form>
+							</div>
+			</div>
+		</div>
+
+			<div class = "docs">
+				<ul id="item-list"></ul>
+				</div>
+		</div>
+	</div>			
+				
+				
+	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyAM1ZdXb99R6nKZI9q71ox2VwsEbRNe1FQ",
+	    authDomain: "jobsearch-ab253.firebaseapp.com",
+	    databaseURL: "https://jobsearch-ab253.firebaseio.com",
+	    projectId: "jobsearch-ab253",
+	    storageBucket: "jobsearch-ab253.appspot.com",
+	    messagingSenderId: "598138185831"
+	  };
+	  firebase.initializeApp(config);
+	</script>
 		<script src="/research_project/js/app.js"></script>	
 	</body>	
 </html>
