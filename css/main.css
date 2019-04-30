@@ -343,7 +343,7 @@ body>.container>.app>.docs {
     margin: 8px 16px 8px 16px;
     min-width: 480px;
     max-width: 640px;
-    padding: 8px 16px;
+    padding: 4px 16px;
     padding-right: 8px;
     padding-left: 4px;
     position: relative;
