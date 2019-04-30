@@ -105,19 +105,13 @@ function renderDB(doc){
   // create list document elements
   let li = document.createElement('li');
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
-  let name = document.createElement('span');
-  name.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px; border-bottom: 2px solid black";
-  let wordsA = document.createElement('span');
-  wordsA.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px;";
-  let wordsB = document.createElement('span');
-  wordsB.style.cssText = "padding: 3px 0px 6px 12px; font-size: 12px;";
-  let wordsD = document.createElement('span');
-  wordsB.style.cssText = "padding: 3px 0px 6px 12px; font-size: 12px;";
-  let wordsC = document.createElement('span');
-  wordsC.style.cssText = "font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 3px 0px 6px 12px; display: block; border-bottom: 2px solid black";
+  let name = document.createElement('span');  name.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px; border-bottom: 2px solid black";
+  let wordsA = document.createElement('span');  wordsA.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px;";
+  let wordsB = document.createElement('span');  wordsB.style.cssText = "padding: 3px 0px 6px 12px; font-size: 12px;";
+  let wordsD = document.createElement('span');  wordsD.style.cssText = "padding: 3px 0px 6px 12px; font-size: 12px;";
+  let wordsC = document.createElement('span');  wordsC.style.cssText = "font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 3px 0px 6px 12px; display: block; border-bottom: 2px solid black";
 
-  let subject = document.createElement('span');
-  subject.style.cssText = "padding: 3px 0px 6px 12px; display: block;";
+  let subject = document.createElement('span');  subject.style.cssText = "padding: 3px 0px 6px 12px; display: block;";
 
   //let cross = document.createElement('div');
   //cross.textContent = 'x';
@@ -126,7 +120,7 @@ function renderDB(doc){
 
   // create elements for labels for each data to display
   let label_name = document.createElement('span');
-  label_name.textContent = "NAME"; //&nbsp;
+  label_name.textContent = "NAME";
   label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
   let label_address = document.createElement('span');
