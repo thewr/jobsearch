@@ -1,260 +1,295 @@
+
 // creates a <table> element and a <tbody> element
-const itemList = document.querySelector('#item-list');
-let tblBody = document.createElement("tbody");
-// get the reference for the body
-var body = document.getElementsByTagName("body")[0];
+var itemList = document.querySelector('#item-list');
+itemList.addEventListener('click', myFunc, false);
+itemList.myParam = 'This is my parameter';
+
+// refresh the console (needs work)
+function refresh() {
+
+    setTimeout(function () {
+        location.reload()
+    }, 100);
+}
+
+// for selections
+var $div = $("<div id='edit_item'>"+"Edit"+"</div>");  //{id: "foo", "class": "a"});
+
+////// code to keep top content
+/*
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("top-container");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+*/
+///////
+
+function myFunc(evt)
+{
+	let id = evt.target.parentElement.getAttribute('data-id');
+	var docRef = db.collection("spells").doc(id);
+	       
+	try {
+		var tableData = {};
+		docRef.get()
+		.then(doc => {
+			if(!doc.exists) {
+				window.alert("no such document");
+			} else {
+				tableData = {
+					doc: doc.data(),
+					name: doc.data().name,
+					wordsA: doc.data().wordsA,
+					wordsB: doc.data().wordsB,
+					wordsC: doc.data().wordsC,
+				        subject: doc.data().subject
+				};  //window.alert(tableData.name + " " + tableData.subject);
+			}
+		})
+	} catch (error) {
+	res.send(error);
+	}
+		 			$('#edit_item').click(function(){
+					        form.name.value =  tableData.name;
+						form.wordsA.value = tableData.wordsA;
+						form.wordsB.value = tableData.wordsB;
+						form.wordsC.value = tableData.wordsC;
+						form.subject.value = tableData.subject;
+						
+						$('#item_submit').click(function(){ 
+							//form.addEventListener('click','append', (e) => {
+    							//e.preventDefault();
+							db.collection("spells").doc(id).update({
+								name: form.name.value,
+								wordsA: form.wordsA.value,
+								wordsB: form.wordsB.value,
+								wordsC: form.wordsC.value,
+								subject: form.subject.value
+							});	
+							refresh();
+							// getting data
+							/*
+							db.collection('spells').get().then(snapshot => {
+    							snapshot.docs.forEach(doc => {
+        						renderDB(doc);
+							});		
+							*/
+						});//end-of-item_submit
+					});//end-of-edit_item event
+	
+			 		$('#delete_item').click(function(){
+						docRef.delete();
+						refresh();
+					});//end-of-delete_item event
+
+	
+
+}
 
 // create form element
-const form = document.querySelector('#add-item-form');
-let execute = document.querySelector('#options');
-
-
-function todaysDate()
-{
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-    today = mm + '/' + dd + '/' + yyyy;
-    return today;
-}
+var form = document.querySelector('#add-item-form');
 
 // create element & render cafe
-function renderCafe(doc){
-/*
-    // creates a table li
-    let row = document.createElement("tr");
-    row.setAttribute('data-id', doc.id);
-    let date = document.createElement('td');
-    let fname = document.createElement('td');
-    let lname = document.createElement('td');
-    let email = document.createElement('td');
-    let dob = document.createElement('td');
-    let info = document.createElement('td');
-*/
-  // create list document object
+function renderDB(doc){
+  // create list document elements
   let li = document.createElement('li');
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
-
-  let date = document.createElement('span');
-  let label = document.createElement('span');//.setAttribute("style","display: inline-block;");
-  //let fname = document.createElement('span');
-  //let lname = document.createElement('span');
   let name = document.createElement('span');
-  let email = document.createElement('span');
-  let dob = document.createElement('span');
-  let info = document.createElement('span');
+  name.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px; border-bottom: 2px solid black";
+  let wordsA = document.createElement('span');
+  wordsA.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px;";
+  let wordsB = document.createElement('span');
+  wordsB.style.cssText = "padding: 3px 0px 6px 12px; font-size: 12px;";
+  let wordsC = document.createElement('span');
+  wordsC.style.cssText = "font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 3px 0px 6px 12px; display: block; border-bottom: 2px solid black";
 
-  date.textContent = doc.data().date;
-  fname.textContent = doc.data().fname;
-  lname.textContent = doc.data().lname;
-  email.textContent = doc.data().email;
-  dob.textContent =  doc.data().dob;
-  info.textContent = doc.data().info;
- 
-  // append row
-  label.textContent = "Date: ";
-  label.style.display = "inline-block"; li.appendChild(label);
-  date.style.display = "inline-block";
-  li.appendChild(date);
+  let subject = document.createElement('span');
+  subject.style.cssText = "padding: 3px 0px 6px 12px; display: block;";
 
-  
-  //label.textContent = "Name: "; label.style.display = "block"; li.appendChild(label);
-  fname.style.display = "inline-block"; li.appendChild(fname);
+  let cross = document.createElement('div');
+  cross.textContent = 'x';
+
+
+
+  // create elements for labels for each data to display
+  let label_name = document.createElement('span');
+  label_name.textContent = "NAME"; //&nbsp;
+  label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+
+  let label_address = document.createElement('span');
+  label_address.textContent = "ADDRESS";
+  label_address.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+
+  let label_website = document.createElement('span');
+  label_website.textContent = "WEBSITE";
+  label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+
+  let label_phone = document.createElement('span');
+  label_phone.textContent = "PHONE";
+  label_phone.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 	
+  let label_subject = document.createElement('span');
+  label_subject.textContent = "LOG ENTRY";
+  label_subject.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+
+  // generate content for fields
+  name.textContent = doc.data().name;
+  wordsA.textContent = doc.data().wordsA;
+  wordsB.textContent = doc.data().wordsB;
+  wordsC.textContent = doc.data().wordsC;
+  subject.textContent = doc.data().subject;
+
+  // append list
+  li.appendChild(label_name);
+  li.appendChild(name);
+
+  li.appendChild(label_address);
+  li.appendChild(wordsA);
 	
-  li.appendChild(lname);
-  li.appendChild(email);
-  li.appendChild(dob);
-  li.appendChild(info);
+  li.appendChild(label_website);
+  li.appendChild(wordsB);
+	
+  li.appendChild(label_phone);
+  li.appendChild(wordsC);
+	
+  li.appendChild(label_subject);
+  li.appendChild(subject);
 
-    // add the li to the end of the table body
-    // tblBody.appendChild(li);
+ // li.appendChild(cross);
 
-    // put the <tbody> in the <table>
-    itemList.appendChild(li);
+
+  // put the <tbody> in the <table>
+  itemList.appendChild(li);
+
+  // deleting data
+  /*
+    cross.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let id = e.target.parentElement.getAttribute('data-id');
+        db.collection('spells').doc(id).delete();
+    });
+    */
 }
-
 
 // getting data
-db.collection('items').get().then(snapshot => {
+db.collection('spells').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
-        renderCafe(doc);
+        renderDB(doc);
     });
 });
-
-// clear form
-function clearForm(){
-	form.fname.value = '';
-	form.lname.value = '';
-      	form.email.value = '';
-      	form.dob.value = '';
-      	form.info.value = '';
-}
 
 // saving data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('items').add({
-        date: todaysDate(),
-        fname: form.fname.value,
-        lname: form.lname.value,
-        email: form.email.value,
-	dob: form.dob.value,
-        info: form.info.value
+    db.collection('spells').add({
+        name: form.name.value,
+        wordsA: form.wordsA.value,
+	wordsB: form.wordsB.value,
+	wordsC: form.wordsC.value,
+        subject: form.subject.value
     });
-	clearForm();
+      form.name.value = '';
+      form.wordsA.value = '';
+	form.wordsB.value = '';
+	form.wordsC.value = '';
+      form.subject.value = '';
+	
+	// generate new db
+	refresh();
+});
+
+form.addEventListener('cancel', (e) => {
+    e.preventDefault();
+	refresh();
 });
 
 
-
 $(function(){
-
-	$(".content").hide();
-	$('#close_app').hide();
 	$("#edit_item").hide();
-	$("#del_item").hide();
-	$(".label").html("Menu");
+	$("#delete_item").hide();
+	$('.sidebar').hide();
 
 
-	$("#edit_submit").hide();
 	// Animate slide for create new form
 	function display_add(){
-		 $( ".feedback" ).toggleClass('blur-me');
-		 $(".options").hide();
-	    	 $('.leftmenu').animate({width: '350px'});
-	         $(".content").hide().fadeIn(500);
-		 $(".label").html("Add Entry");
-		 $('#close_app').show();
+		 $( ".docs" ).toggleClass('blur-me');
+		 $(".min").hide();
+	         $('.sidebar').show();
+	    	// $('.sidebar').animate({width: '350px'});
+	         $(".max").hide().fadeIn(500);
+
+		//$("#label").html("Add Entry");
+	  	 $('#close_app').show();
 	}
 
-// Add new document button show
+	// Add new document button show
 	$("#new_item").click(function(){
-		clearForm();
-		//$("#item_submit").attr('value', 'Submit').attr('type','submit');
+		$("#item_submit").attr('value', 'Submit').attr('type','submit');
 		display_add();
 	});
 
-// Animate slide for edit form
-function display_edit(){
-  $(".options").hide();
-	 $('.leftmenu').animate({width: '378px'});
- 	$(".content").hide().fadeIn(500);
-   	$( ".feedback" ).toggleClass('blur-me');
-	  $(".label").html("Edit Entry");
-	  $('#close_app').show();
-}
+	// Animate slide for edit form
+	function display_edit(){
+		 $( ".docs" ).toggleClass('blur-me');
+		 $(".min").hide();
+	         $('.sidebar').show();
+	    	// $('.sidebar').animate({width: '350px'});
+	         $(".max").hide().fadeIn(500);
 
-//Edit new document button show
-  $("#edit_item").click(function(){
+		//$("#label").html("Add Entry");
+	  	 $('#close_app').show();
+	}
+
+	//Edit new document button show
+  	$("#edit_item").click(function(){
+	  $("#item_submit").attr('value', 'Append').attr('type','append');
 	  display_edit();
   });
 
-
   $('#item_submit').click(function(){
     $(".content").hide();
-	  $('.leftmenu').animate({width: '50px'});
-	  $(".label").html("Menu");
-	  	$(".options").hide().fadeIn(2000);
-	$( ".feedback" ).toggleClass('blur-me');
-	     $('#close_app').hide();
+	  $('.sidebar').hide();
+	  $(".min").show();
+	  $( ".docs" ).toggleClass('blur-me');
+	  $('#close_app').hide();
   });
+	
+$('#item_cancel').click(function(){
+ 	refresh();	
+});
 
 
-  $('#close_app').click(function(){
-    $(".content").hide();
-	$('.leftmenu').animate({width: '50px'});
-	  $(".label").html("Menu");
-	$(".options").hide().fadeIn(2000);
-	$( ".feedback" ).toggleClass('blur-me');
-	     $('#close_app').hide();
-  });
+  	$('#close_app').click(function(){
+    		$(".content").hide();
+	   	$('.sidebar').animate({width: '54px'});
+	 	$( ".docs" ).toggleClass('blur-me');
+	     	$('#close_app').hide();
+	});
 
-function hover(a){
-  if(a=='on')
-  {
-    $('li').hover(function(){
-      $(this).css("background-color", "yellow");
-      }, function(){
-      $(this).css("background-color", "");
-    });
-  }
-  else {
-    $('li').hover(function(){
-      $(this).css("background-color", "");
-      }, function(){
-      $(this).css("background-color", "");
-    });
-  }
-}
-
-$(itemList).on('click','li',function() {
+	
+	$('#item-list').on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
-
-	if($(this).hasClass('selected'))
-	{
-   		 hover('off');
-		//show available options
-		$("#edit_item").show();
-		$("#del_item").show();
-
-		var tableData; //= $(this).children("span").map(function(){return $(this).text();}).get();
-		var id = $(this).attr('data-id');
-		var docRef = db.collection("items").doc(id);
-
-		docRef.get().then(function(doc) {
-		    if (doc.exists) {
-			var tableData = doc.data();    
-			console.log("Document data:", tableData.fname);	
-		    } else {
-			// doc.data() will be undefined in this case
-			console.log("No such document!");
-		    }
-		}).catch(function(error) {
-		    console.log("Error getting document:", error);
-		});
-		
-		
-		//var refData = docRef.get().get().doc.data().fname;//map(function(){return $(this).text();}).get();
-
-		// put data on form
-	
-		form.fname.value =  tableData.fname;//docRef.get().doc.data().fname;//db.collection('items').get().snapshot.doc(id).doc.data().fname;
-		form.lname.value = tableData.lname;
-      		form.email.value = tableData.email;
-      		form.dob.value = tableData.dob;
-      		form.info.value = tableData.info;
-
-		//$('#edit_item').click(function(){
-		form.addEventListener('submit', (e) => {
-    			e.preventDefault();
-    			db.collection('items').doc(id).update({
-				date: todaysDate(),
-        			fname: form.fname.value,
-        			lname: form.lname.value,
-        			email: form.email.value,
-				dob: form.dob.value,
-        			info: form.info.value
-			});
-				clearForm();
-
-			});
-	
-
-   		$('#del_item').on('click',function(){
-        		alert("Deleteing!!!");
-       		 db.collection('items').doc(id).delete();
-      });
+		if($(this).hasClass('selected')){
+			$(this).append($div);
+			$("#edit_item").show();
+			$("#delete_item").show();
+			// change selected's background-color
+			$(this).css("background-color", "rgb(225, 255, 107)");
+		} else {
+			$(this).css("background-color", "");
+			 $div.remove();
+      			$("#edit_item").hide();
+			$("#delete_item").hide();
 
 		}
-  		else
-  		{
-        		hover('on');
-			
-  			$("#edit_item").hide();
-  			$("#del_item").hide();
-  			clearForm();
-  	}
-  });
+	});
 
 });
