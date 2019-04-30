@@ -138,8 +138,8 @@ function renderDB(doc){
   label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
   let label_jobtitle = document.createElement('span');
-  label_website.textContent = "JOB TITLE";
-  label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+  label_jobtitle.textContent = "JOB TITLE";
+  label_jobtitle.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 	
   let label_contact = document.createElement('span');
   label_contact.textContent = "CONTACT";
