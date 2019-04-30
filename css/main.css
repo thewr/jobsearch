@@ -12,7 +12,7 @@ html, body
     user-select: none;
     cursor: default;
     color: #f0f1f2;
-    -webkit-user-select: none;
+   // -webkit-user-select: none;
 }
 
 html {
@@ -35,8 +35,8 @@ html>.container, body>.container {
     height: 100%;
     display: -webkit-box;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
+    //-webkit-box-orient: vertical;
+    //-webkit-box-direction: normal;
     flex-flow: column;
     flex-direction: column;
     flex-wrap: initial;
@@ -47,6 +47,17 @@ html>.container, body>.container {
   display: block;
   position:relative;
   background: #e7e9ea;
+}
+
+
+#item-list li .selected {
+  color: #000;
+  background-color: rgb(112, 189, 144);
+}
+
+.blur-me {
+    z-index: 1;
+  filter: blur(2px);
 }
 
 html>.container>.app, body>.container>.app {
@@ -77,416 +88,296 @@ html>.container, body>.container {
     justify-content: space-between;
     background: #101112;
     padding: 0 1rem;
-    height: 54px;
+    text-size: 10rem;
+    height: 44px;
     z-index: 1000;
 }
 
-.leftmenu>.min .options{
-    -webkit-box-flex: 1;
-    flex: 1 1 0;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    overflow-y: auto;
-    border-bottom: 2px solid #3a3e41;
+.container .top{
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-ul{
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-.container .header ul {
-    padding: 0;
-    white-space: nowrap;
-}
-
-.container .header ul.keys {
-    text-align: right;
-}
-
-.app .leftmenu, .container .header{
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-}
-
-.leftmenu{
-height: 100%;
-  color: white;
-  display: flex;
-  width: 70px;
-  min-width: 70px;
-  background-color: #101112;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  color: #101112;//#f0f1f2;
-  border-right: 1px solid #3a3e41;
-  //box-shadow: 1px 2px 8px rgba(0,0,0,0.45);
-  z-index: 5;
-}
-
-.leftmenu header.row{
-    -webkit-box-flex: 0;
-    flex: 0 0 2.5rem;
-    margin: 0;
-    padding: 0;
-    border-top: 2px solid #282b2d;
-    text-size: 10px;
-}
-
-.leftmenu header.row.backrow {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-flex: 1;
-    flex: 1 0 auto;
-    -webkit-box-align: center;
-    align-items: center;
-    cursor: pointer;
-    margin: 0;
-    padding: .5rem 0;
-}
-
-h1 .label
-{
-    text-size: 10px;
-    color: white;
-}
-
-
-
-.leftmenu .row .label, .letmenu .options>li input, .leftmenu .options>li .label {
-    -webkit-box-flex: 1;
-    flex: 1;
-}
-
-.leftmenu .content{
-    position: relative;
-    display: none;
-    flex-basis: 0px; flex-shrink:1;
-    padding-left:16px;
-    line-height: 16.4px;
-    margin:0;
-  }
-
-.leftmenu .content .footer{
-    height:24px; // Replace with the height your footer should be
-    width: 100%; // Don't change
-    background-image: none;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-position: 0% 0%;
-    position: relative;
-    bottom: 0pt;
-    left: 0pt;
-}
-
-input[type=submit]{
-  background-color: #4285F4;
-  //position:absolute;
-  display:inline-block;
-  border: 1px solid rgba(27, 31, 35, 0.2);
-  color: white;
-  padding: 3px 6px 3px 6px;
-  border-radius: 3px;
-  float: bottom-left;
-  font-weight: 400;
-  line-height: 15px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #3F729B;
-}
-
-#close_app {
- background-color: transparent;
- text-decoration: none !important;
- display: inline-block;
- color: white;
- cursor: pointer;
-}
-
-
-body>.container>.app>.leftmenu {
-    width: 70px;
-    min-width: 70px;
-    box-shadow: 1px 2px 8px rgba(0,0,0,0.45);
-    opacity: 1;
-}
-
-/*
-body>.container>.app>.leftmenu .expand{
+@media (max-width: 900px)
+body>.container>.app>.sidebar {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     z-index: 10000;
     transition: width .2s ease-out;
-//    width: calc(10% + 350px);
+    width: calc(10% + 350px);
     box-shadow: 10px 0 12px rgba(0,0,0,0.45);
     background: #282b2d;
     opacity: .94;
 }
-*/
 
-section{
-    //position: blocker;
-    display: block;
-    overflow-y: scroll;
-    flex: 0 6.25rem;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 6.25rem;
-    padding: 0 1rem;
-    padding-top: 0px;
-    padding-right: 1rem;
-    padding-bottom: 0px;
-    padding-left: 1rem;
-}
+.sidebar{
+ -webkit-box-flex: 1;
+ flex: 1 0 350px;   
+ border-top: 2px solid #b7bcc0;
+ //min-width: 250px;
+ margin-top: 44px;
+ position: fixed;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ height: 100%;
+ flex-direction: column;
+ padding: 23px;
+ background-color: #101112;
+ border-right: 1px solid #3a3e41;
+ z-index: 1000;
 
-.selected {
-  color: #000;
-  background-color: yellow;
-}
 
-.blur-me {
-    z-index: 1;
-  filter: blur(2px);
 }
 
 
-.feedback>section.documents {
-    -webkit-box-flex: 0;
-    flex: 0 6.25rem;
+.sidebar > .max .content{
+    width: 100%;
+   // display: flex;
+   // position: relative;
+    margin: 0;
+    padding:  0;
 }
 
-.feedback>section.text>.documents {
-    position: relative;
-    box-sizing: border-box;
+.sidebar > .content .label {
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+}
+
+
+#close_app {
+ background-color: transparent;
+ text-decoration: none !important;
+ display: inline-block;
+ cursor: pointer;
+}
+
+.container .min{
     display: -webkit-box;
     display: flex;
-    height: 100%;
-    width: 100%;
-    padding: 1rem 0 1rem 1rem;
-}
-
-.feedback>section {
-    //background: #f0f1f2;
-    //color: #575e63;
-    -webkit-box-flex: 1;
-    flex: 1 1 0;
-    transition: -webkit-box-flex .2s ease-out;
-    transition: flex .2s ease-out;
-    transition: flex .2s ease-out,-webkit-box-flex .2s ease-out;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-}
-
-.feedback>section>header {
-    //color: white;
-    //background: blue;
-}
-
-
-@media (max-width: 900px)
-body>.container>.app>.feedback {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 70px;
-    right: 0;
-}
-
-
-body>.container{
-  height: 100%;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-flow: column;
-}
-
-.feedback >section.text>.documents {
-    position: relative;
-    box-sizing: border-box;
-    display: -webkit-box;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    padding: 1rem 0 1rem 1rem;
-}
-
-.feedback>section.text>.documents>.pad {
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    -webkit-box-flex: 1;
-    flex: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background: #101112;
+    magin: 0;
+    padding: 3px 16px 3px 16px;
+    text-size: 10rem;
     text-align: center;
+    height: 32px;
+    border-top: 2px solid #b7bcc0;
+    z-index: 1000;
 }
 
-.feedback {
-    -webkit-box-flex: 8;
-    flex: 8 800px;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-flow: column;
+.options {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 3px 0 3px;
+  white-space: nowrap;
+  //height: 66.7%;
+  overflow: hidden;
 }
 
-
-
-
-
-body>.container>.app>.doc>.blocker {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: rgba(215,218,220,0.5);
-    z-index: 10;
-}
-
-
-
-
-
-/*
-#item-list {
-  border-collapse: collapse;
-  box-sizing: border-box;
-  display: left;
-  text-align: left;
-  width: 100%;
-  font-size: 0.674rem;
-}
-
-#item-list td[name=date]{
-    width: 5%;
-}
-
-
-#item-list td, th {
- border: 1px solid #868f9d;
- color: #26282b;
- padding-left: 6px;
-}
-
-//#item-list tr:hover {background-color: #ddd;}
-
-#item-list th {
-     background-color: #5583a7;
-     color: #eceef0;
-}
-
-#item-list tr {
+.options li{
+  float: left;
   cursor: pointer;
-  text-align: left;
-  color: #26282b;
+  display: inline-block;
+  color: #000;
+  padding: 3px;
+  margin-right:16px;
+  //background-color: white;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
 }
-*/
+
+#new_item {
+    background-color: 	#90EE90;
+}
+
+#edit_item {
+    background-color: 	#ffff66;
+}
+
+#delete_item {
+    background-color: 	#ff0000;
+}
+
+.options #label
+{
+   color: white;
+   background-color: "";
+}
+
+
+li.active {
+  background-color: #white;
+}
+
+li:hover:not(.active) {
+  background-color: #ccc;
+}
+
 
 form:after{
     content: '';
     clear: both;
-    display: block;
+    display: flex;
+    flex-direction: row;
 }
 
 input[type=text],
-select, textarea, input[type=submit]{
-  padding: 6px 12px 6px 12px;
-  margin-bottom: 6px;
-  border: 1px solid rgba(27, 31, 35, 0.2);
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  display: inline-block;
-  resize: horizontal;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=text],
+select {
+  width: 50%;
+  box-sizing:content-box;
+  display: block;
+
 }
 
 textarea {
-     width: 80%;
-     height: 33%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-input[name=fname], input[name=lname], input[name:email]
-{
-    width: 100%;
+
+input[type=submit],input[type=append]{
+  background-color: #4285F4;
+  //position:absolute;
+  display:inline-block;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  color: white;
+  float: bottom-left;
+  font-weight: 400;
+  text-align: center;
+
+  cursor: pointer;
 }
 
-.options {
+
+input[type=cancel]{
+  background-color: #cbd6e9;
+  display:inline-block;
+  position: relative;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  color: red;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+
+input[type=append]:hover {
+  background-color: #3F729B;
+}
+
+input[type=submit]:hover {
+  background-color: #3F729B;
+}
+/*
+button{
+    border: 0;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 13px;
+    width: 14%;
+    border: 1px solid #ccc;
+    box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
+    color: white;
+    font-weight: bold;
+    font-family: ubuntu;
+    letter-spacing: 1px;
+    color: black;
+}
+*/
+
+body>.container>.app>.docs {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 200px;
+    right: 0;    
+}
+
+.docs {
+    -webkit-box-flex: 8;
+    flex: 8 800px;
     display: -webkit-box;
-    display: flex;
+    display: relative;
+   // top: 0;
+   // left: 50px;
+    position: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 16px;
+    flex-flow: column;
 }
-
-.options li {
-    color: white;
-    text-align:center;
-    font-weight: 400;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    display: block;
-    background: #282b2d;
-    border: 1px solid black;
-
-}
-
-
 
 #item-list{
     list-style-type: none;
     padding: 0;
 }
 
-
 #item-list li{
-    padding: 2px;
-    background: #f6f6f6;
-    color: #555;
-    max-width: 740px;
+    background: #edf1e5;
+    display:flex;
+    flex-direction: column;
+    margin: 8px 16px 8px 16px;
+    max-width: 320px;
+    padding-bottom: 16px;
+    padding-right: 8px;
+    padding-left: 4px;
     position: relative;
-    height: 100%;
-    border: 1px solid #282b2d;
-    border-bottom: 16px solid #282b2d;
+    border: 3px solid #2f3f2e;
+    border-radius: 0px 8px;
     cursor: pointer;
 }
 
 #item-list li span{
+    color:#3c1231;
+    font-weight: 400;
     display: block;
     font-size: 14px;
-    margin-top: 3px;
+
     font-size-adjust:auto;
-    color: #999;
 }
+
+/*
+#item-list .inlinespan{
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 3px;
+    font-size: 14px;
+    font-size-adjust:auto;
+}
+*/
 
 li div{
     position: absolute;
-    top: 0;
+    color:#3c1231;
     right: 0px;
-    background: rgba(255,255,255,0.6);
-    width: 100px;
+    width: 12px;
     text-align: center;
-    padding: 6px 6px;
-    font-weight:  400;
+    font-weight:  600;
+    border-radius: 2px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
     cursor:  pointer;
 }
