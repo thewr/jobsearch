@@ -50,6 +50,7 @@ function myFunc(evt)
 					wordsA: doc.data().wordsA,
 					wordsB: doc.data().wordsB,
 					wordsC: doc.data().wordsC,
+					wordsD: doc.data().wordsD,
 				        subject: doc.data().subject
 				};  //window.alert(tableData.name + " " + tableData.subject);
 			}
@@ -62,6 +63,7 @@ function myFunc(evt)
 						form.wordsA.value = tableData.wordsA;
 						form.wordsB.value = tableData.wordsB;
 						form.wordsC.value = tableData.wordsC;
+						form.wordsD.value = tableData.wordsD;
 						form.subject.value = tableData.subject;
 						
 						$('#item_submit').click(function(){ 
@@ -72,6 +74,7 @@ function myFunc(evt)
 								wordsA: form.wordsA.value,
 								wordsB: form.wordsB.value,
 								wordsC: form.wordsC.value,
+								wordsD: form.wordsD.value,
 								subject: form.subject.value
 							});	
 							refresh();
@@ -108,14 +111,16 @@ function renderDB(doc){
   wordsA.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px;";
   let wordsB = document.createElement('span');
   wordsB.style.cssText = "padding: 3px 0px 6px 12px; font-size: 12px;";
+  let wordsD = document.createElement('span');
+  wordsB.style.cssText = "padding: 3px 0px 6px 12px; font-size: 12px;";
   let wordsC = document.createElement('span');
   wordsC.style.cssText = "font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 3px 0px 6px 12px; display: block; border-bottom: 2px solid black";
 
   let subject = document.createElement('span');
   subject.style.cssText = "padding: 3px 0px 6px 12px; display: block;";
 
-  let cross = document.createElement('div');
-  cross.textContent = 'x';
+  //let cross = document.createElement('div');
+  //cross.textContent = 'x';
 
 
 
@@ -132,8 +137,12 @@ function renderDB(doc){
   label_website.textContent = "WEBSITE";
   label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
-  let label_phone = document.createElement('span');
-  label_phone.textContent = "PHONE";
+  let label_jobtitle = document.createElement('span');
+  label_website.textContent = "JOB TITLE";
+  label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+	
+  let label_contact = document.createElement('span');
+  label_phone.textContent = "CONTACT";
   label_phone.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 	
   let label_subject = document.createElement('span');
@@ -145,6 +154,7 @@ function renderDB(doc){
   wordsA.textContent = doc.data().wordsA;
   wordsB.textContent = doc.data().wordsB;
   wordsC.textContent = doc.data().wordsC;
+  wordsD.textContent = doc.data().wordsD;
   subject.textContent = doc.data().subject;
 
   // append list
@@ -157,7 +167,10 @@ function renderDB(doc){
   li.appendChild(label_website);
   li.appendChild(wordsB);
 	
-  li.appendChild(label_phone);
+  li.appendChild(label_jobtitle);
+  li.appendChild(wordsD);
+	
+  li.appendChild(label_contact);
   li.appendChild(wordsC);
 	
   li.appendChild(label_subject);
@@ -194,12 +207,14 @@ form.addEventListener('submit', (e) => {
         wordsA: form.wordsA.value,
 	wordsB: form.wordsB.value,
 	wordsC: form.wordsC.value,
+	wordsD: form.wordsD.value,
         subject: form.subject.value
     });
       form.name.value = '';
       form.wordsA.value = '';
 	form.wordsB.value = '';
 	form.wordsC.value = '';
+	form.wordsD.value = '';
       form.subject.value = '';
 	
 	// generate new db
