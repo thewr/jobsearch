@@ -128,7 +128,7 @@ body>.container>.app>.sidebar {
  -webkit-box-direction: normal;
  height: 100%;
  flex-direction: column;
- padding: 23px;
+ padding: 16px;
  background-color: #101112;
  border-right: 1px solid #3a3e41;
  z-index: 1000;
@@ -268,7 +268,6 @@ input[type=submit],input[type=append]{
   float: bottom-left;
   font-weight: 400;
   text-align: center;
-
   cursor: pointer;
 }
 
