@@ -92,10 +92,11 @@ function myFunc(evt)
 
 // create form element
 var form = document.querySelector('#add-item-form');
-
+var row_count = 0;
 // create element & render cafe
 function renderDB(doc){
   // create list document elements
+  row_count = row_count+1;
   let li = document.createElement('li');
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
   let name = document.createElement('span');  name.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px; border-bottom: 2px solid black";
@@ -110,8 +111,7 @@ function renderDB(doc){
   //cross.textContent = 'x';
 
   let date = document.createElement('div');
-
-
+	
   // create elements for labels for each data to display
   let label_name = document.createElement('span');
   label_name.textContent = "COMPANY/AGENCY";
