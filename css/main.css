@@ -196,6 +196,7 @@ body>.container>.app>.sidebar {
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
+  white-space: pre-line;
 }
 
 #new_item {
