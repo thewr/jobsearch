@@ -4,6 +4,10 @@ var itemList = document.querySelector('#item-list');
 itemList.addEventListener('click', myFunc, false);
 itemList.count = 0;
 
+/*
+var div = document.getElementById('divID');
+div.innerHTML += 'Extra stuff';
+*/
 // refresh the console (needs work)
 function refresh() {
 
