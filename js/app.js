@@ -87,6 +87,10 @@ function myFunc(evt)
 						docRef.delete();
 						refresh();
 					});//end-of-delete_item event
+	
+					$('#item_cancel').click(function(){
+					 	evt.target.removeClass('selected');//parentElement.getAttribute('data-id');
+					}
 
 	
 
