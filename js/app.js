@@ -10,18 +10,9 @@ div.innerHTML += 'Extra stuff';
 */
 // refresh the console (needs work)
 function refresh() {
-
-	/*
     setTimeout(function () {
         location.reload()
     }, 100);
-    */
-	// getting data
-	db.collection('applications').get().then(snapshot => {
-		snapshot.docs.forEach(doc => {
-			renderDB(doc);
-		});
-	});
 }
 
 // for selections
@@ -246,7 +237,7 @@ $(function(){
 		 $( ".docs" ).toggleClass('blur-me');
 		 $(".min").hide();
 	         $('.sidebar').show();
-	    	// $('.sidebar').animate({width: '350px'});
+	    	 $('.sidebar').animate({width: '350px'});
 	         $(".max").hide().fadeIn(500);
 
 		//$("#label").html("Add Entry");
@@ -264,7 +255,7 @@ $(function(){
 		 $( ".docs" ).toggleClass('blur-me');
 		 $(".min").hide();
 	         $('.sidebar').show();
-	    	// $('.sidebar').animate({width: '350px'});
+	    	 $('.sidebar').animate({width: '350px'});
 	         $(".max").hide().fadeIn(500);
 
 		//$("#label").html("Add Entry");
@@ -282,11 +273,13 @@ $(function(){
 	  $('.sidebar').hide();
 	  $(".min").show();
 	  $( ".docs" ).toggleClass('blur-me');
-	  $('#close_app').hide();
+	//  $('#close_app').hide();
   });
 	
 $('#item_cancel').click(function(){
- 	refresh();	
+ 	 $('.sidebar').hide();
+	 $( ".docs" ).toggleClass('blur-me');
+
 });
 
 
