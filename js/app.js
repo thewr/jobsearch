@@ -241,7 +241,7 @@ $(function(){
 		 $( ".docs" ).toggleClass('blur-me');
 		 $(".min").hide();
 	         $('.sidebar').show();
-	    	 $('.sidebar').animate({width: '350px'});
+	    	 $('.sidebar').animate({width: '33%'});
 	         $(".max").hide().fadeIn(500);
 
 		//$("#label").html("Add Entry");
@@ -259,7 +259,7 @@ $(function(){
 		 $( ".docs" ).toggleClass('blur-me');
 		 $(".min").hide();
 	         $('.sidebar').show();
-	    	 $('.sidebar').animate({width: '350px'});
+	    	 $('.sidebar').animate({width: '33%'});
 	         $(".max").hide().fadeIn(500);
 
 		//$("#label").html("Add Entry");
