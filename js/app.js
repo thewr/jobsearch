@@ -99,9 +99,7 @@ var row_count = 0;
 function renderDB(doc){
   // create list document elements
   itemList.count += 1;
-  row_count = row_count+1;
   let li = document.createElement('li');
-  let row = document.createElement('div');
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
   let name = document.createElement('span');  name.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px; border-bottom: 2px solid black";
   let wordsA = document.createElement('span');  wordsA.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px;";
@@ -115,7 +113,9 @@ function renderDB(doc){
   //cross.textContent = 'x';
 
   let date = document.createElement('div');
+  date.style.cssText = "display: block";
 	
+  row.textContent = itemList.count;	
   // create elements for labels for each data to display
   let label_name = document.createElement('span');
   label_name.textContent = "COMPANY/AGENCY";
@@ -130,7 +130,7 @@ function renderDB(doc){
   label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
   let label_jobtitle = document.createElement('span');
-  label_jobtitle.textContent = "JOB TITLE";
+  label_jobtitle.textContent = "POSITION";
   label_jobtitle.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 	
   let label_contact = document.createElement('span');
