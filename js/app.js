@@ -29,7 +29,7 @@ function refresh() {
 }
 
 // for selections
-var $div = $("<div id='edit_item'>"+"Edit"+"</div>");  //{id: "foo", "class": "a"});
+//var $div = $("<div id='edit_item'>"+"Edit"+"</div>");  //{id: "foo", "class": "a"});
 
 function todaysDate()
 {
