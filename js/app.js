@@ -159,8 +159,10 @@ function renderDB(doc){
   li.appendChild(label_address);
   li.appendChild(wordsA);
 	
+if(doc.data().wordsB){
   li.appendChild(label_website);
   li.appendChild(wordsB);
+}
 	
   li.appendChild(label_jobtitle);
   li.appendChild(wordsD);
@@ -170,8 +172,10 @@ if(doc.data().wordsC){
   li.appendChild(wordsC);
 }	
 	
+if(doc.data().subject){
   li.appendChild(label_subject);
   li.appendChild(subject);
+}
 
  // li.appendChild(cross);
 
