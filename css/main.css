@@ -372,6 +372,7 @@ body>.container>.app>.docs {
 */
 
 li div{
+    display: block;
     position: absolute;
     color:#3c1231;
     top: 3px; right: 3px;
