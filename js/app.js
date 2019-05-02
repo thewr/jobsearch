@@ -98,6 +98,7 @@ function renderDB(doc){
   // create list document elements
   row_count = row_count+1;
   let li = document.createElement('li');
+  let row = document.createElement('div');
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
   let name = document.createElement('span');  name.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px; border-bottom: 2px solid black";
   let wordsA = document.createElement('span');  wordsA.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px;";
@@ -147,6 +148,7 @@ function renderDB(doc){
   subject.textContent = doc.data().subject;
 
   // append list
+//  row.appendChild(row_count);
   li.appendChild(date);
 
   li.appendChild(label_name);
