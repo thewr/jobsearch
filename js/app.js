@@ -41,6 +41,7 @@ function myFunc(evt)
 {
 	let id = evt.target.parentElement.getAttribute('data-id');
 	var docRef = db.collection("applications").doc(id);
+	itemList.count += 1;
 	alert(itemList.count);
 	       
 	try {
