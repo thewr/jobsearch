@@ -165,8 +165,10 @@ function renderDB(doc){
   li.appendChild(label_jobtitle);
   li.appendChild(wordsD);
 	
+if(doc.data().wordsC){
   li.appendChild(label_contact);
   li.appendChild(wordsC);
+}	
 	
   li.appendChild(label_subject);
   li.appendChild(subject);
