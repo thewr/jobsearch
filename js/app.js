@@ -9,6 +9,16 @@ var div = document.getElementById('divID');
 div.innerHTML += 'Extra stuff';
 */
 // refresh the console (needs work)
+
+// getting data
+function renderDB(){
+	db.collection('applications').get().then(snapshot => {
+		itemList.count = 0;
+		snapshot.docs.forEach(doc => {
+			renderDB(doc);
+		});
+});
+
 function refresh() {
     //setTimeout(function () {
      //   location.reload()
