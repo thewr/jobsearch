@@ -87,10 +87,6 @@ function myFunc(evt)
 						docRef.delete();
 						refresh();
 					});//end-of-delete_item event
-	
-					$('#item_cancel').click(function(){
-					 	evt.target.removeClass('selected');//parentElement.getAttribute('data-id');
-					});//end-of-cancel
 
 	
 
@@ -303,6 +299,9 @@ $('#item_cancel').click(function(){
 			$("#delete_item").show();
 			// change selected's background-color
 			$(this).css("background-color", "rgb(225, 255, 107)");
+			$('#item_cancel').click(function(){
+				$(this).removeClass('selected');//parentElement.getAttribute('data-id');
+			});//end-of-cancel
 		} else {
 			$(this).css("background-color", "");
 			// $div.remove();
@@ -310,6 +309,8 @@ $('#item_cancel').click(function(){
 			$("#delete_item").hide();
 
 		}
+		
+
 	});
 
 });
