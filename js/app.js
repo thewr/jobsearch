@@ -251,10 +251,21 @@ $(function(){
 
 
 	// Animate slide for create new form
+	function clear_content()
+	{
+		form.name.value = '';
+      		form.wordsA.value = '';
+		form.wordsB.value = '';
+		form.wordsC.value = '';
+		form.wordsD.value = '';
+      		form.subject.value = '';
+	}
+	
 	function display_add(){
 		 $( ".docs" ).toggleClass('blur-me');
 		 $(".min").hide();
-	         $('.sidebar').show();
+	         //$('.sidebar').show();
+		clear_content();
 	    	 $('.sidebar').animate({width: '33%'});
 	         $(".max").hide().fadeIn(500);
 
