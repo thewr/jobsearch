@@ -11,9 +11,17 @@ div.innerHTML += 'Extra stuff';
 // refresh the console (needs work)
 function refresh() {
 
+	/*
     setTimeout(function () {
         location.reload()
     }, 100);
+    */
+	// getting data
+	db.collection('applications').get().then(snapshot => {
+		snapshot.docs.forEach(doc => {
+			renderDB(doc);
+		});
+	});
 }
 
 // for selections
