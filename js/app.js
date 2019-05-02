@@ -269,7 +269,7 @@ $(function(){
   });
 
   $('#item_submit').click(function(){
-    $(".content").hide();
+    	  $(".content").hide();
 	  $('.sidebar').hide();
 	  $(".min").show();
 	  $( ".docs" ).toggleClass('blur-me');
@@ -278,6 +278,7 @@ $(function(){
 	
 $('#item_cancel').click(function(){
  	 $('.sidebar').hide();
+         $(".min").show();
 	 $( ".docs" ).toggleClass('blur-me');
 
 });
