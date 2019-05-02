@@ -9,26 +9,23 @@ var div = document.getElementById('divID');
 div.innerHTML += 'Extra stuff';
 */
 // refresh the console (needs work)
-
-function unrenderDB(){
-	var count = itemList.count;
-	while(count){
-		count -= 1;
-		itemList.removeChild(itemList.childNodes[0]);
-	}
-}
 	
 function refresh() {
     //setTimeout(function () {
      //   location.reload()
     //}, 100);
-	unrenderDB();
+	//clear data
+	var count = itemList.count;
+	while(count){
+		count -= 1;
+		itemList.removeChild(itemList.childNodes[0]);
+	}
 	//get data
 	db.collection('applications').get().then(snapshot => {
 		itemList.count = 0;
 		snapshot.docs.forEach(doc => {
 			renderDB(doc);
-	});
+		});
 }
 
 // for selections
