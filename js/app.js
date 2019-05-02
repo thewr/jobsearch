@@ -2,7 +2,7 @@
 // creates a <table> element and a <tbody> element
 var itemList = document.querySelector('#item-list');
 itemList.addEventListener('click', myFunc, false);
-itemList.myParam = 'This is my parameter';
+itemList.count = 0;
 
 // refresh the console (needs work)
 function refresh() {
