@@ -10,9 +10,14 @@ div.innerHTML += 'Extra stuff';
 */
 // refresh the console (needs work)
 function refresh() {
-    setTimeout(function () {
-        location.reload()
-    }, 100);
+    //setTimeout(function () {
+     //   location.reload()
+    //}, 100);
+	var count = itemList.count;
+	while(count){
+		count -= 1;
+		itemList.removeChild(itemList.childNodes[0]);
+	}
 }
 
 // for selections
