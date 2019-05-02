@@ -250,23 +250,12 @@ $(function(){
 	$('.sidebar').hide();
 
 
-	// Animate slide for create new form
-	function clear_content()
-	{
-		form.name.value = '';
-      		form.wordsA.value = '';
-		form.wordsB.value = '';
-		form.wordsC.value = '';
-		form.wordsD.value = '';
-      		form.subject.value = '';
-	}
-	
+	// Animate slide for create new form	
 	function display_add(){
 		 $( ".docs" ).toggleClass('blur-me');
 		 $(".min").hide();
-	         //$('.sidebar').show();
-		//clear_content();
-	    	 $('.sidebar').animate({width: '33%'});
+	         $('.sidebar').show();
+	    	 //$('.sidebar').animate({width: '33%'});
 	         $(".max").hide().fadeIn(500);
 
 		//$("#label").html("Add Entry");
