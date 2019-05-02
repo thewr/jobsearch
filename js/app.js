@@ -46,7 +46,7 @@ function myFunc(evt)
 {
 	let id = evt.target.parentElement.getAttribute('data-id');
 	var docRef = db.collection("applications").doc(id);
-	console.log(dogRef);
+	console.log(docRef);
 	try {
 		var tableData = {};
 		docRef.get()
