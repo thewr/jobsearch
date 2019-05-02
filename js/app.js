@@ -23,13 +23,14 @@ function refresh() {
 	//get data
 	db.collection('applications').get().then(snapshot => {
 		itemList.count = 0;
-		snapshot.docs.forEach(doc => {
-			renderDB(doc);
-		});
+	    snapshot.docs.forEach(doc => {
+		renderDB(doc);
+	    });
+	});//end of get data
 }
 
 // for selections
-//var $div = $("<div id='edit_item'>"+"Edit"+"</div>");  //{id: "foo", "class": "a"});
+var $div = $("<div id='edit_item'>"+"Edit"+"</div>");  //{id: "foo", "class": "a"});
 
 function todaysDate()
 {
