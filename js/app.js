@@ -32,7 +32,6 @@ function myFunc(evt)
 {
 	let id = evt.target.parentElement.getAttribute('data-id');
 	var docRef = db.collection("applications").doc(id);
-	itemList.count += 1;
 	alert(itemList.count);
 	       
 	try {
@@ -101,6 +100,7 @@ var row_count = 0;
 // create element & render cafe
 function renderDB(doc){
   // create list document elements
+  itemList.count += 1;
   row_count = row_count+1;
   let li = document.createElement('li');
   let row = document.createElement('div');
