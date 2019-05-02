@@ -90,7 +90,7 @@ function myFunc(evt)
 	
 					$('#item_cancel').click(function(){
 					 	evt.target.removeClass('selected');//parentElement.getAttribute('data-id');
-					}
+					});//end-of-cancel
 
 	
 
