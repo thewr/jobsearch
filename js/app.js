@@ -114,8 +114,7 @@ function renderDB(doc){
 
   let date = document.createElement('div');
   date.style.cssText = "display: block";
-	
-  row.textContent = itemList.count;	
+
   // create elements for labels for each data to display
   let label_name = document.createElement('span');
   label_name.textContent = "COMPANY/AGENCY";
