@@ -10,17 +10,6 @@ div.innerHTML += 'Extra stuff';
 */
 // refresh the console (needs work)
 
-// getting data
-/*
-function renderDB(){
-	db.collection('applications').get().then(snapshot => {
-		itemList.count = 0;
-		snapshot.docs.forEach(doc => {
-			renderDB(doc);
-		});
-});
-*/
-
 function unrenderDB(){
 	var count = itemList.count;
 	while(count){
@@ -34,6 +23,7 @@ function refresh() {
      //   location.reload()
     //}, 100);
 	unrenderDB();
+	//get data
 	db.collection('applications').get().then(snapshot => {
 		itemList.count = 0;
 		snapshot.docs.forEach(doc => {
