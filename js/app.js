@@ -265,7 +265,7 @@ $(function(){
 		 $( ".docs" ).toggleClass('blur-me');
 		 $(".min").hide();
 	         //$('.sidebar').show();
-		clear_content();
+		//clear_content();
 	    	 $('.sidebar').animate({width: '33%'});
 	         $(".max").hide().fadeIn(500);
 
