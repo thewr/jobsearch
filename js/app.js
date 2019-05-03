@@ -46,6 +46,7 @@ function myFunc(evt)
 {
 	const id = evt.target.parentElement.getAttribute('data-id');
 	console.log(id);
+	if(id != null){
 	const ref = db.collection("applications").doc(id);
 	try {
 		var tableData = {};
@@ -102,6 +103,7 @@ function myFunc(evt)
 						docRef.delete();
 						refresh();
 					});//end-of-delete_item event
+	}
 
 	
 
