@@ -7,7 +7,8 @@ debug_button.addEventListener('click',debugFunc,false);
 
 function debugFunc(evt)
 {
-	itemList.removeChild(itemList.childNodes[0]);
+	var item = itemList.childNodes[0];
+	itemList.removeChild(item);
 }
 /*
 var div = document.getElementById('divID');
@@ -21,10 +22,10 @@ function refresh() {
     //}, 100);
 	//clear data
 	var count = itemList.count;
-	while(count>0){
+	while(itemList.firstChild){
 		console.log('removing ... ' + itemList.count);
 		count -= 1;
-		itemList.removeChild(itemList.childNodes[0]);
+		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
 	db.collection('applications').get().then(snapshot => {
