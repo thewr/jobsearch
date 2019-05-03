@@ -1,7 +1,7 @@
 
 // creates a <table> element and a <tbody> element
 var itemList = document.querySelector('#item-list');
-itemList.parentElement.addEventListener('click', myFunc, false);//itemList.addEventListener('click', myFunc, false);
+itemList.addEventListener('click', myFunc, false);//itemList.addEventListener('click', myFunc, false);
 itemList.count = 0;
 
 /*
@@ -44,7 +44,7 @@ function todaysDate()
 
 function myFunc(evt)
 {
-	const id = evt.target.getAttribute('data-id');//evt.target.parentElement.getAttribute('data-id');
+	const id = evt.target.parentElement.getAttribute('data-id');
 	console.log(id);
 	if(evt.target && evt.target.nodeName == "selected") {
             console.log(evt.target.id + " was clicked");
