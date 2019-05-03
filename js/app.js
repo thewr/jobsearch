@@ -137,27 +137,27 @@ function renderDB(doc){
   // create elements for labels for each data to display
   let label_name = document.createElement('span');
   label_name.textContent = "COMPANY/AGENCY";
-  label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+  label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
 
   let label_address = document.createElement('span');
   label_address.textContent = "LOCATION";
-  label_address.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+  label_address.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
 
   let label_website = document.createElement('span');
   label_website.textContent = "WEBSITE";
-  label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+  label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
 
   let label_jobtitle = document.createElement('span');
   label_jobtitle.textContent = "POSITION";
-  label_jobtitle.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+  label_jobtitle.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
 	
   let label_contact = document.createElement('span');
   label_contact.textContent = "CONTACT";
-  label_contact.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+  label_contact.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
 	
   let label_subject = document.createElement('span');
   label_subject.textContent = "LOG ENTRY";
-  label_subject.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+  label_subject.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
 
   // render document contents
   date.textContent = doc.data().date;
