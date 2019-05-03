@@ -16,7 +16,7 @@ function refresh() {
     //}, 100);
 	//clear data
 	var count = itemList.count;
-	while(count>-1){
+	while(count){
 		console.log('removing ... ' + itemList.count);
 		count -= 1;
 		itemList.removeChild(itemList.childNodes[0]);
