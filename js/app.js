@@ -3,7 +3,12 @@
 var itemList = document.querySelector('#item-list');
 itemList.addEventListener('click', myFunc, false);//itemList.addEventListener('click', myFunc, false);
 itemList.count = 0;
+debug_button.addEventListener('click',debugFunc,false);
 
+function debugFunc(evt)
+{
+	itemList.removeChild(itemList.childNodes[0]);
+}
 /*
 var div = document.getElementById('divID');
 div.innerHTML += 'Extra stuff';
