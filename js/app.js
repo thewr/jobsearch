@@ -44,18 +44,18 @@ function todaysDate()
 
 function myFunc(evt)
 {
-	var id = evt.target.parentElement.getAttribute('data-id');
-	const docRef = db.collection("applications").doc(id);
+	const id = evt.target.parentElement.getAttribute('data-id');
+	const ref = db.collection("applications").doc(id);
 	console.log(id);
 	try {
 		var tableData = {};
-		docRef.get()
+		ref.get()
 		.then(doc => {
 			if(!doc.exists) {
 				window.alert("no such document");
 			} else {
 				tableData = {
-					doc: doc.data(),
+					//doc: doc.data(),
 					name: doc.data().name,
 					wordsA: doc.data().wordsA,
 					wordsB: doc.data().wordsB,
