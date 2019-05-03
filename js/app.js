@@ -25,10 +25,9 @@ function refresh() {
      //   location.reload()
     //}, 100);
 	//clear data
-	var count = itemList.count;
 	while(itemList.firstChild){
 		console.log('removing ... ' + itemList.count);
-		count -= 1;
+		itemList.count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
