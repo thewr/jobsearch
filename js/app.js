@@ -7,8 +7,12 @@ debug_button.addEventListener('click',debugFunc,false);
 
 function debugFunc(evt)
 {
-	var item = itemList.childNodes[0];
-	itemList.removeChild(item);
+	var count = itemList.count;
+	while(itemList.firstChild){
+		console.log('removing ... ' + itemList.count);
+		count -= 1;
+		itemList.removeChild(itemList.firstChild);
+	}
 }
 /*
 var div = document.getElementById('divID');
