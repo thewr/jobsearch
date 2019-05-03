@@ -45,8 +45,8 @@ function todaysDate()
 function myFunc(evt)
 {
 	const id = evt.target.parentElement.getAttribute('data-id');
-	const ref = db.collection("applications").doc(id);
 	console.log(id);
+	const ref = db.collection("applications").doc(id);
 	try {
 		var tableData = {};
 		ref.get()
