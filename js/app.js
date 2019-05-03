@@ -105,7 +105,7 @@ function myFunc(evt)
 					});//end-of-edit_item event
 	
 			 		$('#delete_item').click(function(){
-						docRef.delete();
+						ref.delete();
 						refresh();
 					});//end-of-delete_item event
 
