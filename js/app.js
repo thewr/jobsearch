@@ -17,7 +17,7 @@ function refresh() {
 	//clear data
 	var count = itemList.count;
 	while(count){
-		console.log(count);
+		console.log('removing ... ' + count);
 		count -= 1;
 		itemList.removeChild(itemList.childNodes[0]);
 	}
@@ -122,6 +122,7 @@ var row_count = 0;
 function renderDB(doc){
   // create list document elements
   itemList.count += 1;
+  console.log('adding ... ' + count);
   let li = document.createElement('li');
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
   let name = document.createElement('span');  name.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px; border-bottom: 2px solid black";
