@@ -102,15 +102,14 @@ html>.container, body>.container {
   z-index: 1000;
 }
 
-@media (max-width: 900px)
 body>.container>.app>.sidebar {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     z-index: 10000;
-    transition: width .2s ease-out;
-    width: calc(10% + 350px);
+    //transition: width .2s ease-out;
+    //width: calc(10% + 350px);
     box-shadow: 10px 0 12px rgba(0,0,0,0.45);
     background: #282b2d;
     opacity: .94;
@@ -323,8 +322,6 @@ body>.container>.app>.docs {
     flex: 8 800px;
     display: -webkit-box;
     display: relative;
-   // top: 0;
-   // left: 50px;
     position: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
