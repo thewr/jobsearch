@@ -208,6 +208,10 @@ body>.container>.app>.sidebar {
     background-color: 	#ff0000;
 }
 
+#debug_button {
+    background-color: 	#ccc;
+}
+
 .options #label
 {
    color: white;
