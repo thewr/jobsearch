@@ -46,7 +46,7 @@ function myFunc(evt)
 {
 	const id = evt.target.getAttribute('data-id');//evt.target.parentElement.getAttribute('data-id');
 	console.log(id);
-	if(evt.target && evt.target.nodeName == "LI") {
+	if(evt.target && evt.target.nodeName == "selected") {
             console.log(evt.target.id + " was clicked");
         }
 	if(id == null){
