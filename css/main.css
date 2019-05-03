@@ -165,7 +165,7 @@ body>.container>.app>.sidebar {
     -webkit-box-pack: justify;
     justify-content: space-between;
     background: #101112;
-    magin: 0;
+    margin: 0;
     padding-left: 16px;
     text-size: 10rem;
     text-align: center;
