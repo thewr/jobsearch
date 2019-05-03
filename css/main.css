@@ -112,7 +112,7 @@ body>.container>.app>.sidebar {
     //width: calc(10% + 350px);
     box-shadow: 10px 0 12px rgba(0,0,0,0.45);
     background: #282b2d;
-    opacity: .94;
+    //opacity: .94;
 }
 
 .sidebar{
