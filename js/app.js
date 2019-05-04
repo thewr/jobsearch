@@ -117,7 +117,7 @@ function myFunc(evt)
 								wordsD: form.wordsD.value,
 								subject: form.subject.value
 							});
-							clearForm();
+							//clearForm();
 						      	refresh();
 						});//end-of-item_submit
 					//});//end-of-edit_item event
