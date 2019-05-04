@@ -9,6 +9,7 @@ var form = document.querySelector('#add-item-form');
 
 debug_button.addEventListener('click',debugFunc,false);
 
+/*
 function debugFunc(evt)
 {
 	var count = itemList.count;
@@ -18,6 +19,8 @@ function debugFunc(evt)
 		itemList.removeChild(itemList.firstChild);
 	}
 }
+*/
+
 /*
 var div = document.getElementById('divID');
 div.innerHTML += 'Extra stuff';
