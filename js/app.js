@@ -99,6 +99,7 @@ function myFunc(evt)
 	} catch (error) {
 	res.send(error);
 	}
+	/*
 		 			$('#edit_item').click(function(){
 					        form.name.value =  tableData.name;
 						form.wordsA.value = tableData.wordsA;
@@ -121,6 +122,7 @@ function myFunc(evt)
 						      	refresh();
 						});
 		//			});
+		*/
 	
 			 		$('#delete_item').click(function(){
 						ref.delete();
