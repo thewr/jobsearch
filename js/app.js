@@ -242,6 +242,7 @@ db.collection('applications').get().then(snapshot => {
 });
 
 // saving data
+/*
 var handler = function(e){
 	 e.preventDefault();
 	db.collection('applications').add({
@@ -258,8 +259,8 @@ var handler = function(e){
 };
 
 form.addEventListener('submit', handler);
+*/
 
-/*
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     db.collection('applications').add({
@@ -281,7 +282,6 @@ form.addEventListener('submit', (e) => {
 	// generate new db
 	refresh();
 });
-/*
 
 
 form.addEventListener('cancel', (e) => {
