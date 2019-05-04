@@ -107,6 +107,7 @@ function myFunc(evt)
 						form.wordsD.value = tableData.wordsD;
 						form.subject.value = tableData.subject;
 						
+						form.removeEventListener('submit');
 						//$('#item_submit').click(function(){ 
 						form.addEventListener('append', (e) => {
     							e.preventDefault();
