@@ -120,7 +120,6 @@ function myFunc(evt)
 							clearForm();
 						      	refresh();
 						});
-						*/
 					});
 	
 			 		$('#delete_item').click(function(){
