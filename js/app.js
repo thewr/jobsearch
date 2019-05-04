@@ -238,10 +238,24 @@ db.collection('applications').get().then(snapshot => {
 });
 
 // saving data
-function createItem(){
-	
-}
+var handler = function(e){
+	 e.preventDefault();
+	db.collection('applications').add({
+		date: todaysDate(),
+        	name: form.name.value,
+        	wordsA: form.wordsA.value,
+		wordsB: form.wordsB.value,
+		wordsC: form.wordsC.value,
+		wordsD: form.wordsD.value,
+        	subject: form.subject.value
+    });
+	clearForm();
+	refresh();
+};
 
+form.addEventListener('submit', handler);
+
+/*
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     db.collection('applications').add({
@@ -263,6 +277,7 @@ form.addEventListener('submit', (e) => {
 	// generate new db
 	refresh();
 });
+/*
 
 
 form.addEventListener('cancel', (e) => {
