@@ -56,6 +56,7 @@ function todaysDate()
     return today;
 }
 
+/*
 function clearForm()
 {
       form.name.value = '';
@@ -65,6 +66,7 @@ function clearForm()
       form.wordsD.value = '';
       form.subject.value = '';
 }
+*/
 
 function myFunc(evt)
 {
