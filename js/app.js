@@ -44,7 +44,6 @@ function refresh() {
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
-	location.reload();
 	db.collection('applications').get().then(snapshot => {
 		itemList.count = 0;
 	    snapshot.docs.forEach(doc => {
