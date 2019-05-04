@@ -52,6 +52,16 @@ function todaysDate()
     return today;
 }
 
+function clearForm()
+{
+      form.name.value = '';
+      form.wordsA.value = '';
+      form.wordsB.value = '';
+      form.wordsC.value = '';
+      form.wordsD.value = '';
+      form.subject.value = '';
+}
+
 function myFunc(evt)
 {
 	const id = evt.target.parentElement.getAttribute('data-id');
@@ -103,8 +113,8 @@ function myFunc(evt)
 								wordsD: form.wordsD.value,
 								subject: form.subject.value
 							});
-						});
-							refresh();
+							clearForm();
+						      	refresh();
 						});//end-of-item_submit
 					//});//end-of-edit_item event
 	
