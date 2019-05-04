@@ -38,12 +38,14 @@ function refresh() {
      //   location.reload()
     //}, 100);
 	//clear data
+	alert("Clearing");
 	while(itemList.firstChild){
 		//console.log('removing ... ' + itemList.count);
 		//itemList.count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
+	alert("Displaying");
 	db.collection('applications').get().then(snapshot => {
 		itemList.count = 0;
 	    snapshot.docs.forEach(doc => {
