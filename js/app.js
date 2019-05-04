@@ -48,12 +48,13 @@ function refresh() {
     //}, 100);
 	//clear data
 	alert("Clearing");
-	sleep(100);
+	
 	while(itemList.firstChild){
 		//console.log('removing ... ' + itemList.count);
 		//itemList.count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
+	sleep(500);
 	//get data
 	alert("Displaying");
 	db.collection('applications').get().then(snapshot => {
