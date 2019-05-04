@@ -7,6 +7,15 @@ itemList.count = 0;
 // create form element
 var form = document.querySelector('#add-item-form');
 
+// sleep
+function sleep(miliseconds) {
+   var currentTime = new Date().getTime();
+
+   while (currentTime + miliseconds >= new Date().getTime()) {
+   }
+}
+
+// define buttons
 debug_button.addEventListener('click',debugFunc,false);
 
 
@@ -39,6 +48,7 @@ function refresh() {
     //}, 100);
 	//clear data
 	alert("Clearing");
+	sleep(100);
 	while(itemList.firstChild){
 		//console.log('removing ... ' + itemList.count);
 		//itemList.count -= 1;
