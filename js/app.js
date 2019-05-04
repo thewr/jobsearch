@@ -108,9 +108,7 @@ function myFunc(evt)
 						form.subject.value = tableData.subject;
 						
 						form.removeEventListener('submit');
-						//$('#item_submit').click(function(){ 
-						form.addEventListener('append', (e) => {
-    							e.preventDefault();
+						$('#item_submit').click(function(){ //form.addEventListener('append', (e) => { e.preventDefault();
 							db.collection("applications").doc(id).update({
 								name: form.name.value,
 								wordsA: form.wordsA.value,
@@ -121,7 +119,8 @@ function myFunc(evt)
 							});
 							clearForm();
 						      	refresh();
-						});						
+						});
+						*/
 					});
 	
 			 		$('#delete_item').click(function(){
