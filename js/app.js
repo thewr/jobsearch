@@ -18,7 +18,7 @@ function debugFunc(evt)
 		//count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
-	location.reload();
+	 setTimeout(function () {location.reload()}, 100);
 	//get data
 	db.collection('applications').get().then(snapshot => {
 		itemList.count = 0;
