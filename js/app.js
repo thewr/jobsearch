@@ -141,6 +141,7 @@ function myFunc(evt)
 							//clearForm();
 						      	refresh();
 						});
+						return;
 					});
 		
 	
