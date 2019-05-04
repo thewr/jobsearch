@@ -108,7 +108,7 @@ function myFunc(evt)
 						form.subject.value = tableData.subject;
 						
 						//$('#item_submit').click(function(){ 
-						form.addEventListener('click','append', (e) => {
+						form.addEventListener('append', (e) => {
     							e.preventDefault();
 							db.collection("applications").doc(id).update({
 								name: form.name.value,
@@ -122,12 +122,11 @@ function myFunc(evt)
 						      	refresh();
 						});						
 					});
-						
+	
 			 		$('#delete_item').click(function(){
 						ref.delete();
 						refresh();
 					});//end-of-delete_item event
-	
 
 }
 
