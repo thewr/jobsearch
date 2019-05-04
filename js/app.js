@@ -1,8 +1,12 @@
 
-// creates a <table> element and a <tbody> element
+// creates a <ol> list element and functions
 var itemList = document.querySelector('#item-list');
 itemList.addEventListener('click', myFunc, false);//itemList.addEventListener('click', myFunc, false);
 itemList.count = 0;
+
+// create form element
+var form = document.querySelector('#add-item-form');
+
 debug_button.addEventListener('click',debugFunc,false);
 
 function debugFunc(evt)
@@ -128,10 +132,7 @@ function myFunc(evt)
 
 }
 
-// create form element
-var form = document.querySelector('#add-item-form');
-var row_count = 0;
-// create element & render cafe
+							      // create element & render cafe
 function renderDB(doc){
   // create list document elements
   itemList.count += 1;
