@@ -18,6 +18,13 @@ function debugFunc(evt)
 		count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
+	//get data
+	db.collection('applications').get().then(snapshot => {
+		itemList.count = 0;
+	    snapshot.docs.forEach(doc => {
+		renderDB(doc);
+	    });
+	});//end of get data
 }
 
 /*
