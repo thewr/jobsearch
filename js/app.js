@@ -39,8 +39,8 @@ function refresh() {
     //}, 100);
 	//clear data
 	while(itemList.firstChild){
-		console.log('removing ... ' + itemList.count);
-		itemList.count -= 1;
+		//console.log('removing ... ' + itemList.count);
+		//itemList.count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
