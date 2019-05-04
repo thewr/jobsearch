@@ -102,7 +102,7 @@ function myFunc(evt)
 	} catch (error) {
 	res.send(error);
 	}
-	/*
+	
 		 			$('#edit_item').click(function(){
 					        form.name.value =  tableData.name;
 						form.wordsA.value = tableData.wordsA;
@@ -111,7 +111,6 @@ function myFunc(evt)
 						form.wordsD.value = tableData.wordsD;
 						form.subject.value = tableData.subject;
 						
-		//				form.removeEventListener('submit', function(e));
 						$('#item_submit').click(function(){ //form.addEventListener('append', (e) => { e.preventDefault();
 							db.collection("applications").doc(id).update({
 								name: form.name.value,
@@ -124,8 +123,8 @@ function myFunc(evt)
 							clearForm();
 						      	refresh();
 						});
-		//			});
-		*/
+					});
+		
 	
 			 		$('#delete_item').click(function(){
 						ref.delete();
