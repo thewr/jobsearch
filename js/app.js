@@ -14,8 +14,8 @@ function debugFunc(evt)
 {
 	var count = itemList.count;
 	while(itemList.firstChild){
-		console.log('removing ... ' + itemList.count);
-		count -= 1;
+		//console.log('removing ... ' + itemList.count);
+		//count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
 	location.reload();
@@ -45,6 +45,7 @@ function refresh() {
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
+	location.reload();
 	db.collection('applications').get().then(snapshot => {
 		itemList.count = 0;
 	    snapshot.docs.forEach(doc => {
