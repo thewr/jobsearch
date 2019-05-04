@@ -92,9 +92,9 @@ function myFunc(evt)
 						form.wordsD.value = tableData.wordsD;
 						form.subject.value = tableData.subject;
 						
-						$('#item_submit').click(function(){ 
-							//form.addEventListener('click','append', (e) => {
-    							//e.preventDefault();
+						//$('#item_submit').click(function(){ 
+						form.addEventListener('click','append', (e) => {
+    							e.preventDefault();
 							db.collection("applications").doc(id).update({
 								name: form.name.value,
 								wordsA: form.wordsA.value,
@@ -102,17 +102,11 @@ function myFunc(evt)
 								wordsC: form.wordsC.value,
 								wordsD: form.wordsD.value,
 								subject: form.subject.value
-							});	
+							});
+						});
 							refresh();
-							// getting data
-							/*
-							db.collection('applications').get().then(snapshot => {
-    							snapshot.docs.forEach(doc => {
-        						renderDB(doc);
-							});		
-							*/
 						});//end-of-item_submit
-					});//end-of-edit_item event
+					//});//end-of-edit_item event
 	
 			 		$('#delete_item').click(function(){
 						ref.delete();
@@ -235,7 +229,7 @@ db.collection('applications').get().then(snapshot => {
 });
 
 // saving data
-/*
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     db.collection('applications').add({
@@ -257,7 +251,7 @@ form.addEventListener('submit', (e) => {
 	// generate new db
 	refresh();
 });
-*/
+
 
 form.addEventListener('cancel', (e) => {
     e.preventDefault();
