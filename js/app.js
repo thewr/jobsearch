@@ -56,7 +56,7 @@ function todaysDate()
     return today;
 }
 
-/*
+
 function clearForm()
 {
       form.name.value = '';
@@ -66,7 +66,6 @@ function clearForm()
       form.wordsD.value = '';
       form.subject.value = '';
 }
-*/
 
 function myFunc(evt)
 {
@@ -119,17 +118,15 @@ function myFunc(evt)
 								wordsD: form.wordsD.value,
 								subject: form.subject.value
 							});
-							//clearForm();
+							clearForm();
 						      	refresh();
-						});//end-of-item_submit
-					//});//end-of-edit_item event
-	
+						});						
+					});
+						
 			 		$('#delete_item').click(function(){
 						ref.delete();
 						refresh();
 					});//end-of-delete_item event
-
-
 	
 
 }
