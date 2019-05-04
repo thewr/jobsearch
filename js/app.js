@@ -126,7 +126,7 @@ function myFunc(evt)
 								wordsD: form.wordsD.value,
 								subject: form.subject.value
 							});
-							clearForm();
+							//clearForm();
 						      	refresh();
 						});
 					});
