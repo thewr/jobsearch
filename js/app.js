@@ -145,8 +145,7 @@ function myFunc(evt)
 						});//end-of-delete_item event
 	} else {
 		return;
-	}|
-
+	}
 }
 
 // create element & render cafe
