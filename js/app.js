@@ -5,7 +5,7 @@ itemList.addEventListener('click', myFunc, false);//itemList.addEventListener('c
 itemList.count = 0;
 
 // create form element
-var form = document.querySelector('#add-item-form');
+var form = document.querySelector('#item-form');
 
 // define buttons
 refresh_button.addEventListener('click',refreshFunc,false);
