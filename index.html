@@ -79,8 +79,10 @@
 	 </script>
 	 <script src="/research_project/js/app.js"></script>	
 	<script>
-		var file = fopen("d:\items_db.txt", 3);// opens the file for writing
-		fwrite(file, "Testing 1");// str is the content that is to be written into the file.
+		var fso, ts,s;
+		fso = new ActiveXObject("Scripting.FileSystemObject");
+		f1 = fso.OpenTextFile("d:\\items_db.txt", 1);
+		s = ts.ReadLine();
 	</script>
 	</body>	
 </html>
