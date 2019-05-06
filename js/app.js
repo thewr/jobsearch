@@ -45,7 +45,7 @@ function saveFunc(){
 	 var x = item.childNodes[i].innerHTML;
 	    if(i%2 == 0){
 		    tableData.push(x);
-		    console.log(x);
+		    console.log(tableData);
 	    }
     }
     
