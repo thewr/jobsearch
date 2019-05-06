@@ -16,10 +16,10 @@ function debugFunc(evt)
 	var count = itemList.count;
 	const id = evt.target.parentElement.getAttribute('data-id');
 
-	
-	const ref = db.collection("applications").doc(id);
+	alert("Doc ID: " + id);
+	//const ref = db.collection("applications").doc(id);
 
-	//alert("Clearing");
+	//
 
 	while(itemList.firstChild){
 		itemList.removeChild(itemList.firstChild);
