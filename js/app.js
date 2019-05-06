@@ -37,7 +37,7 @@ function refreshFunc(evt)
 function saveFunc(){
     //e.preventDefault();
     var x = itemList.firstChild.childNodes[1].innerHTML;
-    alert(childNodes.length + " " + x);
+    alert(itemList.firstChild.children.length + " " + x);
 	/*
     while(itemList.firstChild){
 	    db.collection('backup').add({
