@@ -39,7 +39,7 @@ function debugFunc(evt)
 	//    snapshot.docs.forEach(doc => {
 	//	renderDB(doc);
 	//    });
-	});//end of get data
+	//});//end of get data
 }
 
 /*
