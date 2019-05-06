@@ -19,7 +19,6 @@ function debugFunc(evt)
 	alert("Doc ID: " + id);
 	//const ref = db.collection("applications").doc(id);
 
-	//
 
 	while(itemList.firstChild){
 		itemList.removeChild(itemList.firstChild);
@@ -28,12 +27,12 @@ function debugFunc(evt)
 	
 
 	//renderDB(ref);
-	//db.collection('applications').get().then(snapshot => {
-	 //   itemList.count = 0;
-	//    snapshot.docs.forEach(doc => {
-	//	renderDB(doc);
-	//    });
-	//});//end of get data
+	db.collection('applications').get().then(snapshot => {
+	     itemList.count = 0;
+	    snapshot.docs.forEach(doc => {
+		renderDB(doc);
+	    });
+	});//end of get data
 }
 
 /*
