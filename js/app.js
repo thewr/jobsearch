@@ -41,7 +41,7 @@ function saveFunc(){
     var x = item.childNodes[1].innerHTML;
     for(var i = 0; i < n; i++){
     	var x = item.childNodes[i].innerHTML;
-	    if(!i%2){
+	    if(i%2 != 0){
 		    console.log(x);
 	    }
     }
