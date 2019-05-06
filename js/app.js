@@ -21,29 +21,24 @@ function refreshFunc(evt)
 
 
 	while(itemList.firstChild){
-		//loop to get <span>s
-		/*
-		for (let i = 0; i < itemList.children.length; i++) {
-			console.log(itemList.children[i].tagName);
-		}
-		*/
 		console.log(form.name.value);
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
-	/*
 	db.collection('applications').get().then(snapshot => {
 	     itemList.count = 0;
 	    snapshot.docs.forEach(doc => {
 		renderDB(doc);
 	    });
 	});//end of get data
-	*/
 }
 
 
 function saveFunc(){
     //e.preventDefault();
+    var x = itemList.firstChild.innerHTML;
+    alert(x);
+	/*
     while(itemList.firstChild){
 	    db.collection('backup').add({
 		date: todaysDate(),
@@ -61,6 +56,7 @@ function saveFunc(){
 	
 	// generate new db
 	refresh();
+	*/
 }
 
 /*
