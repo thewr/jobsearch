@@ -67,7 +67,6 @@ function saveFunc(){
 	
 	// generate new db
 	refresh();
-	*/
 }
 
 /*
