@@ -36,8 +36,13 @@ function refreshFunc(evt)
 
 function saveFunc(){
     //e.preventDefault();
-    var x = itemList.firstChild.childNodes[1].innerHTML;
-    alert(itemList.firstChild.children.length + " " + x);
+    var item = itemList.firstChild;
+    var n = item.children.length;
+    var x = item.childNodes[1].innerHTML;
+    for(var i = 0; i < n; i++){
+    	var x = item.childNodes[i].innerHTML;
+	console.log(x);
+    }
 	/*
     while(itemList.firstChild){
 	    db.collection('backup').add({
