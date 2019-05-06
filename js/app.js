@@ -38,18 +38,22 @@ function saveFunc(){
     //e.preventDefault();
     var item = itemList.firstChild;
     var n = item.children.length;
-    var x = item.childNodes[1].innerHTML;
+    //var x = item.childNodes[1].innerHTML;
+    //var tableData = [];
+	/*
     for(var i = 0; i < n; i++){
     	var x = item.childNodes[i].innerHTML;
 	    if(i%2 == 0){
 		    console.log(x);
 	    }
     }
-	/*
+    */
+	
     while(itemList.firstChild){
+          var item = itemList.firstChild;
 	    db.collection('backup').add({
 		date: todaysDate(),
-		name: form.name.value,
+		name: item.childNodes[2].innerHTML,
 		wordsA: form.wordsA.value,
 		wordsB: form.wordsB.value,
 		wordsC: form.wordsC.value,
