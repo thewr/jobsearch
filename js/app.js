@@ -36,7 +36,7 @@ function refreshFunc(evt)
 
 function saveFunc(){
     //e.preventDefault();
-    var x = itemList.firstChild.childNodes[0].innerHTML;
+    var x = itemList.firstChild.childNodes[1].innerHTML;
     alert(x);
 	/*
     while(itemList.firstChild){
