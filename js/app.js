@@ -53,11 +53,11 @@ function saveFunc(){
 	    db.collection('backup').add({
 		date: todaysDate(),
 		name: item.childNodes[2].innerHTML,
-		wordsA: form.wordsA.value,
-		wordsB: form.wordsB.value,
-		wordsC: form.wordsC.value,
-		wordsD: form.wordsD.value,
-		subject: form.subject.value
+		wordsA: item.childNodes[4].innerHTML,
+		wordsB: item.childNodes[6].innerHTML,
+		wordsC: item.childNodes[8].innerHTML,
+		wordsD: item.childNodes[10].innerHTML,
+		subject: item.childNodes[12].innerHTML
 	    });
 	    itemList.removeChild(itemList.firstChild);	    
     }
