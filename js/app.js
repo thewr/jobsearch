@@ -21,7 +21,6 @@ function refreshFunc(evt)
 
 
 	while(itemList.firstChild){
-		console.log(form.name.value);
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
