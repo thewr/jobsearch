@@ -211,6 +211,10 @@ body>.container>.app>.sidebar {
     background-color: 	#ccc;
 }
 
+#save_button {
+    background-color: 	#0099ff;
+}
+
 .options #label
 {
    color: white;
