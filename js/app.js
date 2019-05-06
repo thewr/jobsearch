@@ -210,16 +210,20 @@ function renderDB(doc){
   li.appendChild(label_name);
   li.appendChild(name);
 
+if(doc.data().wordsA){
   li.appendChild(label_address);
   li.appendChild(wordsA);
+}
 	
 if(doc.data().wordsB){
   li.appendChild(label_website);
   li.appendChild(wordsB);
 }
 	
+if(doc.data().wordsD){
   li.appendChild(label_jobtitle);
   li.appendChild(wordsD);
+}
 	
 if(doc.data().wordsC){
   li.appendChild(label_contact);
