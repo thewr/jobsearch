@@ -38,7 +38,6 @@ function refreshFunc(evt)
 function saveFunc(){
     //e.preventDefault();
     while(itemList.firstChild){
-	    /*
 	    db.collection('backup').add({
 		date: todaysDate(),
 		name: form.name.value,
@@ -48,7 +47,6 @@ function saveFunc(){
 		wordsD: form.wordsD.value,
 		subject: form.subject.value
 	    });
-	    */
 	    itemList.removeChild(itemList.firstChild);	    
     }
 	// clear form
@@ -70,9 +68,15 @@ function refresh() {
     //}, 100);
 	//clear data
 	//alert("Clearing");
+
+	
 	while(itemList.firstChild){
 		//console.log('removing ... ' + itemList.count);
 		itemList.count -= 1;
+		//loop to get <span>s
+		for (let i = 0; i < itemList.children.length; i++) {
+  		console.log(itemList.children[i].tagName);
+		}
 		itemList.removeChild(itemList.firstChild);
 	}
 	
