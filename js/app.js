@@ -89,7 +89,7 @@ function clearForm()
 function myFunc(evt)
 {
 	const id = evt.target.parentElement.getAttribute('data-id');
-	console.log(id);
+	console.log("ID: "+ id + " " + evt.target.nodeName);
 	
 	if(evt.target.nodeName == 'li'){// && evt.taget.className = 'selected') {
             console.log(id + " was clicked");
