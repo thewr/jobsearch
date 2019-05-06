@@ -33,7 +33,7 @@ function debugFunc(evt)
 	//get data
 	
 
-	renderDB(ref);
+	//renderDB(ref);
 	//db.collection('applications').get().then(snapshot => {
 	 //   itemList.count = 0;
 	//    snapshot.docs.forEach(doc => {
