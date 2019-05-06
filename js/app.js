@@ -89,66 +89,63 @@ function clearForm()
 function myFunc(evt)
 {
 	const id = evt.target.parentElement.getAttribute('data-id');
-	console.log("ID: "+ id + " " + evt.target.nodeName);
 	
 	if(evt.target.nodeName == 'SPAN'){// && evt.taget.className = 'selected') {
-            console.log(id + " was clicked");
-        }
-	
-	if(id == null){
-		return;
-	}
-	const ref = db.collection("applications").doc(id);
-	try {
-		var tableData = {};
-		ref.get()
-		.then(doc => {
-			if(!doc.exists) {
-				window.alert("no such document");
-			} else {
-				tableData = {
-					//doc: doc.data(),
-					name: doc.data().name,
-					wordsA: doc.data().wordsA,
-					wordsB: doc.data().wordsB,
-					wordsC: doc.data().wordsC,
-					wordsD: doc.data().wordsD,
-				        subject: doc.data().subject
-				};  //window.alert(tableData.name + " " + tableData.subject);
-			}
-		})
-	} catch (error) {
-	res.send(error);
-	}
-	
-		 			$('#edit_item').click(function(){
-					        form.name.value =  tableData.name;
-						form.wordsA.value = tableData.wordsA;
-						form.wordsB.value = tableData.wordsB;
-						form.wordsC.value = tableData.wordsC;
-						form.wordsD.value = tableData.wordsD;
-						form.subject.value = tableData.subject;
-						
-						$('#item_submit').click(function(){ //form.addEventListener('append', (e) => { e.preventDefault();
-							db.collection("applications").doc(id).update({
-								name: form.name.value,
-								wordsA: form.wordsA.value,
-								wordsB: form.wordsB.value,
-								wordsC: form.wordsC.value,
-								wordsD: form.wordsD.value,
-								subject: form.subject.value
+            console.log(id + " was clicked");	
+	    const ref = db.collection("applications").doc(id);
+		try {
+			var tableData = {};
+			ref.get()
+			.then(doc => {
+				if(!doc.exists) {
+					window.alert("no such document");
+				} else {
+					tableData = {
+						//doc: doc.data(),
+						name: doc.data().name,
+						wordsA: doc.data().wordsA,
+						wordsB: doc.data().wordsB,
+						wordsC: doc.data().wordsC,
+						wordsD: doc.data().wordsD,
+						subject: doc.data().subject
+					};  //window.alert(tableData.name + " " + tableData.subject);
+				}
+			})
+		} catch (error) {
+		res.send(error);
+		}
+
+						$('#edit_item').click(function(){
+							form.name.value =  tableData.name;
+							form.wordsA.value = tableData.wordsA;
+							form.wordsB.value = tableData.wordsB;
+							form.wordsC.value = tableData.wordsC;
+							form.wordsD.value = tableData.wordsD;
+							form.subject.value = tableData.subject;
+
+							$('#item_submit').click(function(){ //form.addEventListener('append', (e) => { e.preventDefault();
+								db.collection("applications").doc(id).update({
+									name: form.name.value,
+									wordsA: form.wordsA.value,
+									wordsB: form.wordsB.value,
+									wordsC: form.wordsC.value,
+									wordsD: form.wordsD.value,
+									subject: form.subject.value
+								});
+								clearForm();
+								refresh();
 							});
-							clearForm();
-						      	refresh();
+							return;
 						});
-						return;
-					});
-		
-	
-			 		$('#delete_item').click(function(){
-						ref.delete();
-						refresh();
-					});//end-of-delete_item event
+
+
+						$('#delete_item').click(function(){
+							ref.delete();
+							refresh();
+						});//end-of-delete_item event
+	} else {
+		return;
+	}|
 
 }
 
