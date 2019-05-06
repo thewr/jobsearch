@@ -27,7 +27,7 @@ function refreshFunc(evt)
 			console.log(itemList.children[i].tagName);
 		}
 		*/
-		console.log(forms.name.value);
+		console.log(form.name.value);
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
