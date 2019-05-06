@@ -38,7 +38,7 @@ function saveFunc(){
     var item = itemList.firstChild;
     var n = item.children.length;
     //var x = item.childNodes[1].innerHTML;
-    var tableData = new Array(5);
+    var tableData = [];
 
     for(var i = 0; i < n; i++){
     	tableData = item.childNodes[i].innerHTML;
