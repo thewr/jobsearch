@@ -9,7 +9,7 @@ var form = document.querySelector('#add-item-form');
 
 // define buttons
 refresh_button.addEventListener('click',refreshFunc,false);
-
+save_button.addEventLstener('click',saveFunc,false);
 
 function refreshFunc(evt)
 {
@@ -35,6 +35,29 @@ function refreshFunc(evt)
 	});//end of get data
 }
 
+function saveFunc(){
+    //e.preventDefault();
+    while(itemList.firstChild){
+	    /*
+	    db.collection('backup').add({
+		date: todaysDate(),
+		name: form.name.value,
+		wordsA: form.wordsA.value,
+		wordsB: form.wordsB.value,
+		wordsC: form.wordsC.value,
+		wordsD: form.wordsD.value,
+		subject: form.subject.value
+	    });
+	    */
+	    itemList.removeChild(itemList.firstChild);	    
+    }
+	// clear form
+	clearForm();
+	
+	// generate new db
+	refresh();
+}
+
 /*
 var div = document.getElementById('divID');
 div.innerHTML += 'Extra stuff';
@@ -52,6 +75,7 @@ function refresh() {
 		itemList.count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
+	
 	//get data
 	alert("Displaying");
 	db.collection('applications').get().then(snapshot => {
@@ -258,6 +282,8 @@ db.collection('applications').get().then(snapshot => {
         renderDB(doc);
     });
 });
+
+
 
 //saving data
 var handler = function(e){
