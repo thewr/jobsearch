@@ -101,7 +101,7 @@ function myFunc(evt)
 					window.alert("no such document");
 				} else {
 					tableData = {
-						//doc: doc.data(),
+						//date: doc.data().date,
 						name: doc.data().name,
 						wordsA: doc.data().wordsA,
 						wordsB: doc.data().wordsB,
