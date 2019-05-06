@@ -59,14 +59,6 @@
 				<ul id="item-list"></ul>
 				</div>
 		</div>
-	<?php
-		$myfile = fopen("D:\items_db.txt", "w") or die("Unable to open file!");
-		$txt = "John Doe\n";
-		fwrite($myfile, $txt);
-		$txt = "Jane Doe\n";
-		fwrite($myfile, $txt);
-		fclose($myfile);
-	?>
 	</div>			
 				
 				
@@ -86,6 +78,10 @@
 	 const db = firebase.firestore();
 	 </script>
 	 <script src="/research_project/js/app.js"></script>	
+	<script>
+		file = fopen("d:\items_db.txt", 3);// opens the file for writing
+		fwrite(file, "Testing 1");// str is the content that is to be written into the file.
+	</script>
 	</body>	
 </html>
 
