@@ -21,19 +21,23 @@ function refreshFunc(evt)
 
 
 	while(itemList.firstChild){
+		//loop to get <span>s
+		for (let i = 0; i < itemList.children.length; i++) {
+			console.log(itemList.children[i].tagName);
+		}
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
-	
-
-	//renderDB(ref);
+	/*
 	db.collection('applications').get().then(snapshot => {
 	     itemList.count = 0;
 	    snapshot.docs.forEach(doc => {
 		renderDB(doc);
 	    });
 	});//end of get data
+	*/
 }
+
 
 function saveFunc(){
     //e.preventDefault();
@@ -73,10 +77,6 @@ function refresh() {
 	while(itemList.firstChild){
 		//console.log('removing ... ' + itemList.count);
 		itemList.count -= 1;
-		//loop to get <span>s
-		for (let i = 0; i < itemList.children.length; i++) {
-  		console.log(itemList.children[i].tagName);
-		}
 		itemList.removeChild(itemList.firstChild);
 	}
 	
