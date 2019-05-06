@@ -15,7 +15,7 @@ function debugFunc(evt)
 {
 	var count = itemList.count;
 	const id = evt.target.parentElement.getAttribute('data-id');
-	const ref = db.collection("applications").doc(id);
+	//const ref = db.collection("applications").doc(id);
 
 	//alert("Clearing");
 
