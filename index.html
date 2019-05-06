@@ -80,8 +80,11 @@
 	 <script src="/research_project/js/app.js"></script>	
 	<script> 
 	<?php
-		$myfile = fopen("D:\items_db.txt", "r") or die("Unable to open file!");
-		echo fread($myfile,filesize("webdictionary.txt"));
+		$myfile = fopen("D:\items_db.txt", "w") or die("Unable to open file!");
+		$txt = "John Doe\n";
+		fwrite($myfile, $txt);
+		$txt = "Jane Doe\n";
+		fwrite($myfile, $txt);
 		fclose($myfile);
 	?>
 	</script>  
