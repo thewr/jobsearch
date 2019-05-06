@@ -38,28 +38,22 @@ function saveFunc(){
     var item = itemList.firstChild;
     var n = item.children.length;
     //var x = item.childNodes[1].innerHTML;
-    //var tableData = [];
-	/*
+    var tableData = new Array(5);
+
     for(var i = 0; i < n; i++){
     	var x = item.childNodes[i].innerHTML;
 	    if(i%2 == 0){
 		    console.log(x);
 	    }
     }
-    */
+    
 	
     while(itemList.firstChild){
           var item = itemList.firstChild;
 	    db.collection('backup').add({
 		date: todaysDate(),
 		name: item.childNodes[2].innerHTML,
-		for(var i = 3; i < n: i++){
-			if(i%2){
-				switch(i){
-					case 4:
-						wordsA: item.childNodes[4].innerHTML,
-						break;
-				}
+		wordsA: item.childNodes[4].innerHTML,
 		//wordsB: item.childNodes[6].innerHTML,
 		//wordsC: item.childNodes[8].innerHTML,
 		//wordsD: item.childNodes[10].innerHTML,
