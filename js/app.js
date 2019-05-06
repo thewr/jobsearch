@@ -41,7 +41,9 @@ function saveFunc(){
     var x = item.childNodes[1].innerHTML;
     for(var i = 0; i < n; i++){
     	var x = item.childNodes[i].innerHTML;
-	console.log(x);
+	    if(i/2){
+		    console.log(x);
+	    }
     }
 	/*
     while(itemList.firstChild){
