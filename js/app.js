@@ -9,7 +9,7 @@ var form = document.querySelector('#add-item-form');
 
 // define buttons
 refresh_button.addEventListener('click',refreshFunc,false);
-save_button.addEventLstener('click',saveFunc,false);
+save_button.addEventListener('click',saveFunc,false);
 
 function refreshFunc(evt)
 {
