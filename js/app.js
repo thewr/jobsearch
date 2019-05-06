@@ -41,8 +41,10 @@ function saveFunc(){
     var tableData = new Array(5);
 
     for(var i = 0; i < n; i++){
-    	var x = item.childNodes[i].innerHTML;
+    	tableData = item.childNodes[i].innerHTML;
+	 var x = item.childNodes[i].innerHTML;
 	    if(i%2 == 0){
+		    tableData.push(x);
 		    console.log(x);
 	    }
     }
