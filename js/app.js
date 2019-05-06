@@ -22,9 +22,12 @@ function refreshFunc(evt)
 
 	while(itemList.firstChild){
 		//loop to get <span>s
+		/*
 		for (let i = 0; i < itemList.children.length; i++) {
 			console.log(itemList.children[i].tagName);
 		}
+		*/
+		console.log(forms.name.value);
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
