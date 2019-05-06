@@ -7,14 +7,6 @@ itemList.count = 0;
 // create form element
 var form = document.querySelector('#add-item-form');
 
-// sleep
-function sleep(miliseconds) {
-   var currentTime = new Date().getTime();
-
-   while (currentTime + miliseconds >= new Date().getTime()) {
-   }
-}
-
 // define buttons
 debug_button.addEventListener('click',debugFunc,false);
 
@@ -25,7 +17,7 @@ function debugFunc(evt)
 	const id = evt.target.parentElement.getAttribute('data-id');
 	const ref = db.collection("applications").doc(id);
 
-	alert("Clearing");
+	//alert("Clearing");
 
 	while(itemList.firstChild){
 		itemList.removeChild(itemList.firstChild);
@@ -53,18 +45,16 @@ function refresh() {
      //   location.reload()
     //}, 100);
 	//clear data
-	alert("Clearing");
-	
+	//alert("Clearing");
 	while(itemList.firstChild){
 		//console.log('removing ... ' + itemList.count);
-		//itemList.count -= 1;
+		itemList.count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
-	sleep(500);
 	//get data
 	alert("Displaying");
 	db.collection('applications').get().then(snapshot => {
-		itemList.count = 0;
+		//itemList.count = 0;
 	    snapshot.docs.forEach(doc => {
 		renderDB(doc);
 	    });
@@ -247,7 +237,7 @@ if(doc.data().subject){
  // li.appendChild(cross);
 
 
-  // put the <tbody> in the <table>
+  // put the <itemList> in the <ol>
   itemList.appendChild(li);
 
   // deleting data
@@ -297,12 +287,8 @@ form.addEventListener('submit', (e) => {
 	wordsD: form.wordsD.value,
         subject: form.subject.value
     });
-      form.name.value = '';
-      form.wordsA.value = '';
-	form.wordsB.value = '';
-	form.wordsC.value = '';
-	form.wordsD.value = '';
-      form.subject.value = '';
+	// clear form
+	clearForm();
 	
 	// generate new db
 	refresh();
