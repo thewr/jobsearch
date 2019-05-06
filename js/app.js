@@ -17,7 +17,7 @@ function debugFunc(evt)
 	const id = evt.target.parentElement.getAttribute('data-id');
 
 	
-	//const ref = db.collection("applications").doc(id);
+	const ref = db.collection("applications").doc(id);
 
 	//alert("Clearing");
 
@@ -27,7 +27,7 @@ function debugFunc(evt)
 	//get data
 	
 
-	renderDB(ref);
+	//renderDB(ref);
 	//db.collection('applications').get().then(snapshot => {
 	 //   itemList.count = 0;
 	//    snapshot.docs.forEach(doc => {
