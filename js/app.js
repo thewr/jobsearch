@@ -22,17 +22,23 @@ debug_button.addEventListener('click',debugFunc,false);
 function debugFunc(evt)
 {
 	var count = itemList.count;
+	const id = evt.target.parentElement.getAttribute('data-id');
+	const ref = db.collection("applications").doc(id);
+
+	alert("Clearing");
+
 	while(itemList.firstChild){
-		//console.log('removing ... ' + itemList.count);
-		//count -= 1;
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
-	db.collection('applications').get().then(snapshot => {
-	    itemList.count = 0;
-	    snapshot.docs.forEach(doc => {
-		renderDB(doc);
-	    });
+	
+
+	renderDB(ref);
+	//db.collection('applications').get().then(snapshot => {
+	 //   itemList.count = 0;
+	//    snapshot.docs.forEach(doc => {
+	//	renderDB(doc);
+	//    });
 	});//end of get data
 }
 
@@ -93,9 +99,11 @@ function myFunc(evt)
 {
 	const id = evt.target.parentElement.getAttribute('data-id');
 	console.log(id);
+	
 	if(evt.target.nodeName == 'li'){// && evt.taget.className = 'selected') {
             console.log(id + " was clicked");
         }
+	
 	if(id == null){
 		return;
 	}
@@ -139,7 +147,7 @@ function myFunc(evt)
 								wordsD: form.wordsD.value,
 								subject: form.subject.value
 							});
-							//clearForm();
+							clearForm();
 						      	refresh();
 						});
 						return;
@@ -153,7 +161,7 @@ function myFunc(evt)
 
 }
 
-							      // create element & render cafe
+// create element & render cafe
 function renderDB(doc){
   // create list document elements
   itemList.count += 1;
