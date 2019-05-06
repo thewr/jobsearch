@@ -8,10 +8,10 @@ itemList.count = 0;
 var form = document.querySelector('#add-item-form');
 
 // define buttons
-debug_button.addEventListener('click',debugFunc,false);
+refresh_button.addEventListener('click',refreshFunc,false);
 
 
-function debugFunc(evt)
+function refreshFunc(evt)
 {
 	var count = itemList.count;
 	const id = evt.target.parentElement.getAttribute('data-id');
