@@ -38,25 +38,8 @@ function saveFunc(e){
        // getting data
 	db.collection('applications').get().then(snapshot => {
 	    snapshot.docs.forEach(doc => {
-		try {
-			var tableData = {};
-			doc.get()
-			.then(doc => {
-				if(!doc.exists) {
-					window.alert("no such document");
-				} else {
-					tableData = {
-						//date: doc.data().date,
-						name: doc.data().name,
-						wordsA: doc.data().wordsA,
-						wordsB: doc.data().wordsB,
-						wordsC: doc.data().wordsC,
-						wordsD: doc.data().wordsD,
-						subject: doc.data().subject
-					};  //window.alert(tableData.name + " " + tableData.subject);
-				}
-			})
-		} 
+		    
+	    }
 	    });
 	});
 	
