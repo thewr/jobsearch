@@ -56,7 +56,7 @@ function saveFunc(e){
 					};  //window.alert(tableData.name + " " + tableData.subject);
 				}
 			})
-		} catch (error) { res.send(error);}
+		} 
 	    });
 	});
 	
