@@ -36,13 +36,6 @@ function saveFunc(e){
 	//const ref = db.collection("applications").doc(id);
     
        // getting data
-	db.collection('applications').get().then(snapshot => {
-	    snapshot.docs.forEach(doc => {
-		    
-	    }
-	    });
-	});
-	
 	
     // CODE TO TAKE RENDER TO DB
     /*
