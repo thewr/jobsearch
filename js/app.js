@@ -31,11 +31,40 @@ function refreshFunc(evt)
 }
 
 
-function saveFunc(){
-    //e.preventDefault();
+function saveFunc(e){
+        e.preventDefault();
+	//const ref = db.collection("applications").doc(id);
+    
+       // getting data
+	db.collection('applications').get().then(snapshot => {
+	    snapshot.docs.forEach(doc => {
+		try {
+			var tableData = {};
+			doc.get()
+			.then(doc => {
+				if(!doc.exists) {
+					window.alert("no such document");
+				} else {
+					tableData = {
+						//date: doc.data().date,
+						name: doc.data().name,
+						wordsA: doc.data().wordsA,
+						wordsB: doc.data().wordsB,
+						wordsC: doc.data().wordsC,
+						wordsD: doc.data().wordsD,
+						subject: doc.data().subject
+					};  //window.alert(tableData.name + " " + tableData.subject);
+				}
+			})
+		} catch (error) { res.send(error);}
+	    });
+	});
+	
+	
+    // CODE TO TAKE RENDER TO DB
+    /*
     var item = itemList.firstChild;
     var n = item.children.length;
-    //var x = item.childNodes[1].innerHTML;
     var tableData = [];
 
     for(var i = 0; i < n; i++){
@@ -45,19 +74,7 @@ function saveFunc(){
 		    tableData.push(x);
 		    console.log(tableData);
 	    }
-    }
-	
-	const ref = db.collection("applications").doc(id);
-
-    
-	// getting data
-	db.collection('applications').get().then(snapshot => {
-		itemList.count = 0;
-	    snapshot.docs.forEach(doc => {
-		renderDB(doc);
-	    });
-	});
-	
+    }	
     while(itemList.firstChild){
           var item = itemList.firstChild;
 	    db.collection('backup').add({
@@ -71,6 +88,7 @@ function saveFunc(){
 	    });
 	    itemList.removeChild(itemList.firstChild);	    
     }
+    */
 	// clear form
 	clearForm();
 	
