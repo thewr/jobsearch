@@ -290,7 +290,7 @@ if(doc.data().subject){
 }
 
 // getting data
-db.collection('applications').orderBy("Date").get().then(snapshot => {
+db.collection('applications').orderBy('date').get().then(snapshot => {
 	itemList.count = 0;
     snapshot.docs.forEach(doc => {
         renderDB(doc);
