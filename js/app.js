@@ -38,7 +38,6 @@ function saveFunc(e){
        // getting data
 	
     // CODE TO TAKE RENDER TO DB
-    /*
     var item = itemList.firstChild;
     var n = item.children.length;
     var tableData = [];
@@ -64,7 +63,6 @@ function saveFunc(e){
 	    });
 	    itemList.removeChild(itemList.firstChild);	    
     }
-    */
 	// clear form
 	clearForm();
 	
