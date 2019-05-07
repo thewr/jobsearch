@@ -22,8 +22,10 @@ function refreshFunc(evt)
 		itemList.removeChild(itemList.firstChild);
 	}
 	//get data
-	db.collection('applications').get().then(snapshot => {
-	     itemList.count = 0;
+	db.collection('applications')
+		.orderBy('date','desc')
+		.get().then(snapshot => {
+		itemList.count = 0;
 	    snapshot.docs.forEach(doc => {
 		renderDB(doc);
 	    });
