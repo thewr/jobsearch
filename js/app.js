@@ -290,11 +290,16 @@ if(doc.data().subject){
 }
 
 // getting data
-db.collection('applications').orderBy('date').get().then(snapshot => {
-	itemList.count = 0;
-    snapshot.docs.forEach(doc => {
-        renderDB(doc);
-    });
+db.collection('applications')
+	.orderBy('date','desc')
+	.startAfter(lastDoc)
+	.get()
+	.then(snapshot => 
+	      {
+		itemList.count = 0;
+    		snapshot.docs.forEach(doc => {
+        	renderDB(doc);
+	});
 });
 
 
