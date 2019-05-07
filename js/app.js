@@ -16,9 +16,7 @@ function refreshFunc(evt)
 	var count = itemList.count;
 	const id = evt.target.parentElement.getAttribute('data-id');
 
-	alert("Doc ID: " + id);
-	//const ref = db.collection("applications").doc(id);
-
+	//alert("Doc ID: " + id);
 
 	while(itemList.firstChild){
 		itemList.removeChild(itemList.firstChild);
@@ -48,7 +46,17 @@ function saveFunc(){
 		    console.log(tableData);
 	    }
     }
+	
+	const ref = db.collection("applications").doc(id);
+
     
+	// getting data
+	db.collection('applications').get().then(snapshot => {
+		itemList.count = 0;
+	    snapshot.docs.forEach(doc => {
+		renderDB(doc);
+	    });
+	});
 	
     while(itemList.firstChild){
           var item = itemList.firstChild;
