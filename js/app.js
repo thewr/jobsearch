@@ -292,7 +292,6 @@ if(doc.data().subject){
 // getting data
 db.collection('applications')
 	.orderBy('date','desc')
-	.startAfter(lastDoc)
 	.get()
 	.then(snapshot => 
 	      {
