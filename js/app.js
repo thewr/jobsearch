@@ -247,7 +247,7 @@ function renderDB(doc){
 //  row.appendChild(row_count);
  // li.appendChild(date);
 	
-  var t = document.createTextNode(date);
+  var t = document.createTextNode("text here");
   itemList.appendChild(t);
 
   li.appendChild(label_name);
