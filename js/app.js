@@ -244,10 +244,9 @@ function renderDB(doc){
   subject.textContent = doc.data().subject;
 
   // append list
-//  row.appendChild(row_count);
  // li.appendChild(date);
 	
-  var t = document.createTextNode("text here");
+  var t = document.createTextNode(date);
   itemList.appendChild(t);
 
   li.appendChild(label_name);
