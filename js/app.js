@@ -188,7 +188,7 @@ function myFunc(evt)
 	}
 }
 var date_flag = true;
-var previous_date = 0;
+var previous_date;
 // create element & render cafe
 function renderDB(doc){
   // create list document elements
@@ -198,12 +198,12 @@ function renderDB(doc){
   if((itemList.count > 1)&&(current_date == previous_date))
   {
 	  date_flag = false;
-	  previous_date = current_date;
   } else {
 	  date_flag = true;
-	  previous_date = current_date;
   }
 	
+  previous_date = current_date;
+
   if(date_flag == true)
   {
           // append list
