@@ -187,11 +187,30 @@ function myFunc(evt)
 		return;
 	}
 }
-
+var date_flag = true;
+var previous_date = 0;
 // create element & render cafe
 function renderDB(doc){
   // create list document elements
-  itemList.count += 1;
+  itemList.count += 1; 
+  var current_date = doc.data().date;
+	
+	
+  if(date_flag == true)
+  {
+          // append list
+	 // li.appendChild(date);
+	 // var item_date = doc.data().date;
+	  //var myJSON = JSON.stringify(todaysDate());
+	var label = document.createElement('label');
+	label.style = "color:black; text-align: center"; // apply your style
+	label.appendChild(document.createTextNode(doc.data().date));
+	itemList.appendChild(label);
+  }
+	  
+
+	
+	
   console.log('adding ... ' + itemList.count);
   let li = document.createElement('li');
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
@@ -243,14 +262,6 @@ function renderDB(doc){
   wordsD.textContent = doc.data().wordsD;
   subject.textContent = doc.data().subject;
 
-  // append list
- // li.appendChild(date);
- // var item_date = doc.data().date;
-  //var myJSON = JSON.stringify(todaysDate());
-var label = document.createElement('label');
-label.style = "color:black; text-align: center"; // apply your style
-label.appendChild(document.createTextNode(doc.data().date));
-itemList.appendChild(label);
 	
   //var t = document.createTextNode(doc.data().date);
   //t.newCell.setAttribute("STYLE","color:red'");
