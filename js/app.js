@@ -195,6 +195,14 @@ function renderDB(doc){
   itemList.count += 1; 
   var current_date = doc.data().date;
 	
+  if((itemList.count > 1)&&(current_date == previous_date))
+  {
+	  date_flag = false;
+	  previous_date = current_date;
+  } else {
+	  date_flag = true;
+	  previous_date = current_date;
+  }
 	
   if(date_flag == true)
   {
