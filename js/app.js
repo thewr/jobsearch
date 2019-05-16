@@ -248,7 +248,7 @@ function renderDB(doc){
  // var item_date = doc.data().date;
   //var myJSON = JSON.stringify(todaysDate());
   var t = document.createTextNode(doc.data().date);
-  t.style.cssText = "font-weight: bold;"; //border: 1px solid black";
+  t.style.cssText = "color: black; font-weight: bold;"; //border: 1px solid black";
   itemList.appendChild(t);
 
   li.appendChild(label_name);
