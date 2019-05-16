@@ -247,9 +247,14 @@ function renderDB(doc){
  // li.appendChild(date);
  // var item_date = doc.data().date;
   //var myJSON = JSON.stringify(todaysDate());
-  var t = document.createTextNode(doc.data().date);
-  t.newCell.setAttribute("STYLE","color:red'");
-  itemList.appendChild(t);
+var label = document.createElement('label');
+//label.style = ...; // apply your style
+label.appendChild(document.createTextNode(doc.data().date));
+itemList.appendChild(label);
+	
+  //var t = document.createTextNode(doc.data().date);
+  //t.newCell.setAttribute("STYLE","color:red'");
+  //itemList.appendChild(t);
 
   li.appendChild(label_name);
   li.appendChild(name);
