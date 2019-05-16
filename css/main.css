@@ -318,7 +318,7 @@ button{
     top: 100px;
     bottom: 0;
     left: 200px;
-    right: 0;}
+    //right: 0;}
 }
 
 body>.container>.app>.docs {
@@ -326,7 +326,7 @@ body>.container>.app>.docs {
     top: 100px;
     bottom: 0;
     left: 200px;
-    right: 0;    
+    //right: 0;    
 }
 
 .docs {
