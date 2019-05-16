@@ -248,7 +248,7 @@ function renderDB(doc){
  // var item_date = doc.data().date;
   //var myJSON = JSON.stringify(todaysDate());
 var label = document.createElement('label');
-//label.style = ...; // apply your style
+label.style = "color:red;"; // apply your style
 label.appendChild(document.createTextNode(doc.data().date));
 itemList.appendChild(label);
 	
