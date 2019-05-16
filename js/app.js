@@ -245,9 +245,10 @@ function renderDB(doc){
 
   // append list
  // li.appendChild(date);
-  var item_date = doc.data().date;
+ // var item_date = doc.data().date;
   //var myJSON = JSON.stringify(todaysDate());
-  var t = document.createTextNode(item_date);
+  var t = document.createTextNode(doc.data().date);
+  t.style.cssText = "font-weight: bold;"; //border: 1px solid black";
   itemList.appendChild(t);
 
   li.appendChild(label_name);
