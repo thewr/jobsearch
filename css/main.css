@@ -370,7 +370,7 @@ body>.container>.app>.docs {
     font-size-adjust:auto;
 }
 
-#item-list li label{
+#item-list label{
    color:black; 
    text-align: center; 
    display: block; 
