@@ -370,6 +370,13 @@ body>.container>.app>.docs {
     font-size-adjust:auto;
 }
 
+#item-list li label{
+   color:black; 
+   text-align: center; 
+   display: block; 
+   font-weight: bold;
+}
+
 /*
 #item-list .inlinespan{
     font-weight: 400;
