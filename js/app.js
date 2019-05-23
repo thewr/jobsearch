@@ -210,10 +210,11 @@ function renderDB(doc){
 	 // li.appendChild(date);
 	 // var item_date = doc.data().date;
 	  //var myJSON = JSON.stringify(todaysDate());
-	var label = document.createElement('label');
+	let date_label = document.createElement('label');
 	//label.style = "color:black; text-align: center; display: block; font-weight: bold"; // apply your style
-	label.appendChild(document.createTextNode(doc.data().date));
-	itemList.appendChild(label);
+	  date_label.textContent = doc.data().date;
+	//label.appendChild(document.createTextNode(doc.data().date));
+	itemList.appendChild(date_label);
   }
 	  
 
@@ -233,8 +234,8 @@ function renderDB(doc){
   //let cross = document.createElement('div');
   //cross.textContent = 'x';
 
-  let date = document.createElement('div');
-  date.style.cssText = "display: block";
+ // let date = document.createElement('div');
+//  date.style.cssText = "display: block";
 
   // create elements for labels for each data to display
   let label_name = document.createElement('span');
