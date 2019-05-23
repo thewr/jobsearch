@@ -263,7 +263,7 @@ function renderDB(doc){
   label_subject.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
 
   // render document contents
-  date.textContent = doc.data().date;
+//  date.textContent = doc.data().date;
   name.textContent = doc.data().name;
   wordsA.textContent = doc.data().wordsA;
   wordsB.textContent = doc.data().wordsB;
