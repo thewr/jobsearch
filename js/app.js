@@ -211,7 +211,7 @@ function renderDB(doc){
 	 // var item_date = doc.data().date;
 	  //var myJSON = JSON.stringify(todaysDate());
 	var label = document.createElement('label');
-	label.style = "color:black; text-align: center; display: block; font-weight: bold"; // apply your style
+	//label.style = "color:black; text-align: center; display: block; font-weight: bold"; // apply your style
 	label.appendChild(document.createTextNode(doc.data().date));
 	itemList.appendChild(label);
   }
