@@ -453,9 +453,9 @@ $('#item_cancel').click(function(){
 			$("#edit_item").show();
 			$("#delete_item").show();
 			// change selected's background-color
-			$(this).css("background-color", "rgb(225, 255, 107)");
+			//$(this).css("background-color", "rgb(225, 255, 107)");
 		} else {
-			$(this).css("background-color", "");
+			//$(this).css("background-color", "");
 			// $div.remove();
       			$("#edit_item").hide();
 			$("#delete_item").hide();
