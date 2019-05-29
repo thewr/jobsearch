@@ -371,7 +371,7 @@ body>.container>.app>.docs {
    font-weight: bold;
 }
 
-.selected {
+li .selected {
   color: #000;
   background-color: yellow;
 }
