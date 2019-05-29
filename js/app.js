@@ -447,7 +447,7 @@ $('#item_cancel').click(function(){
 
 	
 	$('#item-list').on('click','li',function() {
-	$(this).toggleClass('selected').siblings().removeClass('selected');
+	$(this).addClass('selected');//toggleClass('selected');//.siblings().removeClass('selected');
 		if($(this).hasClass('selected')){
 			//$(this).append($div);
 			$("#edit_item").show();
@@ -457,6 +457,7 @@ $('#item_cancel').click(function(){
 		} else {
 			//$(this).css("background-color", "");
 			// $div.remove();
+			$(this).removeClass('selected');
       			$("#edit_item").hide();
 			$("#delete_item").hide();
 
