@@ -447,7 +447,7 @@ $('#item_cancel').click(function(){
 
 	
 	$('#item-list').on('click','li',function() {
-	$(this).parent().toggleClass('selected').siblings().removeClass('selected');
+	$(this).toggleClass('selected').siblings().removeClass('selected');
 		if($(this).hasClass('selected')){
 			//$(this).append($div);
 			$("#edit_item").show();
