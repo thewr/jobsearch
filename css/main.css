@@ -371,7 +371,7 @@ body>.container>.app>.docs {
    font-weight: bold;
 }
 
-#item-list>li>.selected {
+#item-list li span .selected {
   color: #000;
   background-color: yellow;
 }
