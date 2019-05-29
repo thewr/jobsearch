@@ -129,6 +129,7 @@ function clearForm()
 function myFunc(evt)
 {
 	const id = evt.target.parentElement.getAttribute('data-id');
+	evt.target.classList.add('selected');
 	
 	if(evt.target.nodeName == 'SPAN'){// && evt.taget.className = 'selected') {
             console.log(id + " was clicked");	
