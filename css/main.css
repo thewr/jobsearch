@@ -371,9 +371,9 @@ body>.container>.app>.docs {
    font-weight: bold;
 }
 
-#item-list li .selected {
+.selected {
   color: #000;
-  background-color: rgb(112, 189, 144);
+  background-color: yellow;
 }
 
 /*
