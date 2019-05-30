@@ -360,7 +360,7 @@ body>.container>.app>.docs {
 
 #item-list li:not(.selected)
 {
-    background-color: blue;
+    background-color: #dbefd6;
 }
 
 #item-list li span{
