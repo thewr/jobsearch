@@ -354,6 +354,15 @@ body>.container>.app>.docs {
     white-space: pre-line;
 }
 
+#item-list li .selected{
+    background-color: yellow;
+}
+
+#item-list li:not(.selected)
+{
+    background-color: blue;
+}
+
 #item-list li span{
     color:#3c1231;
     font-weight: 400;
@@ -368,9 +377,6 @@ body>.container>.app>.docs {
    text-align: center; 
    display: block; 
    font-weight: bold;
-}
-.selected {
-  background: yellow;
 }
 
 /*
