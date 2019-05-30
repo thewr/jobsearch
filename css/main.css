@@ -354,7 +354,7 @@ body>.container>.app>.docs {
     white-space: pre-line;
 }
 
-#item-list li .selected{
+.selected{
     background-color: yellow;
 }
 
