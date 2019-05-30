@@ -215,16 +215,6 @@ body>.container>.app>.sidebar {
    background-color: "";
 }
 
-
-#item-list li .active {
-  background-color: #dbefd6;
-}
-
-#item-list li:hover:not(.selected) {
-  background-color: #ccc;
-}
-
-
 form:after{
     content: '';
     clear: both;
