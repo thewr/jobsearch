@@ -362,6 +362,11 @@ body>.container>.app>.docs {
     font-size-adjust:auto;
 }
 
+#item-list li:hover
+{
+    background-color: #ccc;
+}
+
 #item-list label{
    color:black; 
    text-align: center; 
