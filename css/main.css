@@ -217,7 +217,7 @@ body>.container>.app>.sidebar {
 
 
 #item-list li.active {
-  background-color: #white;
+  background-color: #dbefd6;
 }
 
 #item-list li:hover:not(.active) {
