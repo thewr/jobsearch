@@ -93,7 +93,6 @@ function refresh() {
 	}
 	
 	//get data
-	alert("Displaying");
 	db.collection('applications').get().then(snapshot => {
 		//itemList.count = 0;
 	    snapshot.docs.forEach(doc => {
