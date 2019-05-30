@@ -216,7 +216,7 @@ body>.container>.app>.sidebar {
 }
 
 
-#item-list li.active {
+#item-list li .active {
   background-color: #dbefd6;
 }
 
