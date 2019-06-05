@@ -452,9 +452,7 @@ $('#item_cancel').click(function(){
 			//$(this).append($div);
 			$("#edit_item").show();
 			$("#delete_item").show();
-			$(this).off('hover');
-			// change selected's background-color
-			//$(this).css("background-color", "rgb(225, 255, 107)");
+			$(this).unbind('mouseenter mouseleave')
 		} else {
 			//$(this).css("background-color", "");
 			// $div.remove();
