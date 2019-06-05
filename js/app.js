@@ -448,7 +448,7 @@ $('#item_cancel').click(function(){
 	
 	$('#item-list').on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
-	$(this).unbind('mouseenter mouseleave');	
+	$(this).siblings().unbind('mouseenter mouseleave');	
 		if($(this).hasClass('selected')){
 			//$(this).append($div);
 			$("#edit_item").show();
