@@ -345,12 +345,12 @@ body>.container>.app>.docs {
 }
 
 .selected{
-    background-color: yellow;
+    background-color: #E7EB73;
 }
 
 #item-list li:not(.selected)
 {
-    background-color: #e9f3e2;
+    background-color: #EEF2EB;
 }
 
 #item-list li span{
@@ -364,7 +364,7 @@ body>.container>.app>.docs {
 
 #item-list li:hover
 {
-    background-color: #ccc;
+    background-color: #E7EB73;
 }
 
 #item-list label{
