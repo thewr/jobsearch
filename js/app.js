@@ -445,7 +445,7 @@ $('#item_cancel').click(function(){
 	     	$('#close_app').hide();
 	});
 	
-	$('li').click(function(){
+	$('#item-list li').click(function(){
      		$(this).unbind("mouseenter mouseleave");
 	});
 
