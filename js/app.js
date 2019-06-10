@@ -448,12 +448,10 @@ $('#item_cancel').click(function(){
 	
 	$('#item-list').on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
-	$(this).siblings().unbind('mouseenter mouseleave');	
 		if($(this).hasClass('selected')){
 			//$(this).append($div);
 			$("#edit_item").show();
 			$("#delete_item").show();
-			$(this).unbind('mouseenter mouseleave');
 		} else {
 			//$(this).css("background-color", "");
 			// $div.remove();
