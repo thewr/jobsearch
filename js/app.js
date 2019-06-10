@@ -444,11 +444,14 @@ $('#item_cancel').click(function(){
 	 	$( ".docs" ).toggleClass('blur-me');
 	     	$('#close_app').hide();
 	});
+	
+	$('li').click(function(){
+     		$(this).unbind("mouseenter mouseleave");
+	});
 
 	
 	$('#item-list').on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
-	$(this).siblings().unbind("mouseenter mouseleave");
 		if($(this).hasClass('selected')){
 			//$(this).append($div);
 			$("#edit_item").show();
