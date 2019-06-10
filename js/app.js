@@ -130,7 +130,7 @@ function myFunc(evt)
 	const id = evt.target.parentElement.getAttribute('data-id');
 	//evt.target.parentElement.getElementsByTagName('li').classList.add('selected');
 	
-	if(evt.target.nodeName == 'SPAN'){// && evt.taget.className = 'selected') {
+	if(evt.target.nodeName == 'SPAN'){
             console.log(id + " was clicked");	
 	    const ref = db.collection("applications").doc(id);
 		try {
@@ -448,6 +448,7 @@ $('#item_cancel').click(function(){
 	
 	$('#item-list').on('click','li',function() {
 	$(this).toggleClass('selected').siblings().removeClass('selected');
+	$(this).siblings().unbind("mouseenter mouseleave");
 		if($(this).hasClass('selected')){
 			//$(this).append($div);
 			$("#edit_item").show();
