@@ -131,62 +131,67 @@ function myFunc(evt)
 	//evt.target.parentElement.getElementsByTagName('li').classList.add('selected');
 	
 	if(evt.target.nodeName == 'SPAN'){
-            console.log(id + " was clicked");	
-	    const ref = db.collection("applications").doc(id);
-		try {
-			var tableData = {};
-			ref.get()
-			.then(doc => {
-				if(!doc.exists) {
-					window.alert("no such document");
-				} else {
-					tableData = {
-						//date: doc.data().date,
-						name: doc.data().name,
-						wordsA: doc.data().wordsA,
-						wordsB: doc.data().wordsB,
-						wordsC: doc.data().wordsC,
-						wordsD: doc.data().wordsD,
-						subject: doc.data().subject
-					};  //window.alert(tableData.name + " " + tableData.subject);
-				}
-			})
-		} catch (error) {
-		res.send(error);
-		}
+		console.log(id + " was clicked");	
+	    	const ref = db.collection("applications").doc(id);
+		
+		$('#edit_item').click(function(){
+			//get data
+			try {
+				var tableData = {};
+				ref.get()
+				.then(doc => {
+					if(!doc.exists) {
+						window.alert("no such document");
+					} else {
+						tableData = {
+							//date: doc.data().date,
+							name: doc.data().name,
+							wordsA: doc.data().wordsA,
+							wordsB: doc.data().wordsB,
+							wordsC: doc.data().wordsC,
+							wordsD: doc.data().wordsD,
+							subject: doc.data().subject
+						};  //window.alert(tableData.name + " " + tableData.subject);
+					}
+				})
+			} catch (error) { 
+				res.send(error);
+			} //end of try
+			
+			form.name.value =  tableData.name;
+			form.wordsA.value = tableData.wordsA;
+			form.wordsB.value = tableData.wordsB;
+			form.wordsC.value = tableData.wordsC;
+			form.wordsD.value = tableData.wordsD;
+			form.subject.value = tableData.subject;
 
-						$('#edit_item').click(function(){
-							form.name.value =  tableData.name;
-							form.wordsA.value = tableData.wordsA;
-							form.wordsB.value = tableData.wordsB;
-							form.wordsC.value = tableData.wordsC;
-							form.wordsD.value = tableData.wordsD;
-							form.subject.value = tableData.subject;
-
-							$('#item_submit').click(function(){ //form.addEventListener('append', (e) => { e.preventDefault();
-								db.collection("applications").doc(id).update({
-									name: form.name.value,
-									wordsA: form.wordsA.value,
-									wordsB: form.wordsB.value,
-									wordsC: form.wordsC.value,
-									wordsD: form.wordsD.value,
-									subject: form.subject.value
-								});
-								clearForm();
-								refresh();
-							});
-							return;
-						});
+			$('#item_submit').click(function(){ //form.addEventListener('append', (e) => { e.preventDefault();
+				db.collection("applications").doc(id).update({
+					name: form.name.value,
+					wordsA: form.wordsA.value,
+					wordsB: form.wordsB.value,
+					wordsC: form.wordsC.value,
+					wordsD: form.wordsD.value,
+					subject: form.subject.value
+				});
+				clearForm();
+				refresh();
+			});
+		}); //end of edit item
 
 
-						$('#delete_item').click(function(){
-							ref.delete();
-							refresh();
-						});//end-of-delete_item event
+		$('#delete_item').click(function(){
+			ref.delete();
+			refresh();
+		});//end-of-delete_item event
+		
 	} else {
 		return;
 	}
 }
+
+
+
 var date_flag = true;
 var previous_date;
 // create element & render cafe
