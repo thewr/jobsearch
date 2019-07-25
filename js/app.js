@@ -331,6 +331,7 @@ if(doc.data().subject){
 }
 
 // getting data
+/*
 db.collection('applications')
 	.orderBy('date','desc')
 	.get()
@@ -341,6 +342,7 @@ db.collection('applications')
         	renderDB(doc);
 	});
 });
+*/
 
 
 
