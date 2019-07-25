@@ -386,6 +386,33 @@ form.addEventListener('cancel', (e) => {
 	refresh();
 });
 
+// real-time listener
+db.collection('applications').orderBy('date','desc').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+	    if(change.type == 'added'){
+		    console.log("New item: ", change.doc.data());
+            
+		    renderDB(change.doc);
+	    }
+	    
+	    if (change.type == 'modified'){
+		    console.log("Modified item: ", change.doc.data());
+		    
+		    let li = itemList.querySelector('[data-id=' + change.doc.id + ']');
+		    itemList.removeChild(li);
+		    renderDB(change.doc);
+		    
+	    }
+
+	    if (change.type == 'removed'){
+		    console.log("Removed item: ", change.doc.data());
+		    let li = itemList.querySelector('[data-id=' + change.doc.id + ']');
+		    itemList.removeChild(li);
+	    }
+    });
+});
+
 
 $(function(){
 	$("#edit_item").hide();
