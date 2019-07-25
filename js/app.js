@@ -152,18 +152,21 @@ function myFunc(evt)
 							wordsD: doc.data().wordsD,
 							subject: doc.data().subject
 						};  //window.alert(tableData.name + " " + tableData.subject);
+						
+						form.name.value =  tableData.name;
+						form.wordsA.value = tableData.wordsA;
+						form.wordsB.value = tableData.wordsB;
+						form.wordsC.value = tableData.wordsC;
+						form.wordsD.value = tableData.wordsD;
+						form.subject.value = tableData.subject;
+						
 					}
 				})
 			} catch (error) { 
 				res.send(error);
 			} //end of try
 			
-			form.name.value =  tableData.name;
-			form.wordsA.value = tableData.wordsA;
-			form.wordsB.value = tableData.wordsB;
-			form.wordsC.value = tableData.wordsC;
-			form.wordsD.value = tableData.wordsD;
-			form.subject.value = tableData.subject;
+
 
 			$('#item_submit').click(function(){ //form.addEventListener('append', (e) => { e.preventDefault();
 				db.collection("applications").doc(id).update({
