@@ -84,6 +84,8 @@ function refresh() {
     //}, 100);
 	//clear data
 	//alert("Clearing");
+	
+	clearForm();
 
 	
 	while(itemList.firstChild){
