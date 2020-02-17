@@ -70,9 +70,8 @@ function renderDB(doc){
 	 // var item_date = doc.data().date;	
 	  //var myJSON = JSON.stringify(todaysDate());	
 	let date_label = document.createElement('label');	
-	//label.style = "color:black; text-align: center; display: block; font-weight: bold"; // apply your style	
+	label.style = "color:black; text-align: center; display: block; font-weight: bold"; // apply your style	
 	  date_label.textContent = doc.data().date;	
-	//label.appendChild(document.createTextNode(doc.data().date));	
 	itemList.appendChild(date_label);	
   }	
 	
