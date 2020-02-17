@@ -7,43 +7,9 @@ var form = document.querySelector('#item-form');
 var edit = document.querySelector('#edit_item');
 
 
-
-/*
-document.getElementById("list").addEventListener("click",function(e) {
-  if (e.target && e.target.matches("li.item")) {
-    e.target.className = "foo"; // new class name here
-    }
-});
-*/
-
-// define buttons
-/*
-refresh_button.addEventListener('click',refreshFunc,false);
-function refreshFunc(evt)
-{
-	var count = itemList.count;
-	const id = evt.target.parentElement.getAttribute('data-id');
-
-	while(itemList.firstChild){
-		itemList.removeChild(itemList.firstChild);
-	}
-
-	//get data
-	db.collection('spells')
-		.orderBy('name','asc')
-		.get().then(snapshot => {
-		itemList.count = 0;
-	    snapshot.docs.forEach(doc => {
-		    itemList.count += 1;
-		renderDB(doc);
-	    });
-	});//end of get data
-}
-*/
-
 var tmp;
 function refresh() {
-	db.collection('spells')
+	db.collection('applications')
 		.orderBy('name','asc')
 		.get().then(snapshot => {
 			itemList.count = 0;
@@ -77,6 +43,7 @@ function clearForm()
       form.wordsA.value = '';
       form.wordsB.value = '';
       form.wordsC.value = '';
+	form.wordsD.value = '';
       form.subject.value = '';
 }
 
@@ -122,7 +89,9 @@ function renderDB(doc){
   let wordsB = document.createElement('span');
   wordsB.classList.add("words_data");
   let wordsC = document.createElement('span');
-  wordsC.classList.add("words_data_last");
+  wordsC.classList.add("words_data");
+  let wordsD = document.createElement('span');
+  wordsD.classList.add("words_data_last");
   //wordsC.style.cssText = "font-family: Arial, Helvetica, sans-serif; font-size: 16px; padding: 3px 0px 6px 12px; display: block; border-bottom: 2px solid black";
 
   let subject = document.createElement('span');
@@ -141,11 +110,11 @@ function renderDB(doc){
 
  // create elements for labels for each data to display
   let label_level = document.createElement('span');
-  label_level.textContent = "LEVEL"; //&nbsp;
+  label_level.textContent = "TITLE"; //&nbsp;
   label_level.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
   let label_words = document.createElement('span');
-  label_words.textContent = "WORDS";
+  label_words.textContent = "LOCATION";
   label_words.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
   let label_subject = document.createElement('span');
@@ -159,6 +128,7 @@ function renderDB(doc){
   wordsA.textContent = doc.data().wordsA;
   wordsB.textContent = doc.data().wordsB;
   wordsC.textContent = doc.data().wordsC;
+  wordsD.textContent = doc.data().wordsD;
   subject.textContent = doc.data().subject;
 
 /*
@@ -199,6 +169,7 @@ function renderDB(doc){
   li.appendChild(wordsA);
   li.appendChild(wordsB);
   li.appendChild(wordsC);
+  li.appendChild(wordsD);
 
   li.appendChild(label_subject);
   li.appendChild(subject);
@@ -213,7 +184,7 @@ function renderDB(doc){
 
 
 // real-time listener
-db.collection('spells').orderBy('name').onSnapshot(snapshot => {
+db.collection('applications').orderBy('name').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
 	    if(change.type == 'added'){
@@ -258,6 +229,7 @@ class Snap {
 		this.wordsA = data.wordsA;
 		this.wordsB = data.wordsB;
 		this.wordsC = data.wordsC;
+		this.wordsD = data.wordsD;
 		this.subject = data.subject;
 	}
 
@@ -271,6 +243,7 @@ class Snap {
 		form.wordsA.value = this.wordsA;
 		form.wordsB.value = this.wordsB;
 		form.wordsC.value = this.wordsC;
+		form.wordsD.value = this.wordsD;
 		form.subject.value = this.subject;
 	}
 }
@@ -402,7 +375,7 @@ var selectedListener = function(e) {
 			const id = element.getAttribute('data-id');
 		}
 
-		var ref = db.collection("spells").doc(id);
+		var ref = db.collection("applications").doc(id);
 
 		ref.get().then(doc=>{
 		//	const spell = new Spell(doc);
@@ -428,12 +401,13 @@ itemList.addEventListener('click',selectedListener,false);
 var submit = document.querySelector('input[type=submit][value=Submit]');
 //submit.addEventListener('click',)
 submit.onclick = function(){
-	db.collection('spells').add({
+	db.collection('applications').add({
 			name: form.name.value,
 			level: form.level.value,
 			wordsA: form.wordsA.value,
 			wordsB: form.wordsB.value,
 			wordsC: form.wordsC.value,
+		        wordsD: form.wordsD.value,
 			subject: form.subject.value,
 			date: todaysDate()
 	});
@@ -447,13 +421,14 @@ apply.onclick = function(){
 		if(element.className == 'selected')
 		{
 			var id = element.getAttribute('data-id');
-					var ref = db.collection('spells').doc(id);
+					var ref = db.collection('applications').doc(id);
 					ref.update({
 									name: form.name.value,
 									level: form.level.value,
 									wordsA: form.wordsA.value,
 									wordsB: form.wordsB.value,
 									wordsC: form.wordsC.value,
+									wordsD: form.wordsD.value,
 									subject: form.subject.value
 								});
 					}
@@ -463,45 +438,4 @@ apply.onclick = function(){
 //save new to db
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-		//var submit = document.querySelector('input[type=submit][value=Submit]');
-	//	var apply = document.querySelector('input[type=submit][value=Apply]');
-
-/*
-		submit.onclick = function(){
-    	db.collection('spells').add({
-	        name: form.name.value,
-					level: form.level.value,
-	        wordsA: form.wordsA.value,
-					wordsB: form.wordsB.value,
-					wordsC: form.wordsC.value,
-	        subject: form.subject.value
-    	});
-		};
-*/
-
-/*
-		apply.onclick = function(){
-			alert("Editing...");
-			var x = document.getElementById("item-list");
-			for (let element of x.children) {
-				if(element.className == 'selected')
-				{
-					var id = element.getAttribute('data-id');
-							var ref = db.collection('spells').doc(id);
-							ref.update({
-											name: form.name.value,
-											level: form.level.value,
-											wordsA: form.wordsA.value,
-											wordsB: form.wordsB.value,
-											wordsC: form.wordsC.value,
-											subject: form.subject.value
-										});
-							}
-						}
-		};
-		*/
-
-//	clearForm();
-	// generate new db
-//	refresh();
 });
