@@ -39,7 +39,7 @@ function todaysDate()
 function clearForm()
 {
       form.name.value = '';
-      form.level.value = '';
+      form.title.value = '';
       form.wordsA.value = '';
       form.wordsB.value = '';
       form.wordsC.value = '';
@@ -81,8 +81,8 @@ function renderDB(doc){
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
   let name = document.createElement('span');
   name.classList.add("name_data");
-  let level = document.createElement('span');
-  level.classList.add("name_data");
+  let title = document.createElement('span');
+  title.classList.add("name_data");
   let wordsA = document.createElement('span');
   wordsA.classList.add("words_data");
   let wordsB = document.createElement('span');
@@ -108,9 +108,9 @@ function renderDB(doc){
   label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
  // create elements for labels for each data to display
-  let label_level = document.createElement('span');
-  label_level.textContent = "TITLE"; //&nbsp;
-  label_level.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+  let label_title = document.createElement('span');
+  label_title.textContent = "TITLE"; //&nbsp;
+  label_title.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
   let label_words = document.createElement('span');
   label_words.textContent = "LOCATION";
@@ -123,7 +123,7 @@ function renderDB(doc){
   // generate content for fields
 
   name.textContent = doc.data().name;
-  level.textContent = doc.data().level;
+  title.textContent = doc.data().title;
   wordsA.textContent = doc.data().wordsA;
   wordsB.textContent = doc.data().wordsB;
   wordsC.textContent = doc.data().wordsC;
@@ -161,8 +161,8 @@ function renderDB(doc){
   li.appendChild(label_name);
   li.appendChild(name);
 
-  li.appendChild(label_level);
-  li.appendChild(level);
+  li.appendChild(label_title);
+  li.appendChild(title);
 
   li.appendChild(label_words);
   li.appendChild(wordsA);
@@ -224,7 +224,7 @@ class Snap {
 		//var _data = [];
 		var data = doc.data();
 		this.name = data.name;
-		this.level = data.level;
+		this.tite = data.title;
 		this.wordsA = data.wordsA;
 		this.wordsB = data.wordsB;
 		this.wordsC = data.wordsC;
@@ -238,7 +238,7 @@ class Snap {
 
 	setForm(){
 		form.name.value =  this.name;
-		form.level.value = this.level;
+		form.title.value = this.title;
 		form.wordsA.value = this.wordsA;
 		form.wordsB.value = this.wordsB;
 		form.wordsC.value = this.wordsC;
@@ -402,7 +402,7 @@ var submit = document.querySelector('input[type=submit][value=Submit]');
 submit.onclick = function(){
 	db.collection('applications').add({
 			name: form.name.value,
-			level: form.level.value,
+			title: form.title.value,
 			wordsA: form.wordsA.value,
 			wordsB: form.wordsB.value,
 			wordsC: form.wordsC.value,
@@ -423,7 +423,7 @@ apply.onclick = function(){
 					var ref = db.collection('applications').doc(id);
 					ref.update({
 									name: form.name.value,
-									level: form.level.value,
+									title: form.title.value,
 									wordsA: form.wordsA.value,
 									wordsB: form.wordsB.value,
 									wordsC: form.wordsC.value,
