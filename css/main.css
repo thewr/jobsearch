@@ -198,7 +198,6 @@ html>.container, body>.container {
     cursor: pointer;
 }
 
-
 /*
 .doc>section>header, .sidebar>.min>.options>li {
     display: -webkit-box;
@@ -517,7 +516,7 @@ h1 {
 }
 */
 
-
+/*
 .refresh_button_wrapper{
   position:relative;
   display:block;
@@ -530,7 +529,7 @@ h1 {
   background-color: green;
   cursor:pointer;
 }
-
+*/
 
 .panel {
   margin-top:16px;
