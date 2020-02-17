@@ -435,6 +435,7 @@ apply.onclick = function(){
 								});
 					}
 				}
+	refresh();
 };
 
 //save new to db
