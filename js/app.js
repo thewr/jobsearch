@@ -242,8 +242,8 @@ db.collection('spells').orderBy('name').onSnapshot(snapshot => {
 class Snap {
 	constructor(){
 		if(! Snap.instance){
-      this._data = [];
-      Snap.instance = this;
+      			this._data = [];
+      			Snap.instance = this;
 			//alert("constructor called");
     }
 
@@ -252,7 +252,7 @@ class Snap {
 
 	setData(doc){
 		//var _data = [];
-		var	data = doc.data();
+		var data = doc.data();
 		this.name = data.name;
 		this.level = data.level;
 		this.wordsA = data.wordsA;
@@ -434,7 +434,8 @@ submit.onclick = function(){
 			wordsA: form.wordsA.value,
 			wordsB: form.wordsB.value,
 			wordsC: form.wordsC.value,
-			subject: form.subject.value
+			subject: form.subject.value,
+			date: todaysDate()
 	});
 };
 
