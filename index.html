@@ -2,65 +2,76 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>			
-		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-database.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		
+		<!-- CUSTOM CSS -->
 		<link rel="stylesheet" type="text/css" href="/research_project/css/main.css">
+		
+		<!-- JQUERY -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+		
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  		<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+ 		<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+		
+		<!-- Bootstrap: Latest compiled and minified CSS -->
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+  		-->
+		
 	</head>
 	<body>
 	
-			<div class = "container">
-		
-		<div class = "top">
-			<div class = "header">
-				<h1>Inventory</h1>
-			</div>
-			<div class="min">
-				<ul class = "options">
-					<li id = "new_item">New</li>
-					<li id = "edit_item">Edit</li>
-					<li id = "delete_item">Delete</li>
-					<li id = "refresh_button">Refresh</li>
-					<li id = "save_button">Save</li>
-				</ul>
-			</div>
-		</div>
-		
-		<div class = "app">
-		<div class="sidebar">
+		<div class = "container">
+			<header class = "header">
 
-			<div class = "max">
+				<div class = "settings">
+					<span class="name">Inventory</span>
+				</div>
+
+					<span type = "button" id = "refresh_button">REFRESH</span>
+			</header>
+
+			<div class = "app">
+			<aside class="sidebar">
 				<div class = "content">
-				<form id = "item-form">
-					<label>Company/Agency</label>
-	                		<input type="text" name="name">
-					<label>Location</label>
-	                		<input type="text" name="wordsA">
-					<label>Website</label>
-	                		<input type="text" name="wordsB">
-					<label>Contact</label>
-	                		<input type="text" name="wordsC">
-					<label>Position</label>
-	                		<input type="text" name="wordsD">
-					<!--<label>Hours</label>
-	                		<input type="text" name="hours">-->
-					<label for="subject">Subject</label>
-	                		<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-	                		<input id = "item_submit" type="submit" value="Submit">
-					<!--<a href="https://thewr.github.io/flip_book/" id = "close_app">Cancel</a>-->
-					<input class = "btn btn-danger" id = "item_cancel" type="cancel" value="Cancel">
-	            		</form>
-							</div>
+					<form id = "item-form">
+						<label>Name</label>
+		                		<input type="text" name="name">
+						<label>Level</label>
+						<input type="text" name="level">
+						<label>Words</label>
+		                		<input type="text" name="wordsA">
+		                		<input type="text" name="wordsB">
+		                		<input type="text" name="wordsC">
+						<label for="subject">Description</label>
+		                		<textarea id="subject" name="subject"></textarea>
+					  <div class = "panel">
+						<input type = "submit" id = "item_submit" value="Submit">
+						<input type = "submit" id = "item_edit" value = "Apply">
+						<input type = "cancel" id = "item_cancel" value="Cancel">
+					</div>
+		            		</form>
+				</div>
+				<div class = "min">
+						<ul class = "options">
+							<li id = "new_item">NEW</li>
+							<li id = "edit_item">EDIT</li>
+							<li id = "delete_item">DELETE</li>
+						</ul>
+				</div>
+			</aside>
+
+				<div class = "docs">
+				<!--	<header class = "banner">
+						 <span class = "add"> Entries </span>
+					</header> -->
+					<section class = "view">
+						<ul id="item-list"></ul>
+					</section>
+				</div>
 			</div>
 		</div>
 
-			<div class = "docs">
-				<ul id="item-list"></ul>
-			</div>
-		</div>
-	</div>			
 				
 				
 	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
