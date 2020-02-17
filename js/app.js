@@ -60,6 +60,16 @@ function refresh() {
 		clearForm();
 }
 
+function todaysDate()	
+{	
+    var today = new Date();	
+    var dd = String(today.getDate()).padStart(2, '0');	
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!	
+    var yyyy = today.getFullYear();	
+    today = mm + '/' + dd + '/' + yyyy;	
+    return today;	
+}	
+
 function clearForm()
 {
       form.name.value = '';
@@ -74,6 +84,32 @@ function clearForm()
 
 // create element & render cafe
 function renderDB(doc){
+  itemList.count += 1; 	
+  var current_date = doc.data().date;	
+
+  if((itemList.count > 1)&&(current_date == previous_date))	
+  {	
+	  date_flag = false;	
+  } else {	
+	  date_flag = true;	
+  }	
+
+  previous_date = current_date;	
+
+  if(date_flag == true)	
+  {	
+          // append list	
+	 // li.appendChild(date);	
+	 // var item_date = doc.data().date;	
+	  //var myJSON = JSON.stringify(todaysDate());	
+	let date_label = document.createElement('label');	
+	//label.style = "color:black; text-align: center; display: block; font-weight: bold"; // apply your style	
+	  date_label.textContent = doc.data().date;	
+	//label.appendChild(document.createTextNode(doc.data().date));	
+	itemList.appendChild(date_label);	
+  }	
+	
+	
   // create list document elements
   let li = document.createElement('li');
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
