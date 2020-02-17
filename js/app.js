@@ -1,7 +1,8 @@
+/*
 import firebase from 'firebase/app';
 import 'firebase/database'; // If using Firebase database
 import 'firebase/storage';  // If using Firebase storage
-
+*/
 
 var itemList = document.querySelector('#item-list');
 itemList.count = 0;
