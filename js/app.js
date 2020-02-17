@@ -1,410 +1,198 @@
-
 // creates a <ol> list element and functions
-var itemList = document.querySelector('#item-list');
-itemList.addEventListener('click', myFunc, false);//itemList.addEventListener('click', myFunc, false);
-itemList.count = 0;
 
+var itemList = document.querySelector('#item-list');
+itemList.count = 0;
 // create form element
 var form = document.querySelector('#item-form');
+var edit = document.querySelector('#edit_item');
+
+
+
+/*
+document.getElementById("list").addEventListener("click",function(e) {
+  if (e.target && e.target.matches("li.item")) {
+    e.target.className = "foo"; // new class name here
+    }
+});
+*/
 
 // define buttons
+/*
 refresh_button.addEventListener('click',refreshFunc,false);
-save_button.addEventListener('click',saveFunc,false);
-
 function refreshFunc(evt)
 {
 	var count = itemList.count;
 	const id = evt.target.parentElement.getAttribute('data-id');
 
-	//alert("Doc ID: " + id);
-
 	while(itemList.firstChild){
 		itemList.removeChild(itemList.firstChild);
 	}
+
 	//get data
-	db.collection('applications')
-		.orderBy('date','desc')
+	db.collection('spells')
+		.orderBy('name','asc')
 		.get().then(snapshot => {
 		itemList.count = 0;
 	    snapshot.docs.forEach(doc => {
+		    itemList.count += 1;
 		renderDB(doc);
 	    });
 	});//end of get data
 }
-
-
-function saveFunc(e){
-        e.preventDefault();
-	//const ref = db.collection("applications").doc(id);
-    
-       // getting data
-	
-    // CODE TO TAKE RENDER TO DB
-    var item = itemList.firstChild;
-    var n = item.children.length;
-    var tableData = [];
-
-    for(var i = 0; i < n; i++){
-    	tableData = item.childNodes[i].innerHTML;
-	 var x = item.childNodes[i].innerHTML;
-	    if(i%2 == 0){
-		    tableData.push(x);
-		    console.log(tableData);
-	    }
-    }	
-    while(itemList.firstChild){
-          var item = itemList.firstChild;
-	    db.collection('backup').add({
-		date: todaysDate(),
-		name: item.childNodes[2].innerHTML,
-		wordsA: item.childNodes[4].innerHTML,
-		//wordsB: item.childNodes[6].innerHTML,
-		//wordsC: item.childNodes[8].innerHTML,
-		//wordsD: item.childNodes[10].innerHTML,
-		//subject: item.childNodes[12].innerHTML
-	    });
-	    itemList.removeChild(itemList.firstChild);	    
-    }
-	// clear form
-	clearForm();
-	
-	// generate new db
-	refresh();
-}
-
-/*
-var div = document.getElementById('divID');
-div.innerHTML += 'Extra stuff';
 */
-// refresh the console (needs work)
-	
-function refresh() {
-    //setTimeout(function () {
-     //   location.reload()
-    //}, 100);
-	//clear data
-	//alert("Clearing");
-	
-	clearForm();
 
-	
-	while(itemList.firstChild){
-		//console.log('removing ... ' + itemList.count);
-		itemList.count -= 1;
-		itemList.removeChild(itemList.firstChild);
-	}
-	
-	//get data
-	db.collection('applications').get().then(snapshot => {
-		//itemList.count = 0;
-	    snapshot.docs.forEach(doc => {
-		renderDB(doc);
+var tmp;
+function refresh() {
+	db.collection('spells')
+		.orderBy('name','asc')
+		.get().then(snapshot => {
+			itemList.count = 0;
+		        console.log('displaying contents of db...');
+			while(itemList.firstChild){
+				itemList.removeChild(itemList.firstChild);
+			}
+	    		snapshot.docs.forEach(doc => {
+				itemList.count += 1;
+				console.log(itemList.count);
+				renderDB(doc);
 	    });
 	});//end of get data
+		clearForm();
 }
-
-// for selections
-var $div = $("<div id='edit_item'>"+"Edit"+"</div>");  //{id: "foo", "class": "a"});
-
-function todaysDate()
-{
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-    today = mm + '/' + dd + '/' + yyyy;
-    return today;
-}
-
 
 function clearForm()
 {
       form.name.value = '';
+      form.level.value = '';
       form.wordsA.value = '';
       form.wordsB.value = '';
       form.wordsC.value = '';
-      form.wordsD.value = '';
       form.subject.value = '';
 }
 
-function myFunc(evt)
-{
-	const id = evt.target.parentElement.getAttribute('data-id');
-	//evt.target.parentElement.getElementsByTagName('li').classList.add('selected');
-	
-	if(evt.target.nodeName == 'SPAN'){
-		console.log(id + " was clicked");	
-	    	const ref = db.collection("applications").doc(id);
-		
-		$('#edit_item').click(function(){
-			//get data
-			try {
-				var tableData = {};
-				ref.get()
-				.then(doc => {
-					if(!doc.exists) {
-						window.alert("no such document");
-					} else {
-						tableData = {
-							//date: doc.data().date,
-							name: doc.data().name,
-							wordsA: doc.data().wordsA,
-							wordsB: doc.data().wordsB,
-							wordsC: doc.data().wordsC,
-							wordsD: doc.data().wordsD,
-							subject: doc.data().subject
-						};  //window.alert(tableData.name + " " + tableData.subject);
-						
-						form.name.value =  tableData.name;
-						form.wordsA.value = tableData.wordsA;
-						form.wordsB.value = tableData.wordsB;
-						form.wordsC.value = tableData.wordsC;
-						form.wordsD.value = tableData.wordsD;
-						form.subject.value = tableData.subject;
-						
-					}
-				})
-			} catch (error) { 
-				res.send(error);
-			} //end of try
-			
 
 
-			$('#item_submit').click(function(){ //form.addEventListener('append', (e) => { e.preventDefault();
-				db.collection("applications").doc(id).update({
-					name: form.name.value,
-					wordsA: form.wordsA.value,
-					wordsB: form.wordsB.value,
-					wordsC: form.wordsC.value,
-					wordsD: form.wordsD.value,
-					subject: form.subject.value
-				});
-				clearForm();
-				refresh();
-			});
-		}); //end of edit item
-
-
-		$('#delete_item').click(function(){
-			ref.delete();
-			refresh();
-		});//end-of-delete_item event
-		
-	} else {
-		return;
-	}
-}
-
-
-
-var date_flag = true;
-var previous_date;
 // create element & render cafe
 function renderDB(doc){
   // create list document elements
-  itemList.count += 1; 
-  var current_date = doc.data().date;
-	
-  if((itemList.count > 1)&&(current_date == previous_date))
-  {
-	  date_flag = false;
-  } else {
-	  date_flag = true;
-  }
-	
-  previous_date = current_date;
-
-  if(date_flag == true)
-  {
-          // append list
-	 // li.appendChild(date);
-	 // var item_date = doc.data().date;
-	  //var myJSON = JSON.stringify(todaysDate());
-	let date_label = document.createElement('label');
-	//label.style = "color:black; text-align: center; display: block; font-weight: bold"; // apply your style
-	  date_label.textContent = doc.data().date;
-	//label.appendChild(document.createTextNode(doc.data().date));
-	itemList.appendChild(date_label);
-  }
-	  
-
-	
-	
-  console.log('adding ... ' + itemList.count);
   let li = document.createElement('li');
   li.setAttribute('data-id', doc.id);  //Each document gets an id.
-  let name = document.createElement('span');  name.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px; border-bottom: 2px solid black";
-  let wordsA = document.createElement('span');  wordsA.style.cssText = "padding: 3px 0px 3px 12px; font-size: 12px;";
-  let wordsB = document.createElement('span');  wordsB.style.cssText = "padding: 3px 0px 6px 12px; font-size: 12px;";
-  let wordsD = document.createElement('span');  wordsD.style.cssText = "padding: 3px 0px 6px 12px; font-size: 12px;";
-  let wordsC = document.createElement('span');  wordsC.style.cssText = "font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 3px 0px 6px 12px; display: block; border-bottom: 2px solid black";
+  let name = document.createElement('span');
+  name.classList.add("name_data");
+  let level = document.createElement('span');
+  level.classList.add("name_data");
+  let wordsA = document.createElement('span');
+  wordsA.classList.add("words_data");
+  let wordsB = document.createElement('span');
+  wordsB.classList.add("words_data");
+  let wordsC = document.createElement('span');
+  wordsC.classList.add("words_data_last");
+  //wordsC.style.cssText = "font-family: Arial, Helvetica, sans-serif; font-size: 16px; padding: 3px 0px 6px 12px; display: block; border-bottom: 2px solid black";
 
-  let subject = document.createElement('span');  subject.style.cssText = "padding: 3px 0px 6px 12px; display: block;";
+  let subject = document.createElement('span');
+  subject.classList.add('subject_data');
+  //subject.style.cssText = "padding: 3px 0px 6px 12px; display: block;";
 
-  //let cross = document.createElement('div');
-  //cross.textContent = 'x';
+ // let cross = document.createElement('div');
+ // cross.textContent = 'x';
 
- // let date = document.createElement('div');
-//  date.style.cssText = "display: block";
+
 
   // create elements for labels for each data to display
   let label_name = document.createElement('span');
-  label_name.textContent = "COMPANY/AGENCY";
-  label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
+  label_name.textContent = "NAME"; //&nbsp;
+  label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
-  let label_address = document.createElement('span');
-  label_address.textContent = "LOCATION";
-  label_address.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
+ // create elements for labels for each data to display
+  let label_level = document.createElement('span');
+  label_level.textContent = "LEVEL"; //&nbsp;
+  label_level.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
-  let label_website = document.createElement('span');
-  label_website.textContent = "WEBSITE";
-  label_website.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
+  let label_words = document.createElement('span');
+  label_words.textContent = "WORDS";
+  label_words.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
-  let label_jobtitle = document.createElement('span');
-  label_jobtitle.textContent = "POSITION";
-  label_jobtitle.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
-	
-  let label_contact = document.createElement('span');
-  label_contact.textContent = "CONTACT";
-  label_contact.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
-	
   let label_subject = document.createElement('span');
-  label_subject.textContent = "LOG ENTRY";
-  label_subject.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold;"; //border: 1px solid black";
+  label_subject.textContent = "DESCRIPTION";
+  label_subject.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
-  // render document contents
-//  date.textContent = doc.data().date;
+  // generate content for fields
+
   name.textContent = doc.data().name;
+  level.textContent = doc.data().level;
   wordsA.textContent = doc.data().wordsA;
   wordsB.textContent = doc.data().wordsB;
   wordsC.textContent = doc.data().wordsC;
-  wordsD.textContent = doc.data().wordsD;
   subject.textContent = doc.data().subject;
 
-	
-  //var t = document.createTextNode(doc.data().date);
-  //t.newCell.setAttribute("STYLE","color:red'");
-  //itemList.appendChild(t);
+/*
+	const data = doc.data();
+	for (const key in data) {
+	    const value = data[key];
+
+			//alert("key: " + key + " value: " + value);
+		if(value)
+			{
+			  label_name.textContent = key;
+				//alert(key);
+				var newDiv = document.createElement('span');
+				newDiv.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"
+				var newContent = document.createTextNode(key);
+				var newDiv1 = document.createElement('span');
+				newDiv1.classList.add("name_data");
+				var newContent1 = document.createTextNode(value);
+				newDiv.appendChild(newContent);
+				newDiv1.appendChild(newContent1);
+				li.appendChild(newDiv);
+				li.appendChild(newDiv1);
+			}
+	   // // now key and value are the property name and value
+	}
+	*/
+
+  // append list
+  //li.appendChild(cross);
 
   li.appendChild(label_name);
   li.appendChild(name);
 
-if(doc.data().wordsA){
-  li.appendChild(label_address);
+  li.appendChild(label_level);
+  li.appendChild(level);
+
+  li.appendChild(label_words);
   li.appendChild(wordsA);
-}
-	
-if(doc.data().wordsB){
-  li.appendChild(label_website);
   li.appendChild(wordsB);
-}
-	
-if(doc.data().wordsD){
-  li.appendChild(label_jobtitle);
-  li.appendChild(wordsD);
-}
-	
-if(doc.data().wordsC){
-  li.appendChild(label_contact);
   li.appendChild(wordsC);
-}	
-	
-if(doc.data().subject){
+
   li.appendChild(label_subject);
   li.appendChild(subject);
-}
 
- // li.appendChild(cross);
+  // put the <tbody> in the <table>
 
-
-  // put the <itemList> in the <ol>
   itemList.appendChild(li);
-
-  // deleting data
-  /*
-    cross.addEventListener('click', (e) => {
-        e.stopPropagation();
-        let id = e.target.parentElement.getAttribute('data-id');
-        db.collection('applications').doc(id).delete();
-    });
-    */
 }
 
-// getting data
-/*
-db.collection('applications')
-	.orderBy('date','desc')
-	.get()
-	.then(snapshot => 
-	      {
-		itemList.count = 0;
-    		snapshot.docs.forEach(doc => {
-        	renderDB(doc);
-	});
-});
-*/
 
 
 
-//saving data
-var handler = function(e){
-	e.preventDefault();
-	db.collection('applications').add({
-		date: todaysDate(),
-        	name: form.name.value,
-        	wordsA: form.wordsA.value,
-		wordsB: form.wordsB.value,
-		wordsC: form.wordsC.value,
-		wordsD: form.wordsD.value,
-        	subject: form.subject.value
-    });
-	clearForm();
-	refresh();
-};
-
-//form.addEventListener('submit', handler);
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    db.collection('applications').add({
-	date: todaysDate(),
-        name: form.name.value,
-        wordsA: form.wordsA.value,
-	wordsB: form.wordsB.value,
-	wordsC: form.wordsC.value,
-	wordsD: form.wordsD.value,
-        subject: form.subject.value
-    });
-	// clear form
-	clearForm();
-	
-	// generate new db
-	refresh();
-});
-
-
-form.addEventListener('cancel', (e) => {
-    e.preventDefault();
-	refresh();
-});
 
 // real-time listener
-db.collection('applications').orderBy('date','desc').onSnapshot(snapshot => {
+db.collection('spells').orderBy('name').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
 	    if(change.type == 'added'){
 		    console.log("New item: ", change.doc.data());
-            
+
 		    renderDB(change.doc);
 	    }
-	    
+
 	    if (change.type == 'modified'){
 		    console.log("Modified item: ", change.doc.data());
-		    
+
 		    let li = itemList.querySelector('[data-id=' + change.doc.id + ']');
 		    itemList.removeChild(li);
 		    renderDB(change.doc);
-		    
+
 	    }
 
 	    if (change.type == 'removed'){
@@ -415,95 +203,268 @@ db.collection('applications').orderBy('date','desc').onSnapshot(snapshot => {
     });
 });
 
+class Snap {
+	constructor(){
+		if(! Snap.instance){
+      this._data = [];
+      Snap.instance = this;
+			//alert("constructor called");
+    }
 
+    return Snap.instance;
+	}
+
+	setData(doc){
+		//var _data = [];
+		var	data = doc.data();
+		this.name = data.name;
+		this.level = data.level;
+		this.wordsA = data.wordsA;
+		this.wordsB = data.wordsB;
+		this.wordsC = data.wordsC;
+		this.subject = data.subject;
+	}
+
+	//get(id){
+	//	return this._data.find(d => d.id === id);
+	//}
+
+	setForm(){
+		form.name.value =  this.name;
+		form.level.value = this.level;
+		form.wordsA.value = this.wordsA;
+		form.wordsB.value = this.wordsB;
+		form.wordsC.value = this.wordsC;
+		form.subject.value = this.subject;
+	}
+}
+
+//export default instance;
+
+//itemList.addEventListener('click',selectedListener,false);
+
+
+//JQUERY FUNCTIONS
 $(function(){
+	$('.sidebar').addClass('closed');
 	$("#edit_item").hide();
 	$("#delete_item").hide();
-	$('.sidebar').hide();
+	$('.content').hide();
+	$('.min').show();
 
+	// Display min-sidebar
+	function display_min(){
+		$('.sidebar').addClass('closed');
+		$("#edit_item").hide();
+		$("#delete_item").hide();
+		$('.content').hide();
+		$('.min').show();
+	}
 
-	// Animate slide for create new form	
-	function display_add(){
+	function display_full(){
+		 $('.sidebar').removeClass('closed');
 		 $( ".docs" ).toggleClass('blur-me');
 		 $(".min").hide();
 		 $(".content").show();
-	         $('.sidebar').show();
-	    	 //$('.sidebar').animate({width: '33%'});
-	         $(".max").hide().fadeIn(500);
+	         $(".max").hide().fadeIn(1000);
+	}
 
-		//$("#label").html("Add Entry");
-	  	 $('#close_app').show();
+
+	// Animate slide for create new form
+	function display_add(){
+		//flag_refresh = true;
+		$("#item_edit").hide();
+		$("#item_submit").show();
+		display_full();
 	}
 
 	// Add new document button show
 	$("#new_item").click(function(){
-		$("#item_submit").attr('value', 'Submit').attr('type','submit');
+		//$("#item_submit").attr('value', 'Submit').attr('type','submit');
 		display_add();
+		clearForm();
 	});
 
 	// Animate slide for edit form
 	function display_edit(){
-		 $( ".docs" ).toggleClass('blur-me');
-		 $(".min").hide();
-		 $(".content").show();
-
-	         $('.sidebar').show();
-	    	 //$('.sidebar').animate({width: '33%'});
-	         $(".max").hide().fadeIn(500);
-
-		//$("#label").html("Add Entry");
-	  	 $('#close_app').show();
+		$("#item_edit").show();
+		$("#item_submit").hide();
+		 display_full();
 	}
 
 	//Edit new document button show
   	$("#edit_item").click(function(){
-	  $("#item_submit").attr('value', 'Append').attr('type','append');
-	  display_edit();
-  });
+		//$("#item_submit").attr('value', 'Append').attr('type','append');
+	  	display_edit();
+ 	 });
 
-  $('#item_submit').click(function(){
-    	  $(".content").hide();
-	  $('.sidebar').hide();
-	  $(".min").show();
-	  $( ".docs" ).toggleClass('blur-me');
-	//  $('#close_app').hide();
-  });
-	
-$('#item_cancel').click(function(){
- 	 $('.sidebar').hide();
-         $(".min").show();
-	 $( ".docs" ).toggleClass('blur-me');
-	 refresh();
-});
+ 	$("#item_submit").click(function(){
+	        $( ".docs" ).toggleClass('blur-me');
+		display_min();
+  	});
+
+	$("#item_edit").click(function(){
+	        $( ".docs" ).toggleClass('blur-me');
+		display_min();
+  	});
+
+	$("#item_cancel").click(function(){
+		//flag_refresh = true;
+		$( ".docs" ).toggleClass('blur-me');
+		$("#edit_item").hide();
+		$("#delete_item").hide();
 
 
-  	$('#close_app').click(function(){
-    		$(".content").hide();
-	   	$('.sidebar').animate({width: '54px'});
-	 	$( ".docs" ).toggleClass('blur-me');
-	     	$('#close_app').hide();
+		if($('#item-list li').hasClass('selected')){
+			$('#item-list li').removeClass('selected');
+		}
+
+		display_min();
+
+		clearForm();
+		//refresh();
 	});
-	
-	$('#item-list li').click(function(){
-     		$(this).unbind("mouseenter mouseleave");
-	});
 
-	
-	$('#item-list').on('click','li',function() {
-	$(this).toggleClass('selected').siblings().removeClass('selected');
-		if($(this).hasClass('selected')){
-			//$(this).append($div);
+
+//	$("#item-list").hover('li',function(){
+//	    $(this).addClass( "selected" );
+//	});
+
+
+	$("#item-list").on('click','li',function() {
+		let target = $(this);
+		let others = $(this).siblings();
+
+		target.toggleClass('selected');
+		others.removeClass('selected');
+
+
+		if(target.hasClass('selected')){
 			$("#edit_item").show();
 			$("#delete_item").show();
 		} else {
-			//$(this).css("background-color", "");
-			// $div.remove();
-      			$("#edit_item").hide();
+			$("#edit_item").hide();
 			$("#delete_item").hide();
-
 		}
-		
+
+		//const id = $(this).attr('data-id');
 
 	});
 
+});
+
+
+var selectedListener = function(e) {
+	  //itemList.removeEventListener('click',selectListener);
+		const element = e.target.parentElement;
+		const id = element.getAttribute('data-id');
+		//element.classList.add('selected');
+
+		if(!element.hasAttribute('data-id'))
+				return;
+		else{
+			const id = element.getAttribute('data-id');
+		}
+
+		var ref = db.collection("spells").doc(id);
+
+		ref.get().then(doc=>{
+		//	const spell = new Spell(doc);
+		//	spell.setForm();
+
+			const instance = new Snap();
+			instance.setData(doc);
+			instance.setForm();
+			//Object.freeze(instance);
+		});
+
+
+		$('#delete_item').click(function(){
+			if(!element.classList.contains('selected')) return;
+			ref.delete();
+		});
+
+
+};
+
+itemList.addEventListener('click',selectedListener,false);
+
+var submit = document.querySelector('input[type=submit][value=Submit]');
+//submit.addEventListener('click',)
+submit.onclick = function(){
+	db.collection('spells').add({
+			name: form.name.value,
+			level: form.level.value,
+			wordsA: form.wordsA.value,
+			wordsB: form.wordsB.value,
+			wordsC: form.wordsC.value,
+			subject: form.subject.value
+	});
+};
+
+var apply = document.querySelector('input[type=submit][value=Apply]');
+apply.onclick = function(){
+	alert("Editing...");
+	var x = document.getElementById("item-list");
+	for (let element of x.children) {
+		if(element.className == 'selected')
+		{
+			var id = element.getAttribute('data-id');
+					var ref = db.collection('spells').doc(id);
+					ref.update({
+									name: form.name.value,
+									level: form.level.value,
+									wordsA: form.wordsA.value,
+									wordsB: form.wordsB.value,
+									wordsC: form.wordsC.value,
+									subject: form.subject.value
+								});
+					}
+				}
+};
+
+//save new to db
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+		//var submit = document.querySelector('input[type=submit][value=Submit]');
+	//	var apply = document.querySelector('input[type=submit][value=Apply]');
+
+/*
+		submit.onclick = function(){
+    	db.collection('spells').add({
+	        name: form.name.value,
+					level: form.level.value,
+	        wordsA: form.wordsA.value,
+					wordsB: form.wordsB.value,
+					wordsC: form.wordsC.value,
+	        subject: form.subject.value
+    	});
+		};
+*/
+
+/*
+		apply.onclick = function(){
+			alert("Editing...");
+			var x = document.getElementById("item-list");
+			for (let element of x.children) {
+				if(element.className == 'selected')
+				{
+					var id = element.getAttribute('data-id');
+							var ref = db.collection('spells').doc(id);
+							ref.update({
+											name: form.name.value,
+											level: form.level.value,
+											wordsA: form.wordsA.value,
+											wordsB: form.wordsB.value,
+											wordsC: form.wordsC.value,
+											subject: form.subject.value
+										});
+							}
+						}
+		};
+		*/
+
+//	clearForm();
+	// generate new db
+//	refresh();
 });
