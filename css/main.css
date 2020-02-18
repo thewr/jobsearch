@@ -101,7 +101,7 @@ html>.container>.app, body>.container>.app {
     align-items: stretch;
 }
 
-/*
+
 html>.container, body>.container {
     height: 100%;
     display: -webkit-box;
@@ -110,7 +110,7 @@ html>.container, body>.container {
     -webkit-box-direction: normal;
     flex-flow: column;
 }
-*/
+
 
 .container .header .settings .name {
     text-transform: uppercase;
