@@ -58,6 +58,9 @@ function renderDB(doc){
 	//let div = document.createElement('div');
   	itemList.count += 1; 	
   	var current_date = doc.data().date;	
+	// create list document elements
+	let li = document.createElement('li');
+	li.setAttribute('data-id', doc.id);  //Each document gets an id.
 
   	//if((itemList.count > 1)&&(current_date == previous_date))	
   	//{
@@ -80,9 +83,6 @@ function renderDB(doc){
   	//}	
 	
 	
-	  // create list document elements
-	  let li = document.createElement('li');
-	  li.setAttribute('data-id', doc.id);  //Each document gets an id.
 	  let name = document.createElement('span');
 	  name.classList.add("name_data");
 	  let title = document.createElement('span');
