@@ -121,6 +121,7 @@ html>.container, body>.container {
 
 .sidebar > .content
 {
+    display: none;
     width: 90%;
     margin-left:5%;
     margin-top:5%;
