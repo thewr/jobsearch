@@ -55,6 +55,7 @@ function clearForm()
 
 // create element & render cafe
 function renderDB(doc){
+  let div = document.createElement('div');
   itemList.count += 1; 	
   var current_date = doc.data().date;	
 
@@ -177,8 +178,10 @@ function renderDB(doc){
   li.appendChild(subject);
 
   // put the <tbody> in the <table>
+	
+  div.appendChild(li);
 
-  itemList.appendChild(li);
+  itemList.appendChild(div);
 }
 
 
