@@ -110,7 +110,7 @@ function renderDB(doc){
  	 label_title.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
 	  let label_words = document.createElement('span');
-	  label_words.textContent = "LOCATION";
+	  label_words.textContent = "DETAILS";
  	 label_words.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
  	 let label_subject = document.createElement('span');
