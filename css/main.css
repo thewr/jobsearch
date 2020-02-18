@@ -154,7 +154,8 @@ html>.container, body>.container {
 
 .sidebar > .content {
     display: -webkit-box;
-    display: flex;
+    display: none;
+    //display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
      flex-direction: column;
