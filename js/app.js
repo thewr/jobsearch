@@ -224,7 +224,7 @@ class Snap {
 		//var _data = [];
 		var data = doc.data();
 		this.name = data.name;
-		this.tite = data.title;
+		this.title = data.title;
 		this.wordsA = data.wordsA;
 		this.wordsB = data.wordsB;
 		this.wordsC = data.wordsC;
