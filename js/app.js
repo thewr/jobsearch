@@ -55,7 +55,7 @@ function clearForm()
 
 // create element & render cafe
 function renderDB(doc){
-	let div = document.createElement('div');
+	//let div = document.createElement('div');
   	itemList.count += 1; 	
   	var current_date = doc.data().date;	
 
@@ -76,7 +76,7 @@ function renderDB(doc){
 		let date_label = document.createElement('label');	
 		date_label.textContent = doc.data().date;	
 		date_label.style.cssText = "margin-top: 8px";
-		div.appendChild(date_label);	
+		li.appendChild(date_label);	
   	//}	
 	
 	
@@ -172,9 +172,10 @@ function renderDB(doc){
 
 	  // put the <tbody> in the <table>
 
-	  div.appendChild(li);
+	//  div.appendChild(li);
+	
 
-	  itemList.appendChild(div);
+	  itemList.appendChild(li);
 }
 
 
@@ -187,7 +188,6 @@ db.collection('applications').orderBy('name').onSnapshot(snapshot => {
     changes.forEach(change => {
 	    if(change.type == 'added'){
 		    console.log("New item: ", change.doc.data());
-
 		    renderDB(change.doc);
 	    }
 
@@ -329,7 +329,7 @@ $(function(){
 		display_min();
 
 		clearForm();
-		//refresh();
+		refresh();
 	});
 
 
@@ -354,7 +354,6 @@ $(function(){
 			$("#delete_item").hide();
 		}
 
-		//const id = $(this).attr('data-id');
 
 	});
 
