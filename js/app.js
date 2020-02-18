@@ -203,7 +203,7 @@ db.collection('applications').orderBy('name').onSnapshot(snapshot => {
 	    if (change.type == 'removed'){
 		    console.log("Removed item: ", change.doc.data());
 		    let li = itemList.querySelector('[data-id=' + change.doc.id + ']');
-		    itemList.removeChild(li);
+		    itemList.removeChild(div);
 	    }
     });
 });
@@ -387,7 +387,7 @@ var selectedListener = function(e) {
 			if(!element.classList.contains('selected')) return;
 			ref.delete();
 		});
-
+	
 
 };
 
@@ -410,11 +410,11 @@ submit.onclick = function(){
 
 var apply = document.querySelector('input[type=submit][value=Apply]');
 apply.onclick = function(){
-	alert("Editing...");
 	var x = document.getElementById("item-list");
 	for (let element of x.children) {
 		if(element.className == 'selected')
 		{
+		        alert("Editing...");
 			var id = element.getAttribute('data-id');
 					var ref = db.collection('applications').doc(id);
 					ref.update({
