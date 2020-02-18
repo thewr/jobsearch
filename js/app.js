@@ -59,24 +59,25 @@ function renderDB(doc){
   	itemList.count += 1; 	
   	var current_date = doc.data().date;	
 
-  	if((itemList.count > 1)&&(current_date == previous_date))	
-  	{
-		date_flag = false;	
-  	} else {	
-	  	date_flag = true;	
-  	}	
+  	//if((itemList.count > 1)&&(current_date == previous_date))	
+  	//{
+	//	date_flag = false;	
+  	//} else {	
+	//  	date_flag = true;	
+  	//}	
 	
 	previous_date = current_date;	
-	if(date_flag == true)	
-  	{	
+	//if(date_flag == true)	
+  	//{	
           	// append list	
 	 	// li.appendChild(date);	
 	 	// var item_date = doc.data().date;	
 	  	//var myJSON = JSON.stringify(todaysDate());	
 		let date_label = document.createElement('label');	
 		date_label.textContent = doc.data().date;	
+		date_label.style.cssText = "margin-top: 8px";
 		div.appendChild(date_label);	
-  	}	
+  	//}	
 	
 	
 	  // create list document elements
