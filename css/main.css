@@ -478,10 +478,6 @@ h1 {
     font-size-adjust:auto;
 }
 
-.seperator {
-    border-bottom: 2px solid black;
-}
-
 .name_data{
     padding: 3px 0px 3px 12px;
     border-bottom: 2px solid black;
