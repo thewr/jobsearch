@@ -162,6 +162,8 @@ function renderDB(doc){
 	  li.appendChild(title);
 
 	  li.appendChild(label_words);
+	  let sep = document.createElement('span').style.cssText = "border-bottom: 1px solid black";
+          li.appendChild(sep);
 	  li.appendChild(wordsA);
 	  li.appendChild(wordsB);
 	  li.appendChild(wordsC);
