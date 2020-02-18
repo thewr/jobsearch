@@ -200,12 +200,12 @@ db.collection('applications').orderBy('name').onSnapshot(snapshot => {
 
 	    }
 
-	    if (change.type == 'removed'){
-		    console.log("Removed item: ", change.doc.data());
-		    let li = itemList.querySelector('[data-id=' + change.doc.id + ']');
-		    itemList.removeChild(div);
-		    refresh();
-	    }
+	 //   if (change.type == 'removed'){
+	//	    console.log("Removed item: ", change.doc.data());
+	//	    let li = itemList.querySelector('[data-id=' + change.doc.id + ']');
+	//	    itemList.removeChild(div);
+	//	    refresh();
+	  //  }
     });
 });
 
@@ -383,10 +383,10 @@ var selectedListener = function(e) {
 		});
 
 
-	//	$('#delete_item').click(function(){
-	//		if(!element.classList.contains('selected')) return;
-	//		ref.delete();
-	//	});
+		$('#delete_item').click(function(){
+			if(!element.classList.contains('selected')) return;
+			ref.delete();
+		});
 	
 
 };
