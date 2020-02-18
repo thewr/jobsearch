@@ -386,6 +386,7 @@ var selectedListener = function(e) {
 		$('#delete_item').click(function(){
 			if(!element.classList.contains('selected')) return;
 			ref.delete();
+			refresh();
 		});
 	
 
