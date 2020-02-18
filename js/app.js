@@ -76,7 +76,7 @@ function renderDB(doc){
 	  //var myJSON = JSON.stringify(todaysDate());	
 	let date_label = document.createElement('label');	
 	date_label.textContent = doc.data().date;	
-	itemList.appendChild(date_label);	
+	div.appendChild(date_label);	
   }	
 	
 	
