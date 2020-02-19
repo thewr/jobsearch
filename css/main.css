@@ -444,6 +444,12 @@ h1 {
     justify-content: space-around;
 }
 
+
+@media (max-width: 400px) #item-list li
+{
+    width: 80%;
+}
+
 #item-list li{
     margin-bottom: 16px;
     width: 480px;
