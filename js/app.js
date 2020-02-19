@@ -183,7 +183,7 @@ function renderDB(doc){
 
 
 // real-time listener
-db.collection('applications').orderBy('date','desc').orderBy('name').onSnapshot(snapshot => {
+db.collection('applications').orderBy('date','desc').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
 	    if(change.type == 'added'){
