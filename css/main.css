@@ -445,9 +445,10 @@ h1 {
 }
 
 
-@media (max-width: 400px) #item-list li
-{
-    width: 80%;
+@media (max-width: 400px){
+    #item-list li {
+        width: 80%;
+    }
 }
 
 #item-list li{
