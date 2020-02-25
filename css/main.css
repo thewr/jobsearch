@@ -465,7 +465,7 @@ h1 {
 
 @media only screen and (max-width: 400px){
     #item-list li {
-        width: 120px;
+        width: 240px;
     }
 }
 
