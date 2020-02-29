@@ -82,8 +82,6 @@ function renderDB(doc){
 		li.appendChild(date_label);	
   	//}	
 	
-	 	 label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
-
 	
 	
 	  let name = document.createElement('span');
