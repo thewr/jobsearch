@@ -572,17 +572,17 @@ SVG Icons - svgicons.sparkk.fr
 ----- */
 
 .svg-icon {
-  width: 1em;
-  height: 1em;
+  width: 3px;
+  height: 3px;
 }
 
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: #4691f6;
+  fill: white;
 }
 
 .svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
+  stroke: blue;
+  stroke-width: 0.5;
 }
