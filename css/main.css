@@ -461,7 +461,6 @@ h1 {
     border-radius: 2px;
     cursor: pointer;
     white-space: pre-line;
-    background-color: #f0f1f2;
 }
 
 @media only screen and (max-width: 400px){
@@ -477,11 +476,11 @@ h1 {
 /*
 #item-list li:not(.selected):hover
 */
-/*
+
 #item-list li:not(.selected){
-    background-color: #e9f3e2;
+    background-color: #f0f1f2;
 }
-*/
+
 
 #item-list li span{
     color:#3c1231;
