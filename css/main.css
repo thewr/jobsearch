@@ -154,7 +154,7 @@ html>.container, body>.container {
     display: flex;
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 120px;
+    flex-basis: 60px; //120px;
 }
 
 .sidebar > .content {
@@ -572,8 +572,8 @@ SVG Icons - svgicons.sparkk.fr
 ----- */
 
 .svg-icon {
-  width: 5px;
-  height: 5px;
+  width: 1em;
+  height: 1em;
 }
 
 .svg-icon path,
