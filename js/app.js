@@ -78,9 +78,12 @@ function renderDB(doc){
 	  	//var myJSON = JSON.stringify(todaysDate());	
 		let date_label = document.createElement('label');	
 		date_label.textContent = doc.data().date;	
-		date_label.style.cssText = "margin-top: 8px";
+		date_label.style.cssText = "margin-top: 8px, font-weight: 400, padding: 3px, font-size: smaller, background-color: #fbfbfb, border-bottom: 1px solid #2f3f2e, border-radious: 3px, float: right, display: inline-block";
 		li.appendChild(date_label);	
   	//}	
+	
+	 	 label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+
 	
 	
 	  let name = document.createElement('span');
