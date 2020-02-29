@@ -572,8 +572,8 @@ SVG Icons - svgicons.sparkk.fr
 ----- */
 
 .svg-icon {
-  width: 0.5ep;
-  height: 0.5ep;
+  width: 5px;
+  height: 5px;
 }
 
 .svg-icon path,
