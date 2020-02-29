@@ -264,7 +264,7 @@ input[type=text],
 select,
 textarea {
  padding: 3px 0 3px 6px;
-  border: 2px solid  #ccc;
+  border: 1px solid  #ccc;
   box-sizing: border-box;
   resize: vertical;
   border-radius:3px;
