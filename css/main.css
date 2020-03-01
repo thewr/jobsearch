@@ -418,7 +418,7 @@ h1 {
 
 
 .docs>.view{
-    //background: #f0f1f2;
+    background: #575e63;
     color: #575e63;
     -webkit-box-flex: 1;
     flex-grow: 1;
