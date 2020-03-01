@@ -192,10 +192,10 @@ html>.container, body>.container {
     padding: 5px;
 }
 
-.options li:hover {
-    background: #445553;//#3a3e41;
-    color: #14ff53;
-}
+//.options li:hover {
+//    background: #445553;//#3a3e41;
+//    color: #14ff53;
+//}
 
 
 .options li
@@ -591,3 +591,13 @@ SVG Icons - svgicons.sparkk.fr
   stroke: blue;
   stroke-width: 0.5;
 }
+
+.icon {
+    fill:black;
+}
+
+.icon:hover{
+    fill:orange;
+}
+
+
