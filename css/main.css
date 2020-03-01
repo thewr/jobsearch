@@ -484,7 +484,7 @@ h1 {
 */
 
 #item-list li:not(.selected){
-    background-color: #f0f1f2;
+    background-color: #fff;
 }
 
 
