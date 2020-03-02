@@ -331,7 +331,7 @@ $(function(){
 		display_min();
 
 		clearForm();
-		refresh();
+		//refresh();
 	});
 
 
