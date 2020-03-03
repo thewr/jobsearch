@@ -103,20 +103,20 @@ function renderDB(doc){
 	  // create elements for labels for each data to display
 	  let label_name = document.createElement('span');
  	 label_name.textContent = "NAME"; //&nbsp;
- 	 label_name.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+ 	 label_name.style.cssText = "padding: 3px 0px 0px 0; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
 	 // create elements for labels for each data to display
  	 let label_title = document.createElement('span');
  	 label_title.textContent = "TITLE"; //&nbsp;
- 	 label_title.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+ 	 label_title.style.cssText = "padding: 3px 0px 0px 0; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
 	  let label_words = document.createElement('span');
 	  label_words.textContent = "DETAILS";
- 	 label_words.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+ 	 label_words.style.cssText = "padding: 3px 0px 0px 0; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
  	 let label_subject = document.createElement('span');
  	 label_subject.textContent = "DESCRIPTION";
-	  label_subject.style.cssText = "padding: 3px 0px 0px 6px; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
+	  label_subject.style.cssText = "padding: 3px 0px 0px 0; display: inline-block; font-weight: bold; width: 50%;"; //border: 1px solid black";
 
  	 // generate content for fields
 
