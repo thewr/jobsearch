@@ -440,7 +440,7 @@ h1 {
 #item-list{
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 32px 0 0 0;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -464,13 +464,12 @@ h1 {
 }
 
 #item-list li{
-    margin-bottom: 16px;
     width: 320px;
-    margin: 10px;
-    padding: 10px;
+    margin: 0 0 20px 0;
+    padding: 10px 5px 10px 5;
     position: relative;
-    border: 1px solid #2f3f2e;
-    border-radius: 2px;
+    border: 2px solid #292917;
+    border-radius: 10px;
     cursor: pointer;
     white-space: pre-line;
 }
