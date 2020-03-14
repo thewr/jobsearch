@@ -264,28 +264,29 @@ form label{
   color: #F8F8FF;
   display:inline-block;
   padding: 0.125em 0 0.125em 0;
+  margin-bottom: 0.25em;
 }
 
 input[type=text],
 select,
 textarea {
  padding: 3px 0 3px 6px;
-  border: 1px solid  #ccc;
-  box-sizing: border-box;
-  resize: vertical;
-  border-radius:3px;
+ border: 1px solid  #ccc;
+ box-sizing: border-box;
+ resize: vertical;
+ border-radius:3px;
  // font-size:12px;
-  background-color: rgba(255, 255, 255, 0.07);
-  color: #f0f1f2;
-
+ background-color: rgba(255, 255, 255, 0.07);
+ color: #f0f1f2;
 }
 
 input[type=text],
 select {
-  width: 50%;
+  width: 80%;
   box-sizing:content-box;
-  margin-bottom: 5px;
+  margin-bottom: 0.8em;
   display: block;
+  height: 16px;
 }
 
 textarea {
