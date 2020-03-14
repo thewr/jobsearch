@@ -282,7 +282,7 @@ textarea {
 
 input[type=text],
 select {
-  width: 80%;
+  width: 60%;
   box-sizing:content-box;
   margin-bottom: 0.8em;
   display: block;
