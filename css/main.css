@@ -299,7 +299,7 @@ input[type=edit]{
   //padding:0 20px 0 20px;
   float: left;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 7px;
   font-weight: 400;
   width: 33%;
   text-transform: uppercase;
@@ -323,7 +323,7 @@ input[type=cancel]{
   height: 30px;
   font-weight: 400;
   width: 33%;
-  border-radius: 10px;
+  border-radius: 7px;
   text-transform: uppercase;
   -webkit-text-fill-color:  white;
   //-webkit-text-stroke-width: 0.5px;
